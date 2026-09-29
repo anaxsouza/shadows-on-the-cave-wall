@@ -1,0 +1,10 @@
+genia: partição de avaliação: 4038 entidades em 1229 sentenças; calibração com 526 sentenças, separada por SENTENÇA
+genia: o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+genia: T3 meta 70%: 86 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1914 restantes
+genia: T3 meta 80%: 224 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1776 restantes
+genia: T3 meta 90%: 612 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1388 restantes
+genia: model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.3186). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+genia: T4 meta 90%: 247 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1753 restantes
+conll2003: partição de avaliação: 5701 entidades em 2313 sentenças; calibração com 992 sentenças, separada por SENTENÇA
+conll2003: o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+conll2003: model_confidence+enrichment: peso 0.99 em model_confidence e 0.01 em enrichment, ajustado na calibração (AURC 0.2710). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.

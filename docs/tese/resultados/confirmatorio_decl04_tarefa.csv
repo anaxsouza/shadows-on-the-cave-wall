@@ -1,0 +1,83 @@
+modelo,corpus,comparacao,tipo,supervisor,meta,alcancavel,review_load,coverage,precision,recall,f1,n_delivered,contra,review_load_contra,delta,ci_low,ci_high,n_entidades,n_sentencas,n_reamostragens,n_degeneradas,veredito
+gliner-large,genia,T1,descriptive,(sem supervisor),—,sim,0.0,1.0,0.5791,0.3948,0.4695,3754,,,,,,,,,,
+gliner-large,genia,T1,descriptive,span_size,0.70,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,span_size,0.80,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,span_size,0.90,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,span_size,0.95,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,geometric_fraction,0.70,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,geometric_fraction,0.80,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,geometric_fraction,0.90,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,geometric_fraction,0.95,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,enrichment,0.70,sim,0.9981,0.0019,0.7143,0.0009,0.0018,7,,,,,,,,,,
+gliner-large,genia,T1,descriptive,enrichment,0.80,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,enrichment,0.90,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,enrichment,0.95,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,geometric_residual,0.70,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,geometric_residual,0.80,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,geometric_residual,0.90,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,geometric_residual,0.95,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,sentence_length,0.70,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,sentence_length,0.80,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,sentence_length,0.90,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,sentence_length,0.95,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,span_mass,0.70,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,span_mass,0.80,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,span_mass,0.90,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,span_mass,0.95,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,genia,T1,descriptive,model_confidence,0.70,sim,0.451,0.549,0.7001,0.2621,0.3814,2061,,,,,,,,,,
+gliner-large,genia,T1,descriptive,model_confidence,0.80,sim,0.756,0.244,0.8002,0.1331,0.2283,916,,,,,,,,,,
+gliner-large,genia,T1,descriptive,model_confidence,0.90,sim,0.9651,0.0349,0.9008,0.0214,0.0419,131,,,,,,,,,,
+gliner-large,genia,T1,descriptive,model_confidence,0.95,sim,0.9979,0.0021,1.0,0.0015,0.0029,8,,,,,,,,,,
+gliner-large,genia,T2,task_verdict,span_mass,0.70,não,inalcançável,,,,,,model_confidence,0.451,,,,3754,1205,0,0,inalcançável para span_mass
+gliner-large,genia,T2,task_verdict,span_mass,0.80,não,inalcançável,,,,,,model_confidence,0.756,,,,3754,1205,0,0,inalcançável para span_mass
+gliner-large,genia,T2,task_verdict,span_mass,0.90,não,inalcançável,,,,,,model_confidence,0.9651,,,,3754,1205,0,0,inalcançável para span_mass
+gliner-large,genia,T2,task_verdict,span_mass,0.95,não,inalcançável,,,,,,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para span_mass
+gliner-large,genia,T3,task_verdict,enrichment,0.70,sim,0.9981,,,,,,model_confidence,0.451,0.5471,0.4427,0.6487,3754,1205,1423,577,enrichment EXIGE MAIS revisão
+gliner-large,genia,T3,task_verdict,enrichment,0.80,não,inalcançável,,,,,,model_confidence,0.756,,,,3754,1205,0,0,inalcançável para enrichment
+gliner-large,genia,T3,task_verdict,enrichment,0.90,não,inalcançável,,,,,,model_confidence,0.9651,,,,3754,1205,0,0,inalcançável para enrichment
+gliner-large,genia,T3,task_verdict,enrichment,0.95,não,inalcançável,,,,,,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para enrichment
+gliner-large,genia,T4,task_verdict,model_confidence+enrichment,0.70,sim,0.4592,,,,,,model_confidence,0.451,0.0083,-0.0138,0.0185,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+gliner-large,genia,T4,task_verdict,model_confidence+enrichment,0.80,sim,0.8482,,,,,,model_confidence,0.756,0.0922,-0.008,0.1278,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+gliner-large,genia,T4,task_verdict,model_confidence+enrichment,0.90,sim,0.9992,,,,,,model_confidence,0.9651,0.0341,-0.0354,0.0809,3754,1205,1962,38,NÃO DISTINGUE (IC contém zero)
+gliner-large,genia,T4,task_verdict,model_confidence+enrichment,0.95,sim,0.9992,,,,,,model_confidence,0.9979,0.0013,-0.0042,0.0359,3754,1205,1935,65,NÃO DISTINGUE (IC contém zero)
+gliner-large,conll2003,T1,descriptive,(sem supervisor),—,sim,0.0,1.0,0.5323,0.4805,0.5051,5099,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,span_size,0.70,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,span_size,0.80,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,span_size,0.90,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,span_size,0.95,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,geometric_fraction,0.70,sim,0.999,0.001,0.8,0.0007,0.0014,5,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,geometric_fraction,0.80,sim,0.999,0.001,0.8,0.0007,0.0014,5,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,geometric_fraction,0.90,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,geometric_fraction,0.95,não,inalcançável,,,,,0,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,enrichment,0.70,sim,0.9196,0.0804,0.7,0.0508,0.0948,410,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,enrichment,0.80,sim,0.9584,0.0416,0.8019,0.0301,0.058,212,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,enrichment,0.90,sim,0.9916,0.0084,0.907,0.0069,0.0137,43,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,enrichment,0.95,sim,0.9947,0.0053,0.963,0.0046,0.0092,27,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,geometric_residual,0.70,sim,0.9992,0.0008,0.75,0.0005,0.0011,4,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,geometric_residual,0.80,sim,0.9994,0.0006,1.0,0.0005,0.0011,3,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,geometric_residual,0.90,sim,0.9994,0.0006,1.0,0.0005,0.0011,3,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,geometric_residual,0.95,sim,0.9994,0.0006,1.0,0.0005,0.0011,3,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,sentence_length,0.70,sim,0.9416,0.0584,0.7013,0.037,0.0703,298,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,sentence_length,0.80,sim,0.9725,0.0275,0.8,0.0198,0.0387,140,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,sentence_length,0.90,sim,0.9823,0.0177,0.9,0.0143,0.0282,90,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,sentence_length,0.95,sim,0.9865,0.0135,1.0,0.0122,0.0241,69,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,span_mass,0.70,sim,0.9992,0.0008,0.75,0.0005,0.0011,4,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,span_mass,0.80,sim,0.9994,0.0006,1.0,0.0005,0.0011,3,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,span_mass,0.90,sim,0.9994,0.0006,1.0,0.0005,0.0011,3,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,span_mass,0.95,sim,0.9994,0.0006,1.0,0.0005,0.0011,3,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,model_confidence,0.70,sim,0.323,0.677,0.7002,0.4279,0.5312,3452,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,model_confidence,0.80,sim,0.5607,0.4393,0.8,0.3173,0.4544,2240,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,model_confidence,0.90,sim,0.7715,0.2285,0.9004,0.1857,0.3079,1165,,,,,,,,,,
+gliner-large,conll2003,T1,descriptive,model_confidence,0.95,sim,0.991,0.009,0.9565,0.0078,0.0155,46,,,,,,,,,,
+gliner-large,conll2003,T2,task_verdict,span_mass,0.70,sim,0.9992,,,,,,model_confidence,0.323,0.6762,0.6255,0.7285,5099,2223,1917,83,span_mass EXIGE MAIS revisão
+gliner-large,conll2003,T2,task_verdict,span_mass,0.80,sim,0.9994,,,,,,model_confidence,0.5607,0.4387,0.3939,0.4806,5099,2223,1912,88,span_mass EXIGE MAIS revisão
+gliner-large,conll2003,T2,task_verdict,span_mass,0.90,sim,0.9994,,,,,,model_confidence,0.7715,0.2279,0.1733,0.2744,5099,2223,1912,88,span_mass EXIGE MAIS revisão
+gliner-large,conll2003,T2,task_verdict,span_mass,0.95,sim,0.9994,,,,,,model_confidence,0.991,0.0084,0.0035,0.1167,5099,2223,1912,88,span_mass EXIGE MAIS revisão
+gliner-large,conll2003,T3,task_verdict,enrichment,0.70,sim,0.9196,,,,,,model_confidence,0.323,0.5966,0.5476,0.6441,5099,2223,2000,0,enrichment EXIGE MAIS revisão
+gliner-large,conll2003,T3,task_verdict,enrichment,0.80,sim,0.9584,,,,,,model_confidence,0.5607,0.3977,0.3514,0.4392,5099,2223,2000,0,enrichment EXIGE MAIS revisão
+gliner-large,conll2003,T3,task_verdict,enrichment,0.90,sim,0.9916,,,,,,model_confidence,0.7715,0.22,0.1612,0.2662,5099,2223,2000,0,enrichment EXIGE MAIS revisão
+gliner-large,conll2003,T3,task_verdict,enrichment,0.95,sim,0.9947,,,,,,model_confidence,0.991,0.0037,-0.0037,0.1109,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+gliner-large,conll2003,T4,task_verdict,model_confidence+enrichment,0.70,sim,0.325,,,,,,model_confidence,0.323,0.002,-0.0037,0.0051,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+gliner-large,conll2003,T4,task_verdict,model_confidence+enrichment,0.80,sim,0.5485,,,,,,model_confidence,0.5607,-0.0122,-0.0275,0.0006,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+gliner-large,conll2003,T4,task_verdict,model_confidence+enrichment,0.90,sim,0.7909,,,,,,model_confidence,0.7715,0.0194,-0.0232,0.1209,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+gliner-large,conll2003,T4,task_verdict,model_confidence+enrichment,0.95,sim,0.9747,,,,,,model_confidence,0.991,-0.0163,-0.0523,0.0755,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)

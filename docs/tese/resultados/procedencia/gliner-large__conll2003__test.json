@@ -1,0 +1,80 @@
+{
+ "modelo": {
+  "id": "urchade/gliner_large",
+  "camadas": 24,
+  "cabecas": 16
+ },
+ "colunas": [
+  "sentence_id",
+  "loss",
+  "model_confidence",
+  "span_mass",
+  "is_nested",
+  "token_indices",
+  "span_size",
+  "sentence_length",
+  "span_position",
+  "row_entropy",
+  "row_max",
+  "emitted_mass",
+  "hidden_norm",
+  "hidden_dist_centroide",
+  "hidden_delta_camadas",
+  "logit_margin",
+  "logit_entropy",
+  "logit_max"
+ ],
+ "n_sentencas": 3453,
+ "n_entidades_preditas": 7321,
+ "taxa_de_erro_base": 0.46673951645950007,
+ "preregistro": {
+  "layers": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23
+  ],
+  "heads": null,
+  "sink_policy": "drop_from_denominator",
+  "declaration_id": "decl-09-sinais-large",
+  "declaration_hash": "bc162a9a0cb9e256",
+  "measurement_hash": "5454128f1df4da6f",
+  "source": "configs/decl-09-sinais-large.yaml",
+  "model": "urchade/gliner_large"
+ },
+ "atencao": {
+  "camadas": 24,
+  "cabecas": 16,
+  "dtype": "float16",
+  "fatias": 7,
+  "bytes": 1189023446
+ },
+ "perfil_por_camada": {
+  "linhas": 175704,
+  "natureza": "exploratorio",
+  "nao_decide_veredito": true
+ },
+ "ressalvas": [],
+ "_origem": "results/gliner-large/conll2003/test/MEDIDA.json",
+ "_por_que_esta_copia_existe": "results/ esta inteiramente no .gitignore (linha 78), entao o MEDIDA.json — que e o que PROVA sob qual declaracao e com quais pesos cada tabela foi medida — vivia so no disco local. As tabelas confirmatorias sao copiadas para docs/tese/resultados/, mas a procedencia delas nao era. Esta copia versionada fecha a lacuna: perder results/ passa a custar remedir, e nao perder o registro de como foi medido."
+}

@@ -1,0 +1,49 @@
+{
+ "finalidade": "Insumos do braco decoder. O dado NAO entra no git (mesmo criterio de results/); o manifesto com os hashes entra, para que a procedencia de uma declaracao assinada nao dependa de um bucket estar acessivel no dia da leitura.",
+ "export_treino": {
+  "conll2003_train.jsonl": {
+   "md5": "37cc8bf8b99a2b87800d4a80bf24d02e",
+   "bytes": 2294162,
+   "linhas": 11132,
+   "s3": "s3://<bucket>/sentinel/dados/conll2003_train.jsonl"
+  },
+  "conll2003_validation.jsonl": {
+   "md5": "fd18f63b78556b4c351324341a8dda70",
+   "bytes": 573728,
+   "linhas": 2605,
+   "s3": "s3://<bucket>/sentinel/dados/conll2003_validation.jsonl"
+  },
+  "genia_train.jsonl": {
+   "md5": "30f1724057a78059b98898da41df9c4d",
+   "bytes": 4655518,
+   "linhas": 13507,
+   "s3": "s3://<bucket>/sentinel/dados/genia_train.jsonl"
+  },
+  "genia_validation.jsonl": {
+   "md5": "6e76a13689800a56add32578fe50cb18",
+   "bytes": 476457,
+   "linhas": 1438,
+   "s3": "s3://<bucket>/sentinel/dados/genia_validation.jsonl"
+  }
+ },
+ "modelo_base": {
+  "modelo": "Qwen/Qwen2.5-0.5B",
+  "revisao_hf": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "s3": "s3://<bucket>/sentinel/base/qwen2.5-0.5b/",
+  "checkpoint_sha256_v1": "7e3b2f82b79f4cab09a55349369d3a8ad49bfbbd6c415f067d115ea3c267f965",
+  "receita": "sha256-bytes-dos-pesos-v1",
+  "arquivos": [
+   {
+    "arquivo": "model.safetensors",
+    "bytes": 988097824
+   }
+  ]
+ },
+ "encoder_impressoes_recalculadas": {
+  "receita": "sha256-bytes-dos-pesos-v1 (tools/impressao_digital.py)",
+  "nota": "A receita dos valores de 32 caracteres em docs/tese/resultados/procedencia/ nao ficou registrada e nao reproduz; estes substituem-nos para uso futuro, sem invalidar nenhuma medicao ja feita.",
+  "gliner_base-ft-genia": "c3494fc957821206c6afc4b8b95d417c8cb6720f6d2b12e77b7f7525e80b87ed",
+  "gliner_base-ft-conll2003": "f04b3983a54b7a6ba1189e643aabf7360c762408f07e93c1fcfa99e094d9ddeb",
+  "verificado_do_s3": "sentinel/checkpoints/gliner-ft.tar.gz (1,452 GB) — os dois conferem byte a byte"
+ }
+}

@@ -1,0 +1,119 @@
+modelo,corpus,comparacao,tipo,particao,estrato,metrica,valor,escore,contra,aurc_contra,aurc_escore,delta,ci_low,ci_high,n_entidades,n_sentencas,n_degeneradas,veredito
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9648,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.5339,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,todos,n_entidades,5276,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.6517,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.6518,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k=1,n_entidades,566,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.8346,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.5491,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k=2,n_entidades,1447,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9295,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.5197,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k=3-4,n_entidades,2109,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9628,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.5286,,,,,,,,,,,
+gliner_base-ft-genia,genia,C1,descriptive,teste inteiro,k>=5,n_entidades,1154,,,,,,,,,,,
+gliner_base-ft-genia,genia,C2,verdict,avaliação,todos,,,span_mass,geometric_fraction,0.228,0.2267,-0.0014,-0.0042,0.0014,3685,1190,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C2,verdict,avaliação,k=1,,,span_mass,geometric_fraction,0.4038,0.3545,-0.0493,-0.0811,-0.0168,395,309,0,ACRESCENTA
+gliner_base-ft-genia,genia,C2,verdict,avaliação,k=2,,,span_mass,geometric_fraction,0.2471,0.2426,-0.0045,-0.0155,0.0071,1011,636,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C2,verdict,avaliação,k=3-4,,,span_mass,geometric_fraction,0.2457,0.2425,-0.0032,-0.0095,0.003,1467,823,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C2,verdict,avaliação,k>=5,,,span_mass,geometric_fraction,0.213,0.2123,-0.0006,-0.0083,0.0069,812,563,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C2,verdict,avaliação,aninhado,,,span_mass,geometric_fraction,0.6394,0.6709,0.0315,0.0149,0.0494,285,190,0,PIOR que a base
+gliner_base-ft-genia,genia,C2,verdict,avaliação,plano,,,span_mass,geometric_fraction,0.2017,0.1994,-0.0023,-0.0051,0.0004,3400,1171,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C3,verdict,avaliação,todos,,,model_confidence+enrichment,model_confidence,0.1101,0.1122,0.002,-0.0008,0.0051,3685,1190,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C3,verdict,avaliação,k=1,,,model_confidence+enrichment,model_confidence,0.184,0.1782,-0.0058,-0.0135,0.0031,395,309,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C3,verdict,avaliação,k=2,,,model_confidence+enrichment,model_confidence,0.1169,0.1235,0.0066,-0.0009,0.0159,1011,636,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C3,verdict,avaliação,k=3-4,,,model_confidence+enrichment,model_confidence,0.0986,0.0985,-0.0001,-0.0029,0.0031,1467,823,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C3,verdict,avaliação,k>=5,,,model_confidence+enrichment,model_confidence,0.0905,0.0929,0.0023,-0.0009,0.0066,812,563,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C3,verdict,avaliação,aninhado,,,model_confidence+enrichment,model_confidence,0.5681,0.5736,0.0055,-0.0009,0.0147,285,190,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,C3,verdict,avaliação,plano,,,model_confidence+enrichment,model_confidence,0.0946,0.0968,0.0022,-0.001,0.0058,3400,1171,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9648,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.5339,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,todos,n_entidades,5276,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.6517,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.6518,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k=1,n_entidades,566,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.8346,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.5491,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k=2,n_entidades,1447,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9295,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.5197,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k=3-4,n_entidades,2109,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9628,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.5286,,,,,,,,,,,
+gliner_base-ft-genia,genia,T1,descriptive,teste inteiro,k>=5,n_entidades,1154,,,,,,,,,,,
+gliner_base-ft-genia,genia,escores,descriptive,avaliação,todos,aurc_acaso,0.2418,,,,,,,,,,,
+gliner_base-ft-genia,genia,escores,descriptive,avaliação,todos,aurc_span_size,0.2262,,,,,,,,,,,melhor que o acaso
+gliner_base-ft-genia,genia,escores,descriptive,avaliação,todos,aurc_geometric_fraction,0.228,,,,,,,,,,,melhor que o acaso
+gliner_base-ft-genia,genia,escores,descriptive,avaliação,todos,aurc_enrichment,0.2452,,,,,,,,,,,NÃO melhor que o acaso
+gliner_base-ft-genia,genia,escores,descriptive,avaliação,todos,aurc_geometric_residual,0.2397,,,,,,,,,,,melhor que o acaso
+gliner_base-ft-genia,genia,escores,descriptive,avaliação,todos,aurc_sentence_length,0.2396,,,,,,,,,,,melhor que o acaso
+gliner_base-ft-genia,genia,escores,descriptive,avaliação,todos,aurc_span_mass,0.2267,,,,,,,,,,,melhor que o acaso
+gliner_base-ft-genia,genia,escores,descriptive,avaliação,todos,aurc_model_confidence,0.1101,,,,,,,,,,,melhor que o acaso
+gliner_base-ft-genia,genia,controle,descriptive,teste inteiro,todos,corr_span_size_vs_comprimento,0.0626,,,,,,,,,,,
+gliner_base-ft-genia,genia,controle,descriptive,teste inteiro,todos,corr_geometric_fraction_vs_comprimento,-0.4591,,,,,,,,,,,
+gliner_base-ft-genia,genia,controle,descriptive,teste inteiro,todos,corr_enrichment_vs_comprimento,0.2316,,,,,,,,,,,
+gliner_base-ft-genia,genia,controle,descriptive,teste inteiro,todos,corr_geometric_residual_vs_comprimento,0.1042,,,,,,,,,,,
+gliner_base-ft-genia,genia,controle,descriptive,teste inteiro,todos,corr_sentence_length_vs_comprimento,1.0,,,,,,,,,,,
+gliner_base-ft-genia,genia,controle,descriptive,teste inteiro,todos,corr_span_mass_vs_comprimento,-0.4314,,,,,,,,,,,
+gliner_base-ft-genia,genia,controle,descriptive,teste inteiro,todos,corr_model_confidence_vs_comprimento,-0.0335,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9222,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.4693,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,todos,n_entidades,5839,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.779,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.5098,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k=1,n_entidades,2798,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.9446,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.4597,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k=2,n_entidades,1465,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9671,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.4522,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k=3-4,n_entidades,1303,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9683,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.4591,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C1,descriptive,teste inteiro,k>=5,n_entidades,273,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,C2,verdict,avaliação,todos,,,span_mass,geometric_fraction,0.1518,0.1494,-0.0024,-0.006,0.001,4079,2023,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,C2,verdict,avaliação,k=1,,,span_mass,geometric_fraction,0.0809,0.0785,-0.0024,-0.0114,0.007,1925,1343,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,C2,verdict,avaliação,k=2,,,span_mass,geometric_fraction,0.1961,0.1897,-0.0064,-0.0118,0.0003,1034,810,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,C2,verdict,avaliação,k=3-4,,,span_mass,geometric_fraction,0.1872,0.1882,0.0009,-0.0041,0.0072,920,719,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,C2,verdict,avaliação,k>=5,,,span_mass,geometric_fraction,0.2075,0.225,0.0175,0.0014,0.0386,200,181,0,PIOR que a base
+gliner_base-ft-conll2003,conll2003,C2,verdict,avaliação,aninhado,,,,,,,,,,29,,,NÃO AVALIADO (estrato pequeno ou de perda constante)
+gliner_base-ft-conll2003,conll2003,C2,verdict,avaliação,plano,,,span_mass,geometric_fraction,0.1478,0.1449,-0.0029,-0.0066,0.0006,4050,2020,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,C3,verdict,avaliação,todos,,,model_confidence+enrichment,model_confidence,0.0482,0.0482,0.0,0.0,0.0,4079,2023,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,C3,verdict,avaliação,k=1,,,model_confidence+enrichment,model_confidence,0.0338,0.0338,0.0,0.0,0.0,1925,1343,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,C3,verdict,avaliação,k=2,,,model_confidence+enrichment,model_confidence,0.0626,0.0626,0.0,0.0,0.0,1034,810,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,C3,verdict,avaliação,k=3-4,,,model_confidence+enrichment,model_confidence,0.0657,0.0657,0.0,0.0,0.0,920,719,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,C3,verdict,avaliação,k>=5,,,model_confidence+enrichment,model_confidence,0.0501,0.0501,0.0,0.0,0.0,200,181,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,C3,verdict,avaliação,aninhado,,,,,,,,,,29,,,NÃO AVALIADO (estrato pequeno ou de perda constante)
+gliner_base-ft-conll2003,conll2003,C3,verdict,avaliação,plano,,,model_confidence+enrichment,model_confidence,0.0453,0.0453,0.0,0.0,0.0,4050,2020,0,NÃO ACRESCENTA (IC contém zero)
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9222,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.4693,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,todos,n_entidades,5839,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.779,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.5098,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k=1,n_entidades,2798,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.9446,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.4597,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k=2,n_entidades,1465,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9671,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.4522,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k=3-4,n_entidades,1303,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9683,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.4591,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,T1,descriptive,teste inteiro,k>=5,n_entidades,273,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,escores,descriptive,avaliação,todos,aurc_acaso,0.1003,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,escores,descriptive,avaliação,todos,aurc_span_size,0.1192,,,,,,,,,,,NÃO melhor que o acaso
+gliner_base-ft-conll2003,conll2003,escores,descriptive,avaliação,todos,aurc_geometric_fraction,0.1518,,,,,,,,,,,NÃO melhor que o acaso
+gliner_base-ft-conll2003,conll2003,escores,descriptive,avaliação,todos,aurc_enrichment,0.0914,,,,,,,,,,,melhor que o acaso
+gliner_base-ft-conll2003,conll2003,escores,descriptive,avaliação,todos,aurc_geometric_residual,0.1196,,,,,,,,,,,NÃO melhor que o acaso
+gliner_base-ft-conll2003,conll2003,escores,descriptive,avaliação,todos,aurc_sentence_length,0.0831,,,,,,,,,,,melhor que o acaso
+gliner_base-ft-conll2003,conll2003,escores,descriptive,avaliação,todos,aurc_span_mass,0.1494,,,,,,,,,,,NÃO melhor que o acaso
+gliner_base-ft-conll2003,conll2003,escores,descriptive,avaliação,todos,aurc_model_confidence,0.0482,,,,,,,,,,,melhor que o acaso
+gliner_base-ft-conll2003,conll2003,controle,descriptive,teste inteiro,todos,corr_span_size_vs_comprimento,0.1146,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,controle,descriptive,teste inteiro,todos,corr_geometric_fraction_vs_comprimento,-0.5133,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,controle,descriptive,teste inteiro,todos,corr_enrichment_vs_comprimento,0.5436,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,controle,descriptive,teste inteiro,todos,corr_geometric_residual_vs_comprimento,0.065,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,controle,descriptive,teste inteiro,todos,corr_sentence_length_vs_comprimento,1.0,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,controle,descriptive,teste inteiro,todos,corr_span_mass_vs_comprimento,-0.4748,,,,,,,,,,,
+gliner_base-ft-conll2003,conll2003,controle,descriptive,teste inteiro,todos,corr_model_confidence_vs_comprimento,0.0138,,,,,,,,,,,

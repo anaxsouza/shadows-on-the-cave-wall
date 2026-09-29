@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+repository-code: "https://github.com/anaxsouza/attention-is-not-not-geometry"
+message: "If you use this code or these tables, please cite the article below."
+title: "attention-is-not-not-geometry: code, pre-registered declarations and measured tables"
+type: software
+license: MIT
+authors:
+  - family-names: Souza
+    given-names: Anaximandro
+    email: anaximandro.souza@coc.ufrj.br
+    affiliation: "PEC/COPPE, Universidade Federal do Rio de Janeiro"
+  - family-names: Espíndola
+    given-names: Rogério Pinto
+    affiliation: "PEC/COPPE, Universidade Federal do Rio de Janeiro"
+  - family-names: Cerqueira
+    given-names: Renato
+    affiliation: "PUC-Behring Institute for AI"
+# version, date-released and doi: fill in for the tagged release archived by Zenodo
+preferred-citation:
+  type: article
+  title: "Attention Is Not Not Geometry"
+  authors:
+    - family-names: Souza
+      given-names: Anaximandro
+    - family-names: Espíndola
+      given-names: Rogério Pinto
+    - family-names: Cerqueira
+      given-names: Renato
+  journal: "Computational Linguistics (submitted)"
+  year: 2026

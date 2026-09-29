@@ -1,0 +1,53 @@
+{
+ "modelo": {
+  "id": "urchade/gliner_base",
+  "camadas": 12,
+  "cabecas": 12,
+  "nota": "Anotado retroativamente em 15/09/2026. A medição original não registrava o modelo — o único traço era o nome do diretório, e nome de diretório não é procedência. O identificador é fato recuperável do diretório e de configs/config.yaml, não escolha, e não altera measurement_hash: a declaração vigente é da versão 1 a 3, que não cobre o modelo."
+ },
+ "colunas": [
+  "sentence_id",
+  "loss",
+  "model_confidence",
+  "span_mass",
+  "is_nested",
+  "token_indices"
+ ],
+ "n_sentencas": 3250,
+ "n_entidades_preditas": 8469,
+ "taxa_de_erro_base": 0.5169441492502067,
+ "preregistro": {
+  "layers": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "heads": null,
+  "sink_policy": "drop_from_denominator",
+  "declaration_id": "decl-01-gliner-base",
+  "declaration_hash": "348e90cce8ca9874",
+  "source": "configs/config.yaml"
+ },
+ "atencao": {
+  "camadas": 12,
+  "cabecas": 12,
+  "dtype": "float16",
+  "fatias": 7,
+  "bytes": 536962852
+ },
+ "perfil_por_camada": {
+  "linhas": 101628,
+  "natureza": "exploratorio",
+  "nao_decide_veredito": true
+ },
+ "ressalvas": []
+}

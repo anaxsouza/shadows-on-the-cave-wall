@@ -1,0 +1,419 @@
+corpus,comparacao,tipo,supervisor,grade,meta,meta_absoluta,vao_fechado,alcancavel,review_load,coverage,precision,recall,f1,n_delivered,familia,estatuto_nulo,contra,review_load_contra,delta,ci_low,ci_high,n_entidades,n_sentencas,n_reamostragens,n_degeneradas,veredito
+genia,T1,descriptive,(sem supervisor),—,—,,0.0,sim,0.0,1.0,0.5791,0.3948,0.4695,3754,geometrico,—,,,,,,,,,,
+genia,T1,descriptive,span_size,absoluta,0.70,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,span_size,absoluta,0.80,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,span_size,absoluta,0.90,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,span_size,absoluta,0.95,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,span_size,vao,0.25,0.6806,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,span_size,vao,0.50,0.7870,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,span_size,vao,0.75,0.8935,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,span_size,vao,0.90,0.9574,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,geometric_fraction,absoluta,0.70,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,geometric_fraction,absoluta,0.80,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,geometric_fraction,absoluta,0.90,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,geometric_fraction,absoluta,0.95,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,geometric_fraction,vao,0.25,0.6806,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,geometric_fraction,vao,0.50,0.7870,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,geometric_fraction,vao,0.75,0.8935,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,geometric_fraction,vao,0.90,0.9574,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,sentence_length,absoluta,0.70,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,sentence_length,absoluta,0.80,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,sentence_length,absoluta,0.90,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,sentence_length,absoluta,0.95,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,sentence_length,vao,0.25,0.6806,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,sentence_length,vao,0.50,0.7870,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,sentence_length,vao,0.75,0.8935,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,sentence_length,vao,0.90,0.9574,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+genia,T1,descriptive,row_entropy,absoluta,0.70,,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_entropy,absoluta,0.80,,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_entropy,absoluta,0.90,,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_entropy,absoluta,0.95,,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_entropy,vao,0.25,0.6806,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_entropy,vao,0.50,0.7870,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_entropy,vao,0.75,0.8935,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_entropy,vao,0.90,0.9574,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_max,absoluta,0.70,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_max,absoluta,0.80,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_max,absoluta,0.90,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_max,absoluta,0.95,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_max,vao,0.25,0.6806,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_max,vao,0.50,0.7870,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_max,vao,0.75,0.8935,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,row_max,vao,0.90,0.9574,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,emitted_mass,absoluta,0.70,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,emitted_mass,absoluta,0.80,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,emitted_mass,absoluta,0.90,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,emitted_mass,absoluta,0.95,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,emitted_mass,vao,0.25,0.6806,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,emitted_mass,vao,0.50,0.7870,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,emitted_mass,vao,0.75,0.8935,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,emitted_mass,vao,0.90,0.9574,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,hidden_norm,absoluta,0.70,,0.2872,sim,0.8881,0.1119,0.7,0.0534,0.0992,420,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_norm,absoluta,0.80,,0.5333,sim,0.9702,0.0298,0.8036,0.0163,0.032,112,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_norm,absoluta,0.90,,0.7682,sim,0.9782,0.0218,0.9024,0.0134,0.0265,82,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_norm,absoluta,0.95,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_norm,vao,0.25,0.6806,0.2422,sim,0.8705,0.1295,0.6811,0.0601,0.1105,486,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_norm,vao,0.50,0.7870,0.5009,sim,0.9683,0.0317,0.7899,0.0171,0.0334,119,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_norm,vao,0.75,0.8935,0.7682,sim,0.9782,0.0218,0.9024,0.0134,0.0265,82,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_norm,vao,0.90,0.9574,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_dist_centroide,absoluta,0.70,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_dist_centroide,absoluta,0.80,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_dist_centroide,absoluta,0.90,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_dist_centroide,absoluta,0.95,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_dist_centroide,vao,0.25,0.6806,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_dist_centroide,vao,0.50,0.7870,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_dist_centroide,vao,0.75,0.8935,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_dist_centroide,vao,0.90,0.9574,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_delta_camadas,absoluta,0.70,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_delta_camadas,absoluta,0.80,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_delta_camadas,absoluta,0.90,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_delta_camadas,absoluta,0.95,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_delta_camadas,vao,0.25,0.6806,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_delta_camadas,vao,0.50,0.7870,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_delta_camadas,vao,0.75,0.8935,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,hidden_delta_camadas,vao,0.90,0.9574,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_margin,absoluta,0.70,,0.2873,sim,0.5027,0.4973,0.7001,0.2374,0.3545,1867,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_margin,absoluta,0.80,,0.526,sim,0.781,0.219,0.8005,0.1195,0.208,822,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_margin,absoluta,0.90,,0.7666,sim,0.9403,0.0597,0.9018,0.0367,0.0705,224,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_margin,absoluta,0.95,,1.0,sim,0.9989,0.0011,1.0,0.0007,0.0015,4,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_margin,vao,0.25,0.6806,0.241,sim,0.4188,0.5812,0.6806,0.2697,0.3863,2182,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_margin,vao,0.50,0.7870,0.4945,sim,0.7621,0.2379,0.7872,0.1277,0.2197,893,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_margin,vao,0.75,0.8935,0.7525,sim,0.9361,0.0639,0.8958,0.039,0.0748,240,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_margin,vao,0.90,0.9574,1.0,sim,0.9989,0.0011,1.0,0.0007,0.0015,4,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_entropy,absoluta,0.70,,0.2883,sim,0.719,0.281,0.7005,0.1342,0.2253,1055,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_entropy,absoluta,0.80,,0.528,sim,0.9209,0.0791,0.8013,0.0432,0.082,297,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_entropy,absoluta,0.90,,,não,inalcançável,,,,,0,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_entropy,absoluta,0.95,,,não,inalcançável,,,,,0,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_entropy,vao,0.25,0.6806,0.2421,sim,0.6468,0.3532,0.681,0.164,0.2643,1326,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_entropy,vao,0.50,0.7870,0.4951,sim,0.9148,0.0852,0.7875,0.0458,0.0865,320,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_entropy,vao,0.75,0.8935,,não,inalcançável,,,,,0,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_entropy,vao,0.90,0.9574,,não,inalcançável,,,,,0,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_max,absoluta,0.70,,0.2876,sim,0.451,0.549,0.7001,0.2621,0.3814,2061,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_max,absoluta,0.80,,0.5253,sim,0.756,0.244,0.8002,0.1331,0.2283,916,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_max,absoluta,0.90,,0.7642,sim,0.9651,0.0349,0.9008,0.0214,0.0419,131,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_max,absoluta,0.95,,1.0,sim,0.9979,0.0021,1.0,0.0015,0.0029,8,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_max,vao,0.25,0.6806,0.2413,sim,0.3652,0.6348,0.6807,0.2946,0.4112,2383,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_max,vao,0.50,0.7870,0.4951,sim,0.7355,0.2645,0.7875,0.142,0.2407,993,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_max,vao,0.75,0.8935,0.7507,sim,0.9568,0.0432,0.8951,0.0263,0.0512,162,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,logit_max,vao,0.90,0.9574,1.0,sim,0.9979,0.0021,1.0,0.0015,0.0029,8,logits,empirico,,,,,,,,,,
+genia,T1,descriptive,span_mass,absoluta,0.70,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,span_mass,absoluta,0.80,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,span_mass,absoluta,0.90,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,span_mass,absoluta,0.95,,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,span_mass,vao,0.25,0.6806,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,span_mass,vao,0.50,0.7870,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,span_mass,vao,0.75,0.8935,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,span_mass,vao,0.90,0.9574,,não,inalcançável,,,,,0,atencao,exato,,,,,,,,,,
+genia,T1,descriptive,model_confidence,absoluta,0.70,,0.2876,sim,0.451,0.549,0.7001,0.2621,0.3814,2061,geometrico,—,,,,,,,,,,
+genia,T1,descriptive,model_confidence,absoluta,0.80,,0.5253,sim,0.756,0.244,0.8002,0.1331,0.2283,916,geometrico,—,,,,,,,,,,
+genia,T1,descriptive,model_confidence,absoluta,0.90,,0.7642,sim,0.9651,0.0349,0.9008,0.0214,0.0419,131,geometrico,—,,,,,,,,,,
+genia,T1,descriptive,model_confidence,absoluta,0.95,,1.0,sim,0.9979,0.0021,1.0,0.0015,0.0029,8,geometrico,—,,,,,,,,,,
+genia,T1,descriptive,model_confidence,vao,0.25,0.6806,0.2413,sim,0.3652,0.6348,0.6807,0.2946,0.4112,2383,geometrico,—,,,,,,,,,,
+genia,T1,descriptive,model_confidence,vao,0.50,0.7870,0.4951,sim,0.7355,0.2645,0.7875,0.142,0.2407,993,geometrico,—,,,,,,,,,,
+genia,T1,descriptive,model_confidence,vao,0.75,0.8935,0.7507,sim,0.9568,0.0432,0.8951,0.0263,0.0512,162,geometrico,—,,,,,,,,,,
+genia,T1,descriptive,model_confidence,vao,0.90,0.9574,1.0,sim,0.9979,0.0021,1.0,0.0015,0.0029,8,geometrico,—,,,,,,,,,,
+genia,T2,task_verdict,span_mass,absoluta,0.70,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.451,,,,3754,1205,0,0,inalcançável para span_mass
+genia,T2,task_verdict,span_mass,absoluta,0.80,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.756,,,,3754,1205,0,0,inalcançável para span_mass
+genia,T2,task_verdict,span_mass,absoluta,0.90,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9651,,,,3754,1205,0,0,inalcançável para span_mass
+genia,T2,task_verdict,span_mass,absoluta,0.95,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para span_mass
+genia,T2,task_verdict,span_mass,vao,0.25,0.6806,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.3652,,,,3754,1205,0,0,inalcançável para span_mass
+genia,T2,task_verdict,span_mass,vao,0.50,0.7870,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.7355,,,,3754,1205,0,0,inalcançável para span_mass
+genia,T2,task_verdict,span_mass,vao,0.75,0.8935,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9568,,,,3754,1205,0,0,inalcançável para span_mass
+genia,T2,task_verdict,span_mass,vao,0.90,0.9574,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para span_mass
+genia,T3,task_verdict,enrichment,absoluta,0.70,,,não,inalcançável,,,,,,geometrico,—,model_confidence,0.451,,,,3754,1205,0,0,inalcançável para enrichment
+genia,T3,task_verdict,enrichment,absoluta,0.80,,,não,inalcançável,,,,,,geometrico,—,model_confidence,0.756,,,,3754,1205,0,0,inalcançável para enrichment
+genia,T3,task_verdict,enrichment,absoluta,0.90,,,não,inalcançável,,,,,,geometrico,—,model_confidence,0.9651,,,,3754,1205,0,0,inalcançável para enrichment
+genia,T3,task_verdict,enrichment,absoluta,0.95,,,não,inalcançável,,,,,,geometrico,—,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para enrichment
+genia,T3,task_verdict,enrichment,vao,0.25,0.6806,,não,inalcançável,,,,,,geometrico,—,model_confidence,0.3652,,,,3754,1205,0,0,inalcançável para enrichment
+genia,T3,task_verdict,enrichment,vao,0.50,0.7870,,não,inalcançável,,,,,,geometrico,—,model_confidence,0.7355,,,,3754,1205,0,0,inalcançável para enrichment
+genia,T3,task_verdict,enrichment,vao,0.75,0.8935,,não,inalcançável,,,,,,geometrico,—,model_confidence,0.9568,,,,3754,1205,0,0,inalcançável para enrichment
+genia,T3,task_verdict,enrichment,vao,0.90,0.9574,,não,inalcançável,,,,,,geometrico,—,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para enrichment
+genia,T4,task_verdict,model_confidence+enrichment,absoluta,0.70,,,sim,0.4521,,,,,,geometrico,—,model_confidence,0.451,0.0011,-0.0117,0.0088,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,T4,task_verdict,model_confidence+enrichment,absoluta,0.80,,,sim,0.7549,,,,,,geometrico,—,model_confidence,0.756,-0.0011,-0.0278,0.0175,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,T4,task_verdict,model_confidence+enrichment,absoluta,0.90,,,sim,0.9963,,,,,,geometrico,—,model_confidence,0.9651,0.0312,-0.0252,0.0435,3754,1205,1992,8,NÃO DISTINGUE (IC contém zero)
+genia,T4,task_verdict,model_confidence+enrichment,absoluta,0.95,,,sim,0.9989,,,,,,geometrico,—,model_confidence,0.9979,0.0011,-0.0039,0.0218,3754,1205,1983,17,NÃO DISTINGUE (IC contém zero)
+genia,T4,task_verdict,model_confidence+enrichment,vao,0.25,0.6806,,sim,0.3636,,,,,,geometrico,—,model_confidence,0.3652,-0.0016,-0.0083,0.0071,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,T4,task_verdict,model_confidence+enrichment,vao,0.50,0.7870,,sim,0.7344,,,,,,geometrico,—,model_confidence,0.7355,-0.0011,-0.025,0.01,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,T4,task_verdict,model_confidence+enrichment,vao,0.75,0.8935,,sim,0.9963,,,,,,geometrico,—,model_confidence,0.9568,0.0394,-0.0279,0.0475,3754,1205,1992,8,NÃO DISTINGUE (IC contém zero)
+genia,T4,task_verdict,model_confidence+enrichment,vao,0.90,0.9574,,sim,0.9989,,,,,,geometrico,—,model_confidence,0.9979,0.0011,-0.0034,0.015,3754,1205,1982,18,NÃO DISTINGUE (IC contém zero)
+genia,S1,task_verdict,row_entropy,absoluta,0.70,,,sim,0.9997,,,,,,atencao,exato,model_confidence,0.451,0.5487,0.4356,0.636,3754,1205,1455,545,row_entropy EXIGE MAIS revisão
+genia,S1,task_verdict,row_entropy,absoluta,0.80,,,sim,0.9997,,,,,,atencao,exato,model_confidence,0.756,0.2437,0.1066,0.3045,3754,1205,1312,688,row_entropy EXIGE MAIS revisão
+genia,S1,task_verdict,row_entropy,absoluta,0.90,,,sim,0.9997,,,,,,atencao,exato,model_confidence,0.9651,0.0346,0.0008,0.0951,3754,1205,1283,717,row_entropy EXIGE MAIS revisão
+genia,S1,task_verdict,row_entropy,absoluta,0.95,,,sim,0.9997,,,,,,atencao,exato,model_confidence,0.9979,0.0019,0.0005,0.0341,3754,1205,1281,719,row_entropy EXIGE MAIS revisão
+genia,S1,task_verdict,row_entropy,vao,0.25,0.6806,,sim,0.9997,,,,,,atencao,exato,model_confidence,0.3652,0.6345,0.5091,0.7082,3754,1205,1488,512,row_entropy EXIGE MAIS revisão
+genia,S1,task_verdict,row_entropy,vao,0.50,0.7870,,sim,0.9997,,,,,,atencao,exato,model_confidence,0.7355,0.2643,0.1822,0.3391,3754,1205,1318,682,row_entropy EXIGE MAIS revisão
+genia,S1,task_verdict,row_entropy,vao,0.75,0.8935,,sim,0.9997,,,,,,atencao,exato,model_confidence,0.9568,0.0429,0.0008,0.0994,3754,1205,1283,717,row_entropy EXIGE MAIS revisão
+genia,S1,task_verdict,row_entropy,vao,0.90,0.9574,,sim,0.9997,,,,,,atencao,exato,model_confidence,0.9979,0.0019,0.0005,0.0249,3754,1205,1281,719,row_entropy EXIGE MAIS revisão
+genia,S2,task_verdict,row_max,absoluta,0.70,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.451,,,,3754,1205,0,0,inalcançável para row_max
+genia,S2,task_verdict,row_max,absoluta,0.80,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.756,,,,3754,1205,0,0,inalcançável para row_max
+genia,S2,task_verdict,row_max,absoluta,0.90,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9651,,,,3754,1205,0,0,inalcançável para row_max
+genia,S2,task_verdict,row_max,absoluta,0.95,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para row_max
+genia,S2,task_verdict,row_max,vao,0.25,0.6806,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.3652,,,,3754,1205,0,0,inalcançável para row_max
+genia,S2,task_verdict,row_max,vao,0.50,0.7870,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.7355,,,,3754,1205,0,0,inalcançável para row_max
+genia,S2,task_verdict,row_max,vao,0.75,0.8935,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9568,,,,3754,1205,0,0,inalcançável para row_max
+genia,S2,task_verdict,row_max,vao,0.90,0.9574,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para row_max
+genia,S3,task_verdict,emitted_mass,absoluta,0.70,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.451,,,,3754,1205,0,0,inalcançável para emitted_mass
+genia,S3,task_verdict,emitted_mass,absoluta,0.80,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.756,,,,3754,1205,0,0,inalcançável para emitted_mass
+genia,S3,task_verdict,emitted_mass,absoluta,0.90,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9651,,,,3754,1205,0,0,inalcançável para emitted_mass
+genia,S3,task_verdict,emitted_mass,absoluta,0.95,,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para emitted_mass
+genia,S3,task_verdict,emitted_mass,vao,0.25,0.6806,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.3652,,,,3754,1205,0,0,inalcançável para emitted_mass
+genia,S3,task_verdict,emitted_mass,vao,0.50,0.7870,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.7355,,,,3754,1205,0,0,inalcançável para emitted_mass
+genia,S3,task_verdict,emitted_mass,vao,0.75,0.8935,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9568,,,,3754,1205,0,0,inalcançável para emitted_mass
+genia,S3,task_verdict,emitted_mass,vao,0.90,0.9574,,não,inalcançável,,,,,,atencao,exato,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para emitted_mass
+genia,S4,task_verdict,hidden_norm,absoluta,0.70,,,sim,0.8881,,,,,,estados_ocultos,empirico,model_confidence,0.451,0.4371,0.3427,0.536,3754,1205,2000,0,hidden_norm EXIGE MAIS revisão
+genia,S4,task_verdict,hidden_norm,absoluta,0.80,,,sim,0.9702,,,,,,estados_ocultos,empirico,model_confidence,0.756,0.2142,0.0799,0.2709,3754,1205,2000,0,hidden_norm EXIGE MAIS revisão
+genia,S4,task_verdict,hidden_norm,absoluta,0.90,,,sim,0.9782,,,,,,estados_ocultos,empirico,model_confidence,0.9651,0.0131,-0.0223,0.0744,3754,1205,1679,321,NÃO DISTINGUE (IC contém zero)
+genia,S4,task_verdict,hidden_norm,absoluta,0.95,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para hidden_norm
+genia,S4,task_verdict,hidden_norm,vao,0.25,0.6806,,sim,0.8705,,,,,,estados_ocultos,empirico,model_confidence,0.3652,0.5053,0.4067,0.5913,3754,1205,2000,0,hidden_norm EXIGE MAIS revisão
+genia,S4,task_verdict,hidden_norm,vao,0.50,0.7870,,sim,0.9683,,,,,,estados_ocultos,empirico,model_confidence,0.7355,0.2328,0.1351,0.2959,3754,1205,2000,0,hidden_norm EXIGE MAIS revisão
+genia,S4,task_verdict,hidden_norm,vao,0.75,0.8935,,sim,0.9782,,,,,,estados_ocultos,empirico,model_confidence,0.9568,0.0213,-0.0221,0.0805,3754,1205,1742,258,NÃO DISTINGUE (IC contém zero)
+genia,S4,task_verdict,hidden_norm,vao,0.90,0.9574,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para hidden_norm
+genia,S5,task_verdict,hidden_dist_centroide,absoluta,0.70,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.451,,,,3754,1205,0,0,inalcançável para hidden_dist_centroide
+genia,S5,task_verdict,hidden_dist_centroide,absoluta,0.80,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.756,,,,3754,1205,0,0,inalcançável para hidden_dist_centroide
+genia,S5,task_verdict,hidden_dist_centroide,absoluta,0.90,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.9651,,,,3754,1205,0,0,inalcançável para hidden_dist_centroide
+genia,S5,task_verdict,hidden_dist_centroide,absoluta,0.95,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para hidden_dist_centroide
+genia,S5,task_verdict,hidden_dist_centroide,vao,0.25,0.6806,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.3652,,,,3754,1205,0,0,inalcançável para hidden_dist_centroide
+genia,S5,task_verdict,hidden_dist_centroide,vao,0.50,0.7870,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.7355,,,,3754,1205,0,0,inalcançável para hidden_dist_centroide
+genia,S5,task_verdict,hidden_dist_centroide,vao,0.75,0.8935,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.9568,,,,3754,1205,0,0,inalcançável para hidden_dist_centroide
+genia,S5,task_verdict,hidden_dist_centroide,vao,0.90,0.9574,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para hidden_dist_centroide
+genia,S6,task_verdict,hidden_delta_camadas,absoluta,0.70,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.451,,,,3754,1205,0,0,inalcançável para hidden_delta_camadas
+genia,S6,task_verdict,hidden_delta_camadas,absoluta,0.80,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.756,,,,3754,1205,0,0,inalcançável para hidden_delta_camadas
+genia,S6,task_verdict,hidden_delta_camadas,absoluta,0.90,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.9651,,,,3754,1205,0,0,inalcançável para hidden_delta_camadas
+genia,S6,task_verdict,hidden_delta_camadas,absoluta,0.95,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para hidden_delta_camadas
+genia,S6,task_verdict,hidden_delta_camadas,vao,0.25,0.6806,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.3652,,,,3754,1205,0,0,inalcançável para hidden_delta_camadas
+genia,S6,task_verdict,hidden_delta_camadas,vao,0.50,0.7870,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.7355,,,,3754,1205,0,0,inalcançável para hidden_delta_camadas
+genia,S6,task_verdict,hidden_delta_camadas,vao,0.75,0.8935,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.9568,,,,3754,1205,0,0,inalcançável para hidden_delta_camadas
+genia,S6,task_verdict,hidden_delta_camadas,vao,0.90,0.9574,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para hidden_delta_camadas
+genia,S7,task_verdict,logit_margin,absoluta,0.70,,,sim,0.5027,,,,,,logits,empirico,model_confidence,0.451,0.0517,-0.0078,0.0951,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,S7,task_verdict,logit_margin,absoluta,0.80,,,sim,0.781,,,,,,logits,empirico,model_confidence,0.756,0.025,-0.0607,0.057,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,S7,task_verdict,logit_margin,absoluta,0.90,,,sim,0.9403,,,,,,logits,empirico,model_confidence,0.9651,-0.0248,-0.0619,0.0223,3754,1205,1996,4,NÃO DISTINGUE (IC contém zero)
+genia,S7,task_verdict,logit_margin,absoluta,0.95,,,sim,0.9989,,,,,,logits,empirico,model_confidence,0.9979,0.0011,-0.0283,0.0113,3754,1205,1992,8,NÃO DISTINGUE (IC contém zero)
+genia,S7,task_verdict,logit_margin,vao,0.25,0.6806,,sim,0.4188,,,,,,logits,empirico,model_confidence,0.3652,0.0535,0.0029,0.0967,3754,1205,2000,0,logit_margin EXIGE MAIS revisão
+genia,S7,task_verdict,logit_margin,vao,0.50,0.7870,,sim,0.7621,,,,,,logits,empirico,model_confidence,0.7355,0.0266,-0.0534,0.0625,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,S7,task_verdict,logit_margin,vao,0.75,0.8935,,sim,0.9361,,,,,,logits,empirico,model_confidence,0.9568,-0.0208,-0.0629,0.0239,3754,1205,1999,1,NÃO DISTINGUE (IC contém zero)
+genia,S7,task_verdict,logit_margin,vao,0.90,0.9574,,sim,0.9989,,,,,,logits,empirico,model_confidence,0.9979,0.0011,-0.0192,0.0088,3754,1205,1989,11,NÃO DISTINGUE (IC contém zero)
+genia,S8,task_verdict,logit_entropy,absoluta,0.70,,,sim,0.719,,,,,,logits,empirico,model_confidence,0.451,0.268,0.1646,0.3377,3754,1205,2000,0,logit_entropy EXIGE MAIS revisão
+genia,S8,task_verdict,logit_entropy,absoluta,0.80,,,sim,0.9209,,,,,,logits,empirico,model_confidence,0.756,0.1649,0.042,0.2254,3754,1205,1901,99,logit_entropy EXIGE MAIS revisão
+genia,S8,task_verdict,logit_entropy,absoluta,0.90,,,não,inalcançável,,,,,,logits,empirico,model_confidence,0.9651,,,,3754,1205,0,0,inalcançável para logit_entropy
+genia,S8,task_verdict,logit_entropy,absoluta,0.95,,,não,inalcançável,,,,,,logits,empirico,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para logit_entropy
+genia,S8,task_verdict,logit_entropy,vao,0.25,0.6806,,sim,0.6468,,,,,,logits,empirico,model_confidence,0.3652,0.2816,0.1895,0.3688,3754,1205,2000,0,logit_entropy EXIGE MAIS revisão
+genia,S8,task_verdict,logit_entropy,vao,0.50,0.7870,,sim,0.9148,,,,,,logits,empirico,model_confidence,0.7355,0.1793,0.0667,0.2395,3754,1205,1951,49,logit_entropy EXIGE MAIS revisão
+genia,S8,task_verdict,logit_entropy,vao,0.75,0.8935,,não,inalcançável,,,,,,logits,empirico,model_confidence,0.9568,,,,3754,1205,0,0,inalcançável para logit_entropy
+genia,S8,task_verdict,logit_entropy,vao,0.90,0.9574,,não,inalcançável,,,,,,logits,empirico,model_confidence,0.9979,,,,3754,1205,0,0,inalcançável para logit_entropy
+genia,S9,task_verdict,logit_max,absoluta,0.70,,,sim,0.451,,,,,,logits,empirico,model_confidence,0.451,0.0,0.0,0.0,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,S9,task_verdict,logit_max,absoluta,0.80,,,sim,0.756,,,,,,logits,empirico,model_confidence,0.756,0.0,0.0,0.0,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,S9,task_verdict,logit_max,absoluta,0.90,,,sim,0.9651,,,,,,logits,empirico,model_confidence,0.9651,0.0,0.0,0.0,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,S9,task_verdict,logit_max,absoluta,0.95,,,sim,0.9979,,,,,,logits,empirico,model_confidence,0.9979,0.0,0.0,0.0,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,S9,task_verdict,logit_max,vao,0.25,0.6806,,sim,0.3652,,,,,,logits,empirico,model_confidence,0.3652,0.0,0.0,0.0,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,S9,task_verdict,logit_max,vao,0.50,0.7870,,sim,0.7355,,,,,,logits,empirico,model_confidence,0.7355,0.0,0.0,0.0,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,S9,task_verdict,logit_max,vao,0.75,0.8935,,sim,0.9568,,,,,,logits,empirico,model_confidence,0.9568,0.0,0.0,0.0,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,S9,task_verdict,logit_max,vao,0.90,0.9574,,sim,0.9979,,,,,,logits,empirico,model_confidence,0.9979,0.0,0.0,0.0,3754,1205,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T1,descriptive,(sem supervisor),—,—,,0.0,sim,0.0,1.0,0.5323,0.4805,0.5051,5099,geometrico,—,,,,,,,,,,
+conll2003,T1,descriptive,span_size,absoluta,0.70,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_size,absoluta,0.80,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_size,absoluta,0.90,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_size,absoluta,0.95,,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_size,vao,0.25,0.6517,0.2839,sim,0.8788,0.1212,0.665,0.0728,0.1312,618,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_size,vao,0.50,0.7678,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_size,vao,0.75,0.8839,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_size,vao,0.90,0.9536,,não,inalcançável,,,,,0,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,absoluta,0.70,,0.4518,sim,0.9924,0.0076,0.7436,0.0051,0.0102,39,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,absoluta,0.80,,0.5889,sim,0.9949,0.0051,0.8077,0.0037,0.0074,26,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,absoluta,0.90,,1.0,sim,0.9986,0.0014,1.0,0.0012,0.0025,7,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,absoluta,0.95,,1.0,sim,0.9986,0.0014,1.0,0.0012,0.0025,7,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,vao,0.25,0.6517,0.2775,sim,0.9576,0.0424,0.662,0.0253,0.0488,216,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,vao,0.50,0.7678,0.5172,sim,0.9939,0.0061,0.7742,0.0042,0.0085,31,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,vao,0.75,0.8839,1.0,sim,0.9986,0.0014,1.0,0.0012,0.0025,7,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,vao,0.90,0.9536,1.0,sim,0.9986,0.0014,1.0,0.0012,0.0025,7,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,sentence_length,absoluta,0.70,,0.3615,sim,0.9416,0.0584,0.7013,0.037,0.0703,298,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,sentence_length,absoluta,0.80,,0.5724,sim,0.9725,0.0275,0.8,0.0198,0.0387,140,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,sentence_length,absoluta,0.90,,0.7862,sim,0.9823,0.0177,0.9,0.0143,0.0282,90,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,sentence_length,absoluta,0.95,,1.0,sim,0.9865,0.0135,1.0,0.0122,0.0241,69,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,sentence_length,vao,0.25,0.6517,0.2886,sim,0.8868,0.1132,0.6672,0.0682,0.1237,577,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,sentence_length,vao,0.50,0.7678,0.5492,sim,0.9674,0.0326,0.7892,0.0232,0.0451,166,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,sentence_length,vao,0.75,0.8839,0.7862,sim,0.9823,0.0177,0.9,0.0143,0.0282,90,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,sentence_length,vao,0.90,0.9536,1.0,sim,0.9865,0.0135,1.0,0.0122,0.0241,69,geometrico,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_entropy,absoluta,0.70,,0.3696,sim,0.9847,0.0153,0.7051,0.0097,0.0192,78,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_entropy,absoluta,0.80,,0.5889,sim,0.9949,0.0051,0.8077,0.0037,0.0074,26,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_entropy,absoluta,0.90,,0.8141,sim,0.9955,0.0045,0.913,0.0037,0.0074,23,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_entropy,absoluta,0.95,,0.8982,sim,0.9959,0.0041,0.9524,0.0035,0.0071,21,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_entropy,vao,0.25,0.6517,0.2564,sim,0.982,0.018,0.6522,0.0106,0.0209,92,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_entropy,vao,0.50,0.7678,0.5201,sim,0.9904,0.0096,0.7755,0.0067,0.0133,49,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_entropy,vao,0.75,0.8839,0.8141,sim,0.9955,0.0045,0.913,0.0037,0.0074,23,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_entropy,vao,0.90,0.9536,1.0,sim,0.9965,0.0035,1.0,0.0032,0.0064,18,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_max,absoluta,0.70,,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_max,absoluta,0.80,,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_max,absoluta,0.90,,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_max,absoluta,0.95,,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_max,vao,0.25,0.6517,0.2874,sim,0.9965,0.0035,0.6667,0.0021,0.0042,18,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_max,vao,0.50,0.7678,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_max,vao,0.75,0.8839,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,row_max,vao,0.90,0.9536,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,emitted_mass,absoluta,0.70,,0.4655,sim,0.9992,0.0008,0.75,0.0005,0.0011,4,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,emitted_mass,absoluta,0.80,,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,emitted_mass,absoluta,0.90,,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,emitted_mass,absoluta,0.95,,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,emitted_mass,vao,0.25,0.6517,0.4655,sim,0.9992,0.0008,0.75,0.0005,0.0011,4,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,emitted_mass,vao,0.50,0.7678,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,emitted_mass,vao,0.75,0.8839,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,emitted_mass,vao,0.90,0.9536,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,hidden_norm,absoluta,0.70,,0.3611,sim,0.9829,0.0171,0.7011,0.0108,0.0213,87,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_norm,absoluta,0.80,,0.5913,sim,0.9867,0.0133,0.8088,0.0097,0.0192,68,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_norm,absoluta,0.90,,0.7964,sim,0.9918,0.0082,0.9048,0.0067,0.0134,42,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_norm,absoluta,0.95,,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_norm,vao,0.25,0.6517,0.2554,sim,0.3259,0.6741,0.6517,0.3966,0.4931,3437,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_norm,vao,0.50,0.7678,0.5182,sim,0.9861,0.0139,0.7746,0.0097,0.0192,71,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_norm,vao,0.75,0.8839,0.7625,sim,0.9912,0.0088,0.8889,0.0071,0.0141,45,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_norm,vao,0.90,0.9536,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_dist_centroide,absoluta,0.70,,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_dist_centroide,absoluta,0.80,,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_dist_centroide,absoluta,0.90,,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_dist_centroide,absoluta,0.95,,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_dist_centroide,vao,0.25,0.6517,0.2874,sim,0.9994,0.0006,0.6667,0.0004,0.0007,3,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_dist_centroide,vao,0.50,0.7678,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_dist_centroide,vao,0.75,0.8839,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_dist_centroide,vao,0.90,0.9536,1.0,sim,0.9996,0.0004,1.0,0.0004,0.0007,2,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_delta_camadas,absoluta,0.70,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_delta_camadas,absoluta,0.80,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_delta_camadas,absoluta,0.90,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_delta_camadas,absoluta,0.95,,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_delta_camadas,vao,0.25,0.6517,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_delta_camadas,vao,0.50,0.7678,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_delta_camadas,vao,0.75,0.8839,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,hidden_delta_camadas,vao,0.90,0.9536,,não,inalcançável,,,,,0,estados_ocultos,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_margin,absoluta,0.70,,0.3589,sim,0.3316,0.6684,0.7001,0.4225,0.5269,3408,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_margin,absoluta,0.80,,0.5726,sim,0.4958,0.5042,0.8001,0.3642,0.5005,2571,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_margin,absoluta,0.90,,0.7862,sim,0.7411,0.2589,0.9,0.2103,0.341,1320,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_margin,absoluta,0.95,,1.0,sim,0.9982,0.0018,1.0,0.0016,0.0032,9,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_margin,vao,0.25,0.6517,0.2557,sim,0.2536,0.7464,0.6519,0.4393,0.5249,3806,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_margin,vao,0.50,0.7678,0.5039,sim,0.4489,0.5511,0.768,0.3821,0.5103,2810,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_margin,vao,0.75,0.8839,0.7524,sim,0.6799,0.3201,0.8842,0.2555,0.3964,1632,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_margin,vao,0.90,0.9536,1.0,sim,0.9982,0.0018,1.0,0.0016,0.0032,9,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_entropy,absoluta,0.70,,0.359,sim,0.374,0.626,0.7002,0.3957,0.5057,3192,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_entropy,absoluta,0.80,,0.5724,sim,0.5519,0.4481,0.8,0.3237,0.4609,2285,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_entropy,absoluta,0.90,,0.7865,sim,0.8586,0.1414,0.9001,0.1149,0.2038,721,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_entropy,absoluta,0.95,,0.9018,sim,0.9616,0.0384,0.9541,0.0331,0.064,196,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_entropy,vao,0.25,0.6517,0.2554,sim,0.2871,0.7129,0.6517,0.4194,0.5104,3635,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_entropy,vao,0.50,0.7678,0.5039,sim,0.487,0.513,0.768,0.3557,0.4862,2616,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_entropy,vao,0.75,0.8839,0.7535,sim,0.818,0.182,0.8847,0.1454,0.2497,928,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_entropy,vao,0.90,0.9536,0.9018,sim,0.9616,0.0384,0.9541,0.0331,0.064,196,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_max,absoluta,0.70,,0.359,sim,0.323,0.677,0.7002,0.4279,0.5312,3452,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_max,absoluta,0.80,,0.5724,sim,0.5607,0.4393,0.8,0.3173,0.4544,2240,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_max,absoluta,0.90,,0.7871,sim,0.7715,0.2285,0.9004,0.1857,0.3079,1165,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_max,absoluta,0.95,,0.907,sim,0.991,0.009,0.9565,0.0078,0.0155,46,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_max,vao,0.25,0.6517,0.2555,sim,0.2267,0.7733,0.6518,0.455,0.5359,3943,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_max,vao,0.50,0.7678,0.5036,sim,0.4848,0.5152,0.7678,0.3571,0.4875,2627,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_max,vao,0.75,0.8839,0.7523,sim,0.7343,0.2657,0.8841,0.2121,0.3421,1355,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,logit_max,vao,0.90,0.9536,0.907,sim,0.991,0.009,0.9565,0.0078,0.0155,46,logits,empirico,,,,,,,,,,
+conll2003,T1,descriptive,span_mass,absoluta,0.70,,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_mass,absoluta,0.80,,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_mass,absoluta,0.90,,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_mass,absoluta,0.95,,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_mass,vao,0.25,0.6517,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_mass,vao,0.50,0.7678,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_mass,vao,0.75,0.8839,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,span_mass,vao,0.90,0.9536,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,atencao,exato,,,,,,,,,,
+conll2003,T1,descriptive,model_confidence,absoluta,0.70,,0.359,sim,0.323,0.677,0.7002,0.4279,0.5312,3452,geometrico,—,,,,,,,,,,
+conll2003,T1,descriptive,model_confidence,absoluta,0.80,,0.5724,sim,0.5607,0.4393,0.8,0.3173,0.4544,2240,geometrico,—,,,,,,,,,,
+conll2003,T1,descriptive,model_confidence,absoluta,0.90,,0.7871,sim,0.7715,0.2285,0.9004,0.1857,0.3079,1165,geometrico,—,,,,,,,,,,
+conll2003,T1,descriptive,model_confidence,absoluta,0.95,,0.907,sim,0.991,0.009,0.9565,0.0078,0.0155,46,geometrico,—,,,,,,,,,,
+conll2003,T1,descriptive,model_confidence,vao,0.25,0.6517,0.2555,sim,0.2267,0.7733,0.6518,0.455,0.5359,3943,geometrico,—,,,,,,,,,,
+conll2003,T1,descriptive,model_confidence,vao,0.50,0.7678,0.5036,sim,0.4848,0.5152,0.7678,0.3571,0.4875,2627,geometrico,—,,,,,,,,,,
+conll2003,T1,descriptive,model_confidence,vao,0.75,0.8839,0.7523,sim,0.7343,0.2657,0.8841,0.2121,0.3421,1355,geometrico,—,,,,,,,,,,
+conll2003,T1,descriptive,model_confidence,vao,0.90,0.9536,0.907,sim,0.991,0.009,0.9565,0.0078,0.0155,46,geometrico,—,,,,,,,,,,
+conll2003,T2,task_verdict,span_mass,absoluta,0.70,,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.323,0.6768,0.6287,0.7277,5099,2223,1314,686,span_mass EXIGE MAIS revisão
+conll2003,T2,task_verdict,span_mass,absoluta,0.80,,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.5607,0.4391,0.3944,0.4804,5099,2223,1313,687,span_mass EXIGE MAIS revisão
+conll2003,T2,task_verdict,span_mass,absoluta,0.90,,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.7715,0.2283,0.1739,0.275,5099,2223,1312,688,span_mass EXIGE MAIS revisão
+conll2003,T2,task_verdict,span_mass,absoluta,0.95,,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.991,0.0088,0.0039,0.1193,5099,2223,1312,688,span_mass EXIGE MAIS revisão
+conll2003,T2,task_verdict,span_mass,vao,0.25,0.6517,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.2267,0.7731,0.7349,0.8151,5099,2223,1320,680,span_mass EXIGE MAIS revisão
+conll2003,T2,task_verdict,span_mass,vao,0.50,0.7678,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.4848,0.515,0.4556,0.5683,5099,2223,1313,687,span_mass EXIGE MAIS revisão
+conll2003,T2,task_verdict,span_mass,vao,0.75,0.8839,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.7343,0.2655,0.2208,0.3047,5099,2223,1312,688,span_mass EXIGE MAIS revisão
+conll2003,T2,task_verdict,span_mass,vao,0.90,0.9536,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.991,0.0088,0.0038,0.1065,5099,2223,1312,688,span_mass EXIGE MAIS revisão
+conll2003,T3,task_verdict,enrichment,absoluta,0.70,,,sim,0.9196,,,,,,geometrico,—,model_confidence,0.323,0.5966,0.5476,0.6441,5099,2223,2000,0,enrichment EXIGE MAIS revisão
+conll2003,T3,task_verdict,enrichment,absoluta,0.80,,,sim,0.9584,,,,,,geometrico,—,model_confidence,0.5607,0.3977,0.3514,0.4392,5099,2223,2000,0,enrichment EXIGE MAIS revisão
+conll2003,T3,task_verdict,enrichment,absoluta,0.90,,,sim,0.9916,,,,,,geometrico,—,model_confidence,0.7715,0.22,0.1612,0.2662,5099,2223,2000,0,enrichment EXIGE MAIS revisão
+conll2003,T3,task_verdict,enrichment,absoluta,0.95,,,sim,0.9947,,,,,,geometrico,—,model_confidence,0.991,0.0037,-0.0037,0.1109,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T3,task_verdict,enrichment,vao,0.25,0.6517,,sim,0.8812,,,,,,geometrico,—,model_confidence,0.2267,0.6544,0.6188,0.6986,5099,2223,2000,0,enrichment EXIGE MAIS revisão
+conll2003,T3,task_verdict,enrichment,vao,0.50,0.7678,,sim,0.9482,,,,,,geometrico,—,model_confidence,0.4848,0.4634,0.4024,0.5145,5099,2223,2000,0,enrichment EXIGE MAIS revisão
+conll2003,T3,task_verdict,enrichment,vao,0.75,0.8839,,sim,0.991,,,,,,geometrico,—,model_confidence,0.7343,0.2567,0.2035,0.2942,5099,2223,2000,0,enrichment EXIGE MAIS revisão
+conll2003,T3,task_verdict,enrichment,vao,0.90,0.9536,,sim,0.9947,,,,,,geometrico,—,model_confidence,0.991,0.0037,-0.0039,0.0978,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,absoluta,0.70,,,sim,0.325,,,,,,geometrico,—,model_confidence,0.323,0.002,-0.0037,0.0051,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,absoluta,0.80,,,sim,0.5485,,,,,,geometrico,—,model_confidence,0.5607,-0.0122,-0.0275,0.0006,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,absoluta,0.90,,,sim,0.7909,,,,,,geometrico,—,model_confidence,0.7715,0.0194,-0.0232,0.1209,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,absoluta,0.95,,,sim,0.9747,,,,,,geometrico,—,model_confidence,0.991,-0.0163,-0.0523,0.0755,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,vao,0.25,0.6517,,sim,0.2261,,,,,,geometrico,—,model_confidence,0.2267,-0.0006,-0.002,0.0022,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,vao,0.50,0.7678,,sim,0.4848,,,,,,geometrico,—,model_confidence,0.4848,0.0,-0.022,0.007,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,vao,0.75,0.8839,,sim,0.7225,,,,,,geometrico,—,model_confidence,0.7343,-0.0118,-0.0367,0.0526,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,vao,0.90,0.9536,,sim,0.9755,,,,,,geometrico,—,model_confidence,0.991,-0.0155,-0.0476,0.0637,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S1,task_verdict,row_entropy,absoluta,0.70,,,sim,0.9847,,,,,,atencao,exato,model_confidence,0.323,0.6617,0.6153,0.7092,5099,2223,1983,17,row_entropy EXIGE MAIS revisão
+conll2003,S1,task_verdict,row_entropy,absoluta,0.80,,,sim,0.9949,,,,,,atencao,exato,model_confidence,0.5607,0.4342,0.3861,0.4715,5099,2223,1982,18,row_entropy EXIGE MAIS revisão
+conll2003,S1,task_verdict,row_entropy,absoluta,0.90,,,sim,0.9955,,,,,,atencao,exato,model_confidence,0.7715,0.224,0.1682,0.2708,5099,2223,1982,18,row_entropy EXIGE MAIS revisão
+conll2003,S1,task_verdict,row_entropy,absoluta,0.95,,,sim,0.9959,,,,,,atencao,exato,model_confidence,0.991,0.0049,-0.0014,0.1129,5099,2223,1982,18,NÃO DISTINGUE (IC contém zero)
+conll2003,S1,task_verdict,row_entropy,vao,0.25,0.6517,,sim,0.982,,,,,,atencao,exato,model_confidence,0.2267,0.7552,0.7156,0.7937,5099,2223,1983,17,row_entropy EXIGE MAIS revisão
+conll2003,S1,task_verdict,row_entropy,vao,0.50,0.7678,,sim,0.9904,,,,,,atencao,exato,model_confidence,0.4848,0.5056,0.4456,0.5542,5099,2223,1982,18,row_entropy EXIGE MAIS revisão
+conll2003,S1,task_verdict,row_entropy,vao,0.75,0.8839,,sim,0.9955,,,,,,atencao,exato,model_confidence,0.7343,0.2612,0.2155,0.2989,5099,2223,1982,18,row_entropy EXIGE MAIS revisão
+conll2003,S1,task_verdict,row_entropy,vao,0.90,0.9536,,sim,0.9965,,,,,,atencao,exato,model_confidence,0.991,0.0055,-0.0016,0.0998,5099,2223,1982,18,NÃO DISTINGUE (IC contém zero)
+conll2003,S2,task_verdict,row_max,absoluta,0.70,,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.323,0.6768,0.6288,0.7268,5099,2223,1525,475,row_max EXIGE MAIS revisão
+conll2003,S2,task_verdict,row_max,absoluta,0.80,,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.5607,0.4391,0.3929,0.4806,5099,2223,1390,610,row_max EXIGE MAIS revisão
+conll2003,S2,task_verdict,row_max,absoluta,0.90,,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.7715,0.2283,0.1734,0.2747,5099,2223,1318,682,row_max EXIGE MAIS revisão
+conll2003,S2,task_verdict,row_max,absoluta,0.95,,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.991,0.0088,0.0039,0.116,5099,2223,1317,683,row_max EXIGE MAIS revisão
+conll2003,S2,task_verdict,row_max,vao,0.25,0.6517,,sim,0.9965,,,,,,atencao,exato,model_confidence,0.2267,0.7698,0.7338,0.8127,5099,2223,1616,384,row_max EXIGE MAIS revisão
+conll2003,S2,task_verdict,row_max,vao,0.50,0.7678,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.4848,0.515,0.455,0.5679,5099,2223,1416,584,row_max EXIGE MAIS revisão
+conll2003,S2,task_verdict,row_max,vao,0.75,0.8839,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.7343,0.2655,0.2199,0.3042,5099,2223,1322,678,row_max EXIGE MAIS revisão
+conll2003,S2,task_verdict,row_max,vao,0.90,0.9536,,sim,0.9998,,,,,,atencao,exato,model_confidence,0.991,0.0088,0.0038,0.104,5099,2223,1317,683,row_max EXIGE MAIS revisão
+conll2003,S3,task_verdict,emitted_mass,absoluta,0.70,,,sim,0.9992,,,,,,atencao,exato,model_confidence,0.323,0.6762,0.6268,0.7282,5099,2223,1797,203,emitted_mass EXIGE MAIS revisão
+conll2003,S3,task_verdict,emitted_mass,absoluta,0.80,,,sim,0.9996,,,,,,atencao,exato,model_confidence,0.5607,0.4389,0.3948,0.4808,5099,2223,1786,214,emitted_mass EXIGE MAIS revisão
+conll2003,S3,task_verdict,emitted_mass,absoluta,0.90,,,sim,0.9996,,,,,,atencao,exato,model_confidence,0.7715,0.2281,0.1734,0.2745,5099,2223,1781,219,emitted_mass EXIGE MAIS revisão
+conll2003,S3,task_verdict,emitted_mass,absoluta,0.95,,,sim,0.9996,,,,,,atencao,exato,model_confidence,0.991,0.0086,0.0037,0.1167,5099,2223,1781,219,emitted_mass EXIGE MAIS revisão
+conll2003,S3,task_verdict,emitted_mass,vao,0.25,0.6517,,sim,0.9992,,,,,,atencao,exato,model_confidence,0.2267,0.7725,0.733,0.8157,5099,2223,1817,183,emitted_mass EXIGE MAIS revisão
+conll2003,S3,task_verdict,emitted_mass,vao,0.50,0.7678,,sim,0.9996,,,,,,atencao,exato,model_confidence,0.4848,0.5148,0.4551,0.5682,5099,2223,1786,214,emitted_mass EXIGE MAIS revisão
+conll2003,S3,task_verdict,emitted_mass,vao,0.75,0.8839,,sim,0.9996,,,,,,atencao,exato,model_confidence,0.7343,0.2653,0.2199,0.3042,5099,2223,1781,219,emitted_mass EXIGE MAIS revisão
+conll2003,S3,task_verdict,emitted_mass,vao,0.90,0.9536,,sim,0.9996,,,,,,atencao,exato,model_confidence,0.991,0.0086,0.0036,0.104,5099,2223,1781,219,emitted_mass EXIGE MAIS revisão
+conll2003,S4,task_verdict,hidden_norm,absoluta,0.70,,,sim,0.9829,,,,,,estados_ocultos,empirico,model_confidence,0.323,0.6599,0.6053,0.7101,5099,2223,2000,0,hidden_norm EXIGE MAIS revisão
+conll2003,S4,task_verdict,hidden_norm,absoluta,0.80,,,sim,0.9867,,,,,,estados_ocultos,empirico,model_confidence,0.5607,0.426,0.3823,0.4689,5099,2223,2000,0,hidden_norm EXIGE MAIS revisão
+conll2003,S4,task_verdict,hidden_norm,absoluta,0.90,,,sim,0.9918,,,,,,estados_ocultos,empirico,model_confidence,0.7715,0.2202,0.1659,0.2673,5099,2223,1969,31,hidden_norm EXIGE MAIS revisão
+conll2003,S4,task_verdict,hidden_norm,absoluta,0.95,,,sim,0.9996,,,,,,estados_ocultos,empirico,model_confidence,0.991,0.0086,-0.003,0.1129,5099,2223,1863,137,NÃO DISTINGUE (IC contém zero)
+conll2003,S4,task_verdict,hidden_norm,vao,0.25,0.6517,,sim,0.3259,,,,,,estados_ocultos,empirico,model_confidence,0.2267,0.0992,0.031,0.1809,5099,2223,2000,0,hidden_norm EXIGE MAIS revisão
+conll2003,S4,task_verdict,hidden_norm,vao,0.50,0.7678,,sim,0.9861,,,,,,estados_ocultos,empirico,model_confidence,0.4848,0.5013,0.4412,0.555,5099,2223,2000,0,hidden_norm EXIGE MAIS revisão
+conll2003,S4,task_verdict,hidden_norm,vao,0.75,0.8839,,sim,0.9912,,,,,,estados_ocultos,empirico,model_confidence,0.7343,0.2569,0.213,0.2961,5099,2223,1982,18,hidden_norm EXIGE MAIS revisão
+conll2003,S4,task_verdict,hidden_norm,vao,0.90,0.9536,,sim,0.9996,,,,,,estados_ocultos,empirico,model_confidence,0.991,0.0086,-0.003,0.0989,5099,2223,1855,145,NÃO DISTINGUE (IC contém zero)
+conll2003,S5,task_verdict,hidden_dist_centroide,absoluta,0.70,,,sim,0.9996,,,,,,estados_ocultos,empirico,model_confidence,0.323,0.6766,0.6262,0.7292,5099,2223,1728,272,hidden_dist_centroide EXIGE MAIS revisão
+conll2003,S5,task_verdict,hidden_dist_centroide,absoluta,0.80,,,sim,0.9996,,,,,,estados_ocultos,empirico,model_confidence,0.5607,0.4389,0.3939,0.4807,5099,2223,1728,272,hidden_dist_centroide EXIGE MAIS revisão
+conll2003,S5,task_verdict,hidden_dist_centroide,absoluta,0.90,,,sim,0.9996,,,,,,estados_ocultos,empirico,model_confidence,0.7715,0.2281,0.1731,0.2745,5099,2223,1727,273,hidden_dist_centroide EXIGE MAIS revisão
+conll2003,S5,task_verdict,hidden_dist_centroide,absoluta,0.95,,,sim,0.9996,,,,,,estados_ocultos,empirico,model_confidence,0.991,0.0086,0.0038,0.117,5099,2223,1727,273,hidden_dist_centroide EXIGE MAIS revisão
+conll2003,S5,task_verdict,hidden_dist_centroide,vao,0.25,0.6517,,sim,0.9994,,,,,,estados_ocultos,empirico,model_confidence,0.2267,0.7727,0.7318,0.816,5099,2223,1731,269,hidden_dist_centroide EXIGE MAIS revisão
+conll2003,S5,task_verdict,hidden_dist_centroide,vao,0.50,0.7678,,sim,0.9996,,,,,,estados_ocultos,empirico,model_confidence,0.4848,0.5148,0.4545,0.5698,5099,2223,1728,272,hidden_dist_centroide EXIGE MAIS revisão
+conll2003,S5,task_verdict,hidden_dist_centroide,vao,0.75,0.8839,,sim,0.9996,,,,,,estados_ocultos,empirico,model_confidence,0.7343,0.2653,0.2203,0.3043,5099,2223,1727,273,hidden_dist_centroide EXIGE MAIS revisão
+conll2003,S5,task_verdict,hidden_dist_centroide,vao,0.90,0.9536,,sim,0.9996,,,,,,estados_ocultos,empirico,model_confidence,0.991,0.0086,0.0037,0.1043,5099,2223,1727,273,hidden_dist_centroide EXIGE MAIS revisão
+conll2003,S6,task_verdict,hidden_delta_camadas,absoluta,0.70,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.323,,,,5099,2223,0,0,inalcançável para hidden_delta_camadas
+conll2003,S6,task_verdict,hidden_delta_camadas,absoluta,0.80,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.5607,,,,5099,2223,0,0,inalcançável para hidden_delta_camadas
+conll2003,S6,task_verdict,hidden_delta_camadas,absoluta,0.90,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.7715,,,,5099,2223,0,0,inalcançável para hidden_delta_camadas
+conll2003,S6,task_verdict,hidden_delta_camadas,absoluta,0.95,,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.991,,,,5099,2223,0,0,inalcançável para hidden_delta_camadas
+conll2003,S6,task_verdict,hidden_delta_camadas,vao,0.25,0.6517,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.2267,,,,5099,2223,0,0,inalcançável para hidden_delta_camadas
+conll2003,S6,task_verdict,hidden_delta_camadas,vao,0.50,0.7678,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.4848,,,,5099,2223,0,0,inalcançável para hidden_delta_camadas
+conll2003,S6,task_verdict,hidden_delta_camadas,vao,0.75,0.8839,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.7343,,,,5099,2223,0,0,inalcançável para hidden_delta_camadas
+conll2003,S6,task_verdict,hidden_delta_camadas,vao,0.90,0.9536,,não,inalcançável,,,,,,estados_ocultos,empirico,model_confidence,0.991,,,,5099,2223,0,0,inalcançável para hidden_delta_camadas
+conll2003,S7,task_verdict,logit_margin,absoluta,0.70,,,sim,0.3316,,,,,,logits,empirico,model_confidence,0.323,0.0086,-0.0077,0.0264,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S7,task_verdict,logit_margin,absoluta,0.80,,,sim,0.4958,,,,,,logits,empirico,model_confidence,0.5607,-0.0649,-0.0912,-0.0441,5099,2223,2000,0,logit_margin EXIGE MENOS revisão
+conll2003,S7,task_verdict,logit_margin,absoluta,0.90,,,sim,0.7411,,,,,,logits,empirico,model_confidence,0.7715,-0.0304,-0.0871,0.0074,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S7,task_verdict,logit_margin,absoluta,0.95,,,sim,0.9982,,,,,,logits,empirico,model_confidence,0.991,0.0073,-0.0474,0.0903,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S7,task_verdict,logit_margin,vao,0.25,0.6517,,sim,0.2536,,,,,,logits,empirico,model_confidence,0.2267,0.0269,0.016,0.0383,5099,2223,2000,0,logit_margin EXIGE MAIS revisão
+conll2003,S7,task_verdict,logit_margin,vao,0.50,0.7678,,sim,0.4489,,,,,,logits,empirico,model_confidence,0.4848,-0.0359,-0.0721,-0.0148,5099,2223,2000,0,logit_margin EXIGE MENOS revisão
+conll2003,S7,task_verdict,logit_margin,vao,0.75,0.8839,,sim,0.6799,,,,,,logits,empirico,model_confidence,0.7343,-0.0543,-0.0957,-0.0028,5099,2223,2000,0,logit_margin EXIGE MENOS revisão
+conll2003,S7,task_verdict,logit_margin,vao,0.90,0.9536,,sim,0.9982,,,,,,logits,empirico,model_confidence,0.991,0.0073,-0.0282,0.0769,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S8,task_verdict,logit_entropy,absoluta,0.70,,,sim,0.374,,,,,,logits,empirico,model_confidence,0.323,0.051,0.0289,0.0747,5099,2223,2000,0,logit_entropy EXIGE MAIS revisão
+conll2003,S8,task_verdict,logit_entropy,absoluta,0.80,,,sim,0.5519,,,,,,logits,empirico,model_confidence,0.5607,-0.0088,-0.0455,0.0256,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S8,task_verdict,logit_entropy,absoluta,0.90,,,sim,0.8586,,,,,,logits,empirico,model_confidence,0.7715,0.0871,0.0173,0.1643,5099,2223,2000,0,logit_entropy EXIGE MAIS revisão
+conll2003,S8,task_verdict,logit_entropy,absoluta,0.95,,,sim,0.9616,,,,,,logits,empirico,model_confidence,0.991,-0.0294,-0.0693,0.0757,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S8,task_verdict,logit_entropy,vao,0.25,0.6517,,sim,0.2871,,,,,,logits,empirico,model_confidence,0.2267,0.0604,0.0454,0.0795,5099,2223,2000,0,logit_entropy EXIGE MAIS revisão
+conll2003,S8,task_verdict,logit_entropy,vao,0.50,0.7678,,sim,0.487,,,,,,logits,empirico,model_confidence,0.4848,0.0022,-0.0377,0.0331,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S8,task_verdict,logit_entropy,vao,0.75,0.8839,,sim,0.818,,,,,,logits,empirico,model_confidence,0.7343,0.0837,0.0006,0.1579,5099,2223,2000,0,logit_entropy EXIGE MAIS revisão
+conll2003,S8,task_verdict,logit_entropy,vao,0.90,0.9536,,sim,0.9616,,,,,,logits,empirico,model_confidence,0.991,-0.0294,-0.0666,0.0599,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S9,task_verdict,logit_max,absoluta,0.70,,,sim,0.323,,,,,,logits,empirico,model_confidence,0.323,0.0,0.0,0.0,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S9,task_verdict,logit_max,absoluta,0.80,,,sim,0.5607,,,,,,logits,empirico,model_confidence,0.5607,0.0,0.0,0.0,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S9,task_verdict,logit_max,absoluta,0.90,,,sim,0.7715,,,,,,logits,empirico,model_confidence,0.7715,0.0,0.0,0.0,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S9,task_verdict,logit_max,absoluta,0.95,,,sim,0.991,,,,,,logits,empirico,model_confidence,0.991,0.0,0.0,0.0,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S9,task_verdict,logit_max,vao,0.25,0.6517,,sim,0.2267,,,,,,logits,empirico,model_confidence,0.2267,0.0,0.0,0.0,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S9,task_verdict,logit_max,vao,0.50,0.7678,,sim,0.4848,,,,,,logits,empirico,model_confidence,0.4848,0.0,0.0,0.0,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S9,task_verdict,logit_max,vao,0.75,0.8839,,sim,0.7343,,,,,,logits,empirico,model_confidence,0.7343,0.0,0.0,0.0,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,S9,task_verdict,logit_max,vao,0.90,0.9536,,sim,0.991,,,,,,logits,empirico,model_confidence,0.991,0.0,0.0,0.0,5099,2223,2000,0,NÃO DISTINGUE (IC contém zero)

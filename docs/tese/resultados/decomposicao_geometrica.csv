@@ -1,0 +1,15 @@
+corpus,escore,descricao,n,aurc,acaso,melhor_que_acaso,corr_erro
+genia,k,"tamanho do span, maior primeiro",4932,0.4203,0.4941,sim,-0.1687
+genia,T,"comprimento da sentença, maior primeiro",4932,0.4894,0.4941,sim,-0.0109
+genia,1/T,"comprimento da sentença, menor primeiro",4932,0.4928,0.4941,sim,0.0109
+genia,k/T,fração geométrica,4932,0.4239,0.4941,sim,-0.149
+genia,massa,massa de atenção declarada,4932,0.4196,0.4941,sim,-0.1562
+genia,enriquecimento,massa / esperado sob o nulo,4932,0.5387,0.4941,NÃO,0.0822
+genia,confianca,confiança do modelo,4932,0.3301,0.4941,sim,-0.3397
+conll2003,k,"tamanho do span, maior primeiro",8469,0.4605,0.5169,sim,-0.1165
+conll2003,T,"comprimento da sentença, maior primeiro",8469,0.4414,0.5169,sim,-0.1471
+conll2003,1/T,"comprimento da sentença, menor primeiro",8469,0.5721,0.5169,NÃO,0.1471
+conll2003,k/T,fração geométrica,8469,0.53,0.5169,NÃO,0.0309
+conll2003,massa,massa de atenção declarada,8469,0.5341,0.5169,NÃO,0.0365
+conll2003,enriquecimento,massa / esperado sob o nulo,8469,0.5128,0.5169,sim,-0.0128
+conll2003,confianca,confiança do modelo,8469,0.2425,0.5169,sim,-0.5669

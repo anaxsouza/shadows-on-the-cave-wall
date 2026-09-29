@@ -1,0 +1,8 @@
+corpus,teste,n_avaliacao,comparacao,aurc_a,aurc_b,delta,ic_baixo,ic_alto,contem_zero,veredito
+GENIA,piso,4038,massa vs abstenção aleatória,0.4809,0.439,-0.0419,-0.0575,-0.0267,não,massa ordena melhor que o acaso — CRITÉRIO ATENDIDO
+CoNLL-2003,piso,5701,massa vs abstenção aleatória,0.531,0.5629,0.0319,0.0186,0.0442,não,ACASO ordena melhor que a massa — REFUTADO com sinal invertido
+GENIA,valor adicionado,4038,combinado vs confiança do modelo,0.3162,0.315,-0.0012,-0.0037,0.0016,sim,"REFUTADO — peso convexo 0,97/0,03 (colapso)"
+CoNLL-2003,valor adicionado,5701,combinado vs confiança do modelo,0.2593,0.2603,0.001,-0.0003,0.0026,sim,"REFUTADO — peso convexo 0,99/0,01 (colapso)"
+GENIA,valor adicionado / estrato aninhado,510,combinado vs confiança,,,0.0018,-0.0023,0.0061,sim,sem efeito detectável
+GENIA,valor adicionado / estrato plano,3528,combinado vs confiança,,,-0.0013,-0.004,0.002,sim,sem efeito detectável
+CoNLL-2003,valor adicionado / estrato aninhado,24,combinado vs confiança,,,,,,,"NÃO AVALIADO — reamostragens degeneradas; ausência de dado, não de efeito"

@@ -1,0 +1,29 @@
+{
+  "upload_type": "software",
+  "title": "attention-is-not-not-geometry: code, pre-registered declarations and measured tables for \"Attention Is Not Not Geometry\"",
+  "description": "Code, pre-registered declarations and measured tables (without corpus text) for the article \"Attention Is Not Not Geometry\". Every verdict, number, table and figure of the article is regenerated from this archive by a single command and compared byte for byte with the published version. The fine-tuned weights are archived separately, each with a content fingerprint checked by tools/impressao_digital.py.",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Souza, Anaximandro",
+      "affiliation": "PEC/COPPE, Universidade Federal do Rio de Janeiro"
+    },
+    {
+      "name": "Espíndola, Rogério Pinto",
+      "affiliation": "PEC/COPPE, Universidade Federal do Rio de Janeiro"
+    },
+    {
+      "name": "Cerqueira, Renato",
+      "affiliation": "PUC-Behring Institute for AI"
+    }
+  ],
+  "keywords": [
+    "attention",
+    "named entity recognition",
+    "selective prediction",
+    "abstention",
+    "pre-registration",
+    "reproducibility"
+  ],
+  "notes": "Add under 'related identifiers': the DOI of the pre-registration hash deposit, and the DOIs of the two weights deposits (GLiNER, CC-BY-NC-4.0; Qwen2.5, Apache-2.0)."
+}

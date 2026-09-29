@@ -1,0 +1,135 @@
+# =============================================================================
+# decl-03-tarefa — o impacto na TAREFA, e não na curva
+# =============================================================================
+# ESTADO: ASSINADA em 2026-09-15. Os valores e critérios abaixo são COMPROMISSO.
+#
+# Analisar sob outros valores não é proibido, é rastreável — mas exige declaração NOVA,
+# com outro declaration_id e outro hash. Editar esta é o que não se faz.
+#
+# POR QUE ELA EXISTE
+#
+# A decl-02 decidiu em ΔAURC, que é área sob uma curva. Ninguém em NER decide
+# nada com uma área: decide com "que qualidade sai do sistema" e "quanto
+# trabalho humano isso custa". Esta declaração traduz a mesma medição para
+# essas duas unidades — e traz critério próprio, porque o resultado na tarefa é
+# a afirmação central do paper e tabela sem critério declarado é ilustração, não
+# resultado.
+#
+# O QUE ELA *NÃO* MUDA
+#
+# Nada da medição e nada da ordenação. Sumidouro, camadas, cabeças, partição por
+# sentença, semente e regra de combinação são os mesmos da decl-02, então o hash
+# de MEDIÇÃO é idêntico e as tabelas já medidas servem. O que entra é a grade de
+# metas de qualidade, as quatro métricas da tarefa, e um veredito por par de
+# supervisores.
+#
+# A RESTRIÇÃO ESTRUTURAL QUE MOLDA TUDO AQUI
+#
+# O supervisor só REMOVE predições; ele nunca cria. As entidades anotadas que o
+# extrator não apontou são invisíveis para ele, então o recall tem teto fixo (o
+# recall do extrator) e abster-se só o baixa. Qualquer formulação em que "o
+# supervisor melhora o F1" é, por construção, impossível de sustentar. Por isso
+# a unidade declarada aqui é CARGA DE REVISÃO A QUALIDADE FIXA, e não ganho de
+# F1: é a pergunta que o arranjo pode responder.
+
+selective:
+  declaration_id: 'decl-03-tarefa'
+  hash_version: 3
+
+  # ---------------------------------------------------------------------------
+  # HERANÇA: a medição é a mesma, e quem afirma isso assina
+  # ---------------------------------------------------------------------------
+  inherits_measurement_from:
+    declaration_id: 'decl-01-gliner-base'
+    declaration_hash: '348e90cce8ca9874'
+
+  # ---------------------------------------------------------------------------
+  # IDÊNTICOS À decl-02 — copiados, não reescolhidos
+  # ---------------------------------------------------------------------------
+  sink_policy: 'drop_from_denominator'
+  layers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  heads: null
+  combination_rule: 'convex'
+  calibration_fraction: 0.30
+  coverage_levels: [0.5, 0.7, 0.8, 0.9, 0.95]
+  operating_point: 'derived_from_target_risk'
+  target_risk_grid: [0.01, 0.02, 0.05, 0.10]
+  added_value_ci_level: 0.95
+  n_bootstrap_resamples: 2000
+  conformal_alpha: 0.05
+  loss_bound: 1.0
+  seed: 42
+  comparison_scores: [span_size, geometric_fraction, enrichment, geometric_residual, sentence_length]
+  stratify_by: [span_size, is_nested]
+  span_size_bins: [[1, 1], [2, 2], [3, 4], [5, null]]
+
+  # ---------------------------------------------------------------------------
+  # ITEM NOVO 1 — a grade de metas de qualidade
+  # ---------------------------------------------------------------------------
+  # Precisão ENTRE OS ENTREGUES. Valores convencionais e redondos, escolhidos
+  # sem olhar o teste: são os patamares que a prática usa, não pontos lidos de
+  # uma curva.
+  #
+  # É grade e não meta única pela razão do risco: com erro base de 48% (GENIA) e
+  # 53% (CoNLL), a precisão a cobertura total é 0,52 e 0,47. Uma meta única fixada
+  # no escuro poderia cair onde nenhum supervisor chega, e a declaração não
+  # decidiria nada. Com a grade, "inalcançável em qualquer cobertura" é uma linha
+  # da tabela e um resultado legítimo.
+  #
+  # E a grade não custa grau de liberdade: o veredito é a comparação ENTRE
+  # supervisores em CADA meta, então não há meta a escolher depois de ver número.
+  task_quality_grid: [0.70, 0.80, 0.90, 0.95]
+
+  # ---------------------------------------------------------------------------
+  # ITEM NOVO 2 — as quatro métricas, declaradas juntas
+  # ---------------------------------------------------------------------------
+  # Juntas de propósito. O supervisor faz precisão subir e recall cair pela mesma
+  # ação; relatar só uma seria relatar a que subiu. `review_load` é a fração das
+  # predições mandadas para revisão humana — a unidade em que o custo aparece.
+  task_metrics:
+    - precision_delivered
+    - recall_delivered
+    - f1_delivered
+    - review_load
+
+  # ---------------------------------------------------------------------------
+  # AS COMPARAÇÕES
+  # ---------------------------------------------------------------------------
+  comparisons:
+    # C1 e C2 repetidos da decl-02 NÃO entram: já foram decididos, e redecidir
+    # sob outra declaração seria dois vereditos sobre a mesma pergunta.
+    - id: 'T1'
+      kind: 'descriptive'
+      question: >-
+        Em cada meta de qualidade, qual a carga de revisão exigida por cada
+        supervisor, e qual precisão, recall e F1 saem entre os entregues? Inclui
+        a linha SEM supervisor (cobertura total) como referência, e declara
+        "inalcançável" como resultado possível.
+
+    - id: 'T2'
+      kind: 'task_verdict'
+      question: >-
+        O supervisor baseado na massa de atenção exige MENOS revisão humana que
+        a confiança do próprio modelo, para a mesma qualidade entregue?
+      score: 'span_mass'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'T3'
+      kind: 'task_verdict'
+      question: >-
+        E o instrumento desconfundido pela razão — o enriquecimento — exige menos
+        revisão que a confiança do próprio modelo?
+      score: 'enrichment'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'T4'
+      kind: 'task_verdict'
+      question: >-
+        A combinação da confiança com o enriquecimento exige menos revisão que a
+        confiança sozinha? É a versão na tarefa da pergunta que C3 respondeu em
+        AURC, e serve para mostrar se a unidade muda a conclusão.
+      score: 'model_confidence+enrichment'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'

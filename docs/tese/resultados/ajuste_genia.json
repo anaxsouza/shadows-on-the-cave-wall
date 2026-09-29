@@ -1,0 +1,41 @@
+{
+ "corpus": "genia",
+ "checkpoint": "checkpoint-3378",
+ "f1_val": 0.7678,
+ "f1_val_antes": 0.5597,
+ "p_antes": 0.5341,
+ "r_antes": 0.5879,
+ "por_epoca": [
+  {
+   "checkpoint": "checkpoint-1689",
+   "f1": 0.7517,
+   "p": 0.7393,
+   "r": 0.7645
+  },
+  {
+   "checkpoint": "checkpoint-3378",
+   "f1": 0.7678,
+   "p": 0.7711,
+   "r": 0.7645
+  },
+  {
+   "checkpoint": "checkpoint-5067",
+   "f1": 0.7639,
+   "p": 0.7632,
+   "r": 0.7645
+  }
+ ],
+ "rotulos": [
+  "DNA",
+  "RNA",
+  "cell line",
+  "cell type",
+  "protein"
+ ],
+ "seed": 42,
+ "epocas": 3,
+ "lote": 8,
+ "n_val_avaliadas": 400,
+ "regra_checkpoint": "melhor F1 estrito na validacao; nunca olha ΔAURC",
+ "hiperparametros": "receita padrao do gliner, nao varrida"
+}

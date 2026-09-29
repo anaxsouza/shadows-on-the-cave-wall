@@ -1,0 +1,176 @@
+# =============================================================================
+# decl-02-geometria — declaração de ANÁLISE, não de medição
+# =============================================================================
+# ESTADO: ASSINADA em 2026-09-10. Os valores e critérios abaixo são COMPROMISSO.
+#
+# Analisar sob outros valores não é proibido, é rastreável — mas exige declaração NOVA, com
+# outro declaration_id e outro hash. Editar esta é o que não se faz: o hash muda e o guarda
+# de procedência passa a recusar as tabelas medidas sob a linhagem declarada aqui.
+#
+# O QUE ELA MUDA, E O QUE ELA DELIBERADAMENTE NÃO MUDA
+#
+# Não muda NADA da medição: `sink_policy`, `layers` e `heads` são idênticos aos
+# de decl-01, e por isso as tabelas já medidas sob decl-01 continuam servindo —
+# o guarda de procedência compara o hash de MEDIÇÃO, não o da declaração inteira.
+# Remedir por burocracia seria gastar horas de GPU para obter os mesmos números.
+#
+# Muda o que se faz DEPOIS da tabela: acrescenta os escores contra os quais o
+# sinal elaborado tem de se provar, e obriga a estratificação do relato.
+#
+# POR QUE ISSO NÃO É INSERIR GRAU DE LIBERDADE
+# Uma base de comparação só pode ENFRAQUECER a afirmação de quem a declara: ela
+# não dá mais chances de encontrar efeito, dá um nulo mais difícil de bater. É o
+# oposto de trocar de modelo ou de ajustar hiperparâmetros de treino, que abrem
+# escolhas capazes de favorecer o resultado.
+#
+# PROCEDÊNCIA DOS ITENS NOVOS
+# Saghir (2026), arXiv 2605.00269, estabelece que sinais de confiança de caixa
+# branca em modelos de linguagem — incluindo agregados de atenção — são
+# estruturalmente confundidos por comprimento (|r| >= 0,61) e colapsam para
+# 0,491-0,527 de AUROC (acaso 0,5) sob avaliação com comprimento pareado, com uma
+# base trivial de contagem de tokens alcançando 0,874 e 0,919. Os três controles
+# que ele recomenda — base trivial de comprimento, residualização contra
+# comprimento, e relato da correlação escore-comprimento — são adotados aqui.
+# Não são invenção nossa, e é isso que os torna difíceis de recusar.
+#
+# ONDE VIVE O RESTO DA CONFIGURAÇÃO
+# Este arquivo é a DECLARAÇÃO. Corpora, modelos e descrições de rótulo continuam
+# em configs/config.yaml, que é ambiente e não compromisso científico. A etapa de
+# medição usa aquele arquivo; esta declaração governa `selective --test`.
+# =============================================================================
+
+selective:
+  declaration_id: 'decl-02-geometria'
+
+  # Versão 2 do conjunto de itens hasheados. decl-01 declara versão 1 e continua
+  # reproduzindo o hash que assinou (348e90cce8ca9874) — assinatura que deixa de
+  # ser reproduzível não prova ordem nenhuma.
+  hash_version: 2
+
+  # A MEDIÇÃO É HERDADA, e a herança é declarada aqui em vez de inferida pelo
+  # guarda. `sink_policy`, `layers` e `heads` abaixo são idênticos aos de
+  # decl-01, então as tabelas já medidas servem — mas quem afirma que duas
+  # declarações compartilham medição assina essa afirmação, e é isto.
+  inherits_measurement_from:
+    declaration_id: 'decl-01-gliner-base'
+    declaration_hash: '348e90cce8ca9874'
+
+  # ---------------------------------------------------------------------------
+  # HERDADO DE decl-01, sem uma vírgula de diferença. Cada valor mantém a
+  # procedência que docs/tese/PREREGISTRO.md registra para ele.
+  # ---------------------------------------------------------------------------
+  sink_policy: 'drop_from_denominator'
+  layers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  heads: null
+  layer_profile: true
+  combination_rule: 'convex'
+  calibration_fraction: 0.3
+  coverage_levels: [0.5, 0.7, 0.8, 0.9, 0.95]
+  operating_point: 'derived_from_target_risk'
+  added_value_ci_level: 0.95
+  n_bootstrap_resamples: 2000
+  target_risk_grid: [0.01, 0.02, 0.05, 0.1]
+  conformal_alpha: 0.05
+  loss_bound: 1.0
+  seed: 42
+
+  # ---------------------------------------------------------------------------
+  # ITEM NOVO 1 — contra o que a massa de atenção tem de se provar
+  # ---------------------------------------------------------------------------
+  # Três destes não usam modelo nenhum: são contas sobre a anotação. Se a massa
+  # de atenção não bater uma conta que qualquer pessoa faz sem GPU, ela não é
+  # instrumento.
+  #
+  #   span_size ........... k, o número de tokens do span
+  #   geometric_fraction .. k/|K|, que é a massa ESPERADA sob permutabilidade das
+  #                         chaves. Exata, não aproximada: sai da linearidade da
+  #                         esperança sobre matriz linha-estocástica, e foi
+  #                         verificada por permutação (desvio +0,00013 e +0,00017
+  #                         contra desvios observados 327x e 335x maiores)
+  #   enrichment .......... massa dividida pelo esperado: a desconfundição por
+  #                         RAZÃO. Vale 1,0 quando a entidade recebe exatamente a
+  #                         parte dela
+  #   geometric_residual .. massa menos o ajuste em k/|K|: a desconfundição por
+  #                         REGRESSÃO. Coexiste com a razão de propósito, porque
+  #                         as duas erram em direções opostas — a razão
+  #                         sobrecorrige (correlação com k/T vira -0,43 e -0,51),
+  #                         a regressão subcorrige. Declarar as duas impede
+  #                         escolher depois a que der o número desejado
+  #   sentence_length ..... T. Está aqui porque é o que DECIDE o sinal da massa:
+  #                         a massa é ~k/T, e se T prevê erro no corpus então
+  #                         dividir por T injeta um termo anti-preditivo
+  comparison_scores:
+    - span_size
+    - geometric_fraction
+    - enrichment
+    - geometric_residual
+    - sentence_length
+
+  # ---------------------------------------------------------------------------
+  # ITEM NOVO 2 — estratificação obrigatória do relato
+  # ---------------------------------------------------------------------------
+  # `span_size` não é zelo: é medida. No GENIA a associação entre enriquecimento
+  # e erro é POSITIVA no agregado (+0,0212, p = 3,9e-4) e NEGATIVA em três das
+  # quatro faixas de tamanho de span: -0,0117 (k=1, n=970), -0,0164 (k=2,
+  # n=1.204), -0,0114 (k=3-4, n=1.896). Na quarta (k=5-20, n=862) é +0,0010,
+  # mesmo sinal do agregado e praticamente nula. As três faixas invertidas cobrem
+  # 4.070 das 4.932 entidades. Paradoxo de Simpson, causado por spans de 1 token
+  # terem ao mesmo tempo erro alto (0,71) e enriquecimento alto. Sem estratificar
+  # por tamanho, a DIREÇÃO do efeito não é interpretável.
+  #
+  # `is_nested` continua porque é metade da pergunta original.
+  stratify_by:
+    - span_size
+    - is_nested
+
+  # ---------------------------------------------------------------------------
+  # ITEM NOVO 3 — as bordas das faixas, declaradas
+  # ---------------------------------------------------------------------------
+  # `stratify_by` diz QUE estratificar; sem isto não diria COMO, e o corte muda a
+  # leitura descritiva. Medido na validação do GENIA, a inversão de sinal do
+  # enriquecimento vai de 3-de-4 estratos (1|2|3-4|5+) a 4-de-4 (1|2|3+ e quartis
+  # de k) a 1-de-2 (1-2|3+), com o mesmo dado. Escolher a borda depois de ver isso
+  # seria escolher a conclusão.
+  #
+  # O VEREDITO NÃO DEPENDE DESTAS BORDAS: os critérios de C2 e C3 são diferenças
+  # de AURC sobre a amostra inteira, que não vê estrato nenhum. As faixas governam
+  # a tabela DESCRITIVA, e o relato traz os quatro esquemas acima como análise de
+  # sensibilidade — para que ninguém precise confiar em que não escolhemos.
+  #
+  # Bordas: singleton, par, curto multi-token, longo. A última é aberta, senão
+  # span maior que a borda sumiria do relato.
+  span_size_bins: [[1, 1], [2, 2], [3, 4], [5, null]]
+
+  # ---------------------------------------------------------------------------
+  # ITEM NOVO 4 — as três comparações, e o que cada uma afirma
+  # ---------------------------------------------------------------------------
+  # Escolhido pelo autor em 03/09/2026 entre três estruturas. A cadeia mapeia
+  # direto na afirmação da tese: a massa de atenção não acrescenta poder de
+  # decisão sobre a confiança que o próprio modelo reporta.
+  comparisons:
+    # C1 é DESCRITIVA e não tem veredito, deliberadamente. Caracterizar o nulo é
+    # parte do resultado sem ser teste; transformá-la em veredito gastaria um
+    # teste pré-registrado para confirmar o que a validação já mostrou.
+    - id: 'C1'
+      kind: 'descriptive'
+      question: 'A massa de atenção acompanha o nulo k/|K|? Relata R² contra a fração
+        geométrica e a mediana da razão observado/esperado, por corpus e por faixa.'
+
+    # C2 fecha a objeção geométrica: se a massa não bate uma conta que dispensa
+    # modelo, ela não é instrumento.
+    - id: 'C2'
+      kind: 'verdict'
+      question: 'A massa de atenção acrescenta sobre a geometria pura?'
+      score: 'span_mass'
+      against: 'geometric_fraction'
+      criterion: 'paired_delta_aurc_ci_excludes_zero'
+
+    # C3 responde a pergunta original COM O INSTRUMENTO CORRETO. Testar a massa
+    # crua contra a confiança deixaria aberta a saída 'vocês testaram a versão
+    # confundida'; o enriquecimento é a versão desconfundida.
+    - id: 'C3'
+      kind: 'verdict'
+      question: 'O instrumento desconfundido acrescenta sobre a confiança do modelo?'
+      score: 'model_confidence+enrichment'
+      against: 'model_confidence'
+      criterion: 'paired_delta_aurc_ci_excludes_zero'

@@ -1,0 +1,57 @@
+{
+ "modelo": {
+  "id": "urchade/gliner_base",
+  "camadas": 12,
+  "cabecas": 12,
+  "nota": "Anotado retroativamente em 15/09/2026. A medição original não registrava o modelo — o único traço era o nome do diretório, e nome de diretório não é procedência. O identificador é fato recuperável do diretório e de configs/config.yaml, não escolha, e não altera measurement_hash: a declaração vigente é da versão 1 a 3, que não cobre o modelo."
+ },
+ "colunas": [
+  "sentence_id",
+  "loss",
+  "model_confidence",
+  "span_mass",
+  "is_nested",
+  "token_indices"
+ ],
+ "n_sentencas": 3453,
+ "n_entidades_preditas": 8104,
+ "taxa_de_erro_base": 0.5309723593287266,
+ "preregistro": {
+  "layers": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "heads": null,
+  "sink_policy": "drop_from_denominator",
+  "declaration_id": "decl-01-gliner-base",
+  "declaration_hash": "348e90cce8ca9874",
+  "measurement_hash": "8a798025fb755a32",
+  "source": "configs/config.yaml"
+ },
+ "atencao": {
+  "camadas": 12,
+  "cabecas": 12,
+  "dtype": "float16",
+  "fatias": 7,
+  "bytes": 448025636
+ },
+ "perfil_por_camada": {
+  "linhas": 97248,
+  "natureza": "exploratorio",
+  "nao_decide_veredito": true
+ },
+ "ressalvas": [],
+ "n_entidades_ouro": 5648,
+ "n_entidades_ouro_aninhadas": 0,
+ "n_entidades_ouro_nota": "Contagem de ANOTAÇÃO, recuperada em 15/09/2026 pelo MESMO carregador que produziu o numerador — ele normaliza tipos e descarta entidade sem posição, e contar direto do corpus daria denominador inconsistente, que apareceria como recall inflado e não como erro. Não envolve o modelo, logo não altera measurement_hash. Foi calculada na medição original e impressa no relatório, mas não gravada: defeito de registro."
+}

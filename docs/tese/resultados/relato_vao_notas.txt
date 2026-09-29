@@ -1,0 +1,52 @@
+[gliner-large/genia] partição de avaliação: 3754 entidades em 1205 sentenças; calibração com 517 sentenças, separada por SENTENÇA
+[gliner-large/genia] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[gliner-large/genia] grade do VÃO em vigor: precisão de base da CALIBRAÇÃO = 0.5741; metas derivadas 25% -> 0.6806, 50% -> 0.7870, 75% -> 0.8935, 90% -> 0.9574. A fração está no hash; a meta absoluta é derivada, e vem da calibração porque derivá-la da avaliação fixaria o alvo olhando a resposta
+[gliner-large/genia] T3 grade absoluta meta 0.70: 577 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1423 restantes
+[gliner-large/genia] T3 grade vao meta 0.25: 541 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1459 restantes
+[gliner-large/genia] model_confidence+enrichment: peso 0.96 em model_confidence e 0.04 em enrichment, ajustado na calibração (AURC 0.2986). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[gliner-large/genia] T4 grade absoluta meta 0.90: 38 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1962 restantes
+[gliner-large/genia] T4 grade absoluta meta 0.95: 65 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1935 restantes
+[gliner-large/genia] T4 grade vao meta 0.75: 33 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1967 restantes
+[gliner-large/genia] T4 grade vao meta 0.90: 68 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1932 restantes
+[gliner-large/conll2003] partição de avaliação: 5099 entidades em 2223 sentenças; calibração com 953 sentenças, separada por SENTENÇA
+[gliner-large/conll2003] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[gliner-large/conll2003] grade do VÃO em vigor: precisão de base da CALIBRAÇÃO = 0.5356; metas derivadas 25% -> 0.6517, 50% -> 0.7678, 75% -> 0.8839, 90% -> 0.9536. A fração está no hash; a meta absoluta é derivada, e vem da calibração porque derivá-la da avaliação fixaria o alvo olhando a resposta
+[gliner-large/conll2003] T2 grade absoluta meta 0.70: 83 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1917 restantes
+[gliner-large/conll2003] T2 grade absoluta meta 0.80: 88 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1912 restantes
+[gliner-large/conll2003] T2 grade absoluta meta 0.90: 88 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1912 restantes
+[gliner-large/conll2003] T2 grade absoluta meta 0.95: 88 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1912 restantes
+[gliner-large/conll2003] T2 grade vao meta 0.25: 75 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1925 restantes
+[gliner-large/conll2003] T2 grade vao meta 0.50: 88 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1912 restantes
+[gliner-large/conll2003] T2 grade vao meta 0.75: 88 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1912 restantes
+[gliner-large/conll2003] T2 grade vao meta 0.90: 88 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1912 restantes
+[gliner-large/conll2003] model_confidence+enrichment: peso 0.97 em model_confidence e 0.03 em enrichment, ajustado na calibração (AURC 0.2273). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[ajustado/genia] partição de avaliação: 3685 entidades em 1190 sentenças; calibração com 510 sentenças, separada por SENTENÇA
+[ajustado/genia] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[ajustado/genia] grade do VÃO em vigor: precisão de base da CALIBRAÇÃO = 0.7448; metas derivadas 25% -> 0.8086, 50% -> 0.8724, 75% -> 0.9362, 90% -> 0.9745. A fração está no hash; a meta absoluta é derivada, e vem da calibração porque derivá-la da avaliação fixaria o alvo olhando a resposta
+[ajustado/genia] T2 grade absoluta meta 0.80: 64 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1936 restantes
+[ajustado/genia] T2 grade absoluta meta 0.90: 598 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1402 restantes
+[ajustado/genia] T2 grade absoluta meta 0.95: 657 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1343 restantes
+[ajustado/genia] T2 grade vao meta 0.25: 104 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1896 restantes
+[ajustado/genia] T2 grade vao meta 0.50: 497 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1503 restantes
+[ajustado/genia] T2 grade vao meta 0.75: 645 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1355 restantes
+[ajustado/genia] T2 grade vao meta 0.90: 660 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1340 restantes
+[ajustado/genia] T3 grade absoluta meta 0.80: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[ajustado/genia] T3 grade absoluta meta 0.90: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[ajustado/genia] T3 grade absoluta meta 0.95: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[ajustado/genia] T3 grade vao meta 0.25: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[ajustado/genia] T3 grade vao meta 0.50: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[ajustado/genia] T3 grade vao meta 0.75: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[ajustado/genia] T3 grade vao meta 0.90: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[ajustado/genia] model_confidence+enrichment: peso 0.96 em model_confidence e 0.04 em enrichment, ajustado na calibração (AURC 0.1228). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[ajustado/conll2003] partição de avaliação: 4079 entidades em 2023 sentenças; calibração com 867 sentenças, separada por SENTENÇA
+[ajustado/conll2003] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[ajustado/conll2003] grade do VÃO em vigor: precisão de base da CALIBRAÇÃO = 0.8915; metas derivadas 25% -> 0.9186, 50% -> 0.9457, 75% -> 0.9729, 90% -> 0.9891. A fração está no hash; a meta absoluta é derivada, e vem da calibração porque derivá-la da avaliação fixaria o alvo olhando a resposta
+[ajustado/conll2003] T2 grade absoluta meta 0.90: 248 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1752 restantes
+[ajustado/conll2003] T2 grade absoluta meta 0.95: 658 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1342 restantes
+[ajustado/conll2003] T2 grade vao meta 0.25: 553 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1447 restantes
+[ajustado/conll2003] T2 grade vao meta 0.50: 560 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1440 restantes
+[ajustado/conll2003] T3 grade absoluta meta 0.95: 159 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1841 restantes
+[ajustado/conll2003] T3 grade vao meta 0.50: 9 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1991 restantes
+[ajustado/conll2003] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0525). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[ajustado/conll2003] T4 grade absoluta meta 0.95: 159 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1841 restantes
+[ajustado/conll2003] T4 grade vao meta 0.50: 9 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1991 restantes

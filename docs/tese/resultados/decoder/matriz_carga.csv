@@ -1,0 +1,21 @@
+par,"0,5B GENIA","0,5B CoNLL","1,5B GENIA","1,5B CoNLL"
+AD1 sonda_atencao_cabecas vs base_treinada,2+ 0- 20 4na,5+ 0- 30 0na,1+ 0- 30 4na,5+ 0- 30 0na
+AD1 sonda_atencao_cabecas_ajustada vs base_treinada_ajustada,4+ 0- 10 3na,5+ 0- 30 0na,3+ 0- 10 4na,5+ 0- 30 0na
+AD1 sonda_ocultos vs base_treinada,4+ 0- 10 3na,5+ 0- 30 0na,3+ 0- 10 4na,5+ 0- 30 0na
+AD1 sonda_ocultos_ajustada vs base_treinada_ajustada,4+ 0- 40 0na,5+ 0- 30 0na,3+ 0- 10 4na,6+ 0- 20 0na
+hidden_delta_camadas vs aggseq,0+ 2- 60 0na,0+ 5- 20 1na,0+ 2- 20 4na,0+ 5- 30 0na
+hidden_delta_camadas vs model_confidence,0+ 7- 10 0na,0+ 5- 30 0na,0+ 4- 20 2na,0+ 5- 20 1na
+hidden_dist_centroide vs aggseq,0+ 0- 10 7na,0+ 0- 20 6na,0+ 0- 10 7na,0+ 5- 30 0na
+hidden_dist_centroide vs model_confidence,0+ 0- 10 7na,0+ 0- 20 6na,0+ 0- 10 7na,0+ 5- 20 1na
+hidden_norm vs aggseq,0+ 2- 10 5na,0+ 5- 20 1na,0+ 2- 20 4na,0+ 5- 30 0na
+hidden_norm vs model_confidence,0+ 2- 10 5na,0+ 5- 30 0na,0+ 2- 40 2na,0+ 5- 20 1na
+row_entropy_causal vs aggseq,0+ 2- 60 0na,0+ 5- 20 1na,0+ 0- 10 7na,0+ 5- 30 0na
+row_entropy_causal vs model_confidence,0+ 7- 10 0na,0+ 5- 30 0na,0+ 0- 10 7na,0+ 5- 20 1na
+row_max_causal vs aggseq,0+ 2- 60 0na,0+ 5- 20 1na,0+ 2- 20 4na,0+ 5- 30 0na
+row_max_causal vs model_confidence,0+ 7- 10 0na,0+ 6- 20 0na,0+ 4- 20 2na,0+ 5- 20 1na
+sonda_atencao_cabecas vs aggseq,0+ 2- 20 4na,3+ 0- 40 1na,0+ 2- 20 4na,3+ 0- 50 0na
+sonda_atencao_cabecas vs model_confidence,1+ 0- 30 4na,3+ 0- 50 0na,0+ 0- 60 2na,5+ 0- 20 1na
+sonda_ocultos vs aggseq,0+ 0- 50 3na,5+ 0- 20 1na,0+ 2- 20 4na,4+ 0- 40 0na
+sonda_ocultos vs model_confidence,2+ 0- 30 3na,5+ 0- 30 0na,2+ 0- 40 2na,5+ 0- 20 1na
+span_mass vs aggseq,0+ 2- 60 0na,0+ 5- 20 1na,0+ 0- 10 7na,0+ 5- 30 0na
+span_mass vs model_confidence,0+ 7- 10 0na,0+ 5- 30 0na,0+ 0- 10 7na,0+ 5- 20 1na

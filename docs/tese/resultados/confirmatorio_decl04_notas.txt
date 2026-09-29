@@ -1,0 +1,23 @@
+[geometria genia] partição por sentença: 517 sentenças de calibração (1613 entidades) e 1205 de avaliação (3754 entidades).
+[geometria genia] model_confidence+enrichment: peso 0.96 em model_confidence e 0.04 em enrichment, ajustado na calibração (AURC 0.2986). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[geometria genia] T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[geometria genia] T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[geometria genia] T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[tarefa genia] partição de avaliação: 3754 entidades em 1205 sentenças; calibração com 517 sentenças, separada por SENTENÇA
+[tarefa genia] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[tarefa genia] T3 meta 70%: 577 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1423 restantes
+[tarefa genia] model_confidence+enrichment: peso 0.96 em model_confidence e 0.04 em enrichment, ajustado na calibração (AURC 0.2986). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[tarefa genia] T4 meta 90%: 38 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1962 restantes
+[tarefa genia] T4 meta 95%: 65 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1935 restantes
+[geometria conll2003] partição por sentença: 953 sentenças de calibração (2222 entidades) e 2223 de avaliação (5099 entidades).
+[geometria conll2003] model_confidence+enrichment: peso 0.97 em model_confidence e 0.03 em enrichment, ajustado na calibração (AURC 0.2273). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[geometria conll2003] T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[geometria conll2003] T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[geometria conll2003] T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[tarefa conll2003] partição de avaliação: 5099 entidades em 2223 sentenças; calibração com 953 sentenças, separada por SENTENÇA
+[tarefa conll2003] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[tarefa conll2003] T2 meta 70%: 83 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1917 restantes
+[tarefa conll2003] T2 meta 80%: 88 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1912 restantes
+[tarefa conll2003] T2 meta 90%: 88 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1912 restantes
+[tarefa conll2003] T2 meta 95%: 88 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1912 restantes
+[tarefa conll2003] model_confidence+enrichment: peso 0.97 em model_confidence e 0.03 em enrichment, ajustado na calibração (AURC 0.2273). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.

@@ -1,0 +1,147 @@
+comparacao,tipo,particao,estrato,metrica,valor,familia,estatuto_nulo,escore,contra,aurc_contra,aurc_escore,delta,ci_low,ci_high,n_entidades,n_sentencas,n_degeneradas,veredito
+C1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.961,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.4674,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,todos,n_entidades,5367,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.7509,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.5884,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=1,n_entidades,927,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.8513,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.4754,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=2,n_entidades,1471,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9145,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.4461,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=3-4,n_entidades,2072,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9628,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.4557,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k>=5,n_entidades,897,geometrico,—,,,,,,,,,,,
+C2,verdict,avaliação,todos,,,atencao,exato,span_mass,geometric_fraction,0.3864,0.3829,-0.0036,-0.0067,-0.0006,3754,1205,0,ACRESCENTA
+C2,verdict,avaliação,k=1,,,atencao,exato,span_mass,geometric_fraction,0.6515,0.647,-0.0045,-0.0246,0.0145,628,450,0,NÃO ACRESCENTA (IC contém zero)
+C2,verdict,avaliação,k=2,,,atencao,exato,span_mass,geometric_fraction,0.4179,0.3927,-0.0252,-0.0381,-0.0131,1034,668,0,ACRESCENTA
+C2,verdict,avaliação,k=3-4,,,atencao,exato,span_mass,geometric_fraction,0.373,0.3594,-0.0137,-0.0204,-0.0066,1449,816,0,ACRESCENTA
+C2,verdict,avaliação,k>=5,,,atencao,exato,span_mass,geometric_fraction,0.3954,0.3982,0.0029,-0.0055,0.0114,643,471,0,NÃO ACRESCENTA (IC contém zero)
+C2,verdict,avaliação,aninhado,,,atencao,exato,span_mass,geometric_fraction,0.7122,0.7197,0.0076,-0.0026,0.018,565,377,0,NÃO ACRESCENTA (IC contém zero)
+C2,verdict,avaliação,plano,,,atencao,exato,span_mass,geometric_fraction,0.3414,0.3387,-0.0027,-0.0058,0.0004,3189,1164,0,NÃO ACRESCENTA (IC contém zero)
+C3,verdict,avaliação,todos,,,geometrico,—,model_confidence+enrichment,model_confidence,0.278,0.2792,0.0012,-0.0002,0.0026,3754,1205,0,NÃO ACRESCENTA (IC contém zero)
+C3,verdict,avaliação,k=1,,,geometrico,—,model_confidence+enrichment,model_confidence,0.5024,0.5055,0.0031,0.0003,0.0064,628,450,0,PIOR que a base
+C3,verdict,avaliação,k=2,,,geometrico,—,model_confidence+enrichment,model_confidence,0.2606,0.2625,0.0018,-0.0017,0.0047,1034,668,0,NÃO ACRESCENTA (IC contém zero)
+C3,verdict,avaliação,k=3-4,,,geometrico,—,model_confidence+enrichment,model_confidence,0.2414,0.2435,0.0021,0.0003,0.004,1449,816,0,PIOR que a base
+C3,verdict,avaliação,k>=5,,,geometrico,—,model_confidence+enrichment,model_confidence,0.2197,0.2196,-0.0002,-0.0012,0.0008,643,471,0,NÃO ACRESCENTA (IC contém zero)
+C3,verdict,avaliação,aninhado,,,geometrico,—,model_confidence+enrichment,model_confidence,0.6653,0.6629,-0.0024,-0.0086,0.0019,565,377,0,NÃO ACRESCENTA (IC contém zero)
+C3,verdict,avaliação,plano,,,geometrico,—,model_confidence+enrichment,model_confidence,0.2349,0.236,0.0011,-0.0004,0.0027,3189,1164,0,NÃO ACRESCENTA (IC contém zero)
+T1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.961,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.4674,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,todos,n_entidades,5367,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.7509,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.5884,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=1,n_entidades,927,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.8513,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.4754,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=2,n_entidades,1471,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9145,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.4461,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=3-4,n_entidades,2072,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9628,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.4557,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k>=5,n_entidades,897,geometrico,—,,,,,,,,,,,
+escores,descriptive,avaliação,todos,aurc_acaso,0.4209,geometrico,—,,,,,,,,,,,
+escores,descriptive,avaliação,todos,aurc_span_size,0.3857,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_geometric_fraction,0.3864,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_sentence_length,0.4142,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_row_entropy,0.4128,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_row_max,0.4422,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_emitted_mass,0.5158,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_hidden_norm,0.4899,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_hidden_dist_centroide,0.5152,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_hidden_delta_camadas,0.5002,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_logit_margin,0.2851,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_logit_entropy,0.4989,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_logit_max,0.278,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_span_mass,0.3829,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_model_confidence,0.278,geometrico,—,,,,,,,,,,,melhor que o acaso
+controle,descriptive,teste inteiro,todos,corr_span_size_vs_comprimento,0.0459,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_geometric_fraction_vs_comprimento,-0.4497,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_sentence_length_vs_comprimento,1.0,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_row_entropy_vs_comprimento,0.7025,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_row_max_vs_comprimento,-0.3347,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_emitted_mass_vs_comprimento,0.0676,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_hidden_norm_vs_comprimento,-0.0151,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_hidden_dist_centroide_vs_comprimento,0.079,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_hidden_delta_camadas_vs_comprimento,-0.0688,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_logit_margin_vs_comprimento,-0.0118,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_logit_entropy_vs_comprimento,0.0051,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_logit_max_vs_comprimento,-0.0457,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_span_mass_vs_comprimento,-0.4367,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_model_confidence_vs_comprimento,-0.0457,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9603,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.4564,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,todos,n_entidades,7321,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.8806,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.4993,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=1,n_entidades,3424,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.9418,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.4411,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=2,n_entidades,2014,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9766,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.421,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k=3-4,n_entidades,1535,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9718,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.4297,geometrico,—,,,,,,,,,,,
+C1,descriptive,teste inteiro,k>=5,n_entidades,348,geometrico,—,,,,,,,,,,,
+C2,verdict,avaliação,todos,,,atencao,exato,span_mass,geometric_fraction,0.46,0.4897,0.0297,0.0233,0.0366,5099,2223,0,PIOR que a base
+C2,verdict,avaliação,k=1,,,atencao,exato,span_mass,geometric_fraction,0.4675,0.5348,0.0672,0.055,0.0803,2369,1506,0,PIOR que a base
+C2,verdict,avaliação,k=2,,,atencao,exato,span_mass,geometric_fraction,0.4727,0.4775,0.0048,-0.0045,0.0144,1435,1034,0,NÃO ACRESCENTA (IC contém zero)
+C2,verdict,avaliação,k=3-4,,,atencao,exato,span_mass,geometric_fraction,0.2791,0.2695,-0.0096,-0.0175,-0.0031,1043,827,0,ACRESCENTA
+C2,verdict,avaliação,k>=5,,,atencao,exato,span_mass,geometric_fraction,0.3034,0.2814,-0.022,-0.0433,-0.0097,252,224,0,ACRESCENTA
+C2,verdict,avaliação,aninhado,,,geometrico,—,,,,,,,,36,,,NÃO AVALIADO (estrato pequeno ou de perda constante)
+C2,verdict,avaliação,plano,,,atencao,exato,span_mass,geometric_fraction,0.457,0.4868,0.0298,0.0235,0.0369,5063,2218,0,PIOR que a base
+C3,verdict,avaliação,todos,,,geometrico,—,model_confidence+enrichment,model_confidence,0.2322,0.2309,-0.0013,-0.0049,0.0022,5099,2223,0,NÃO ACRESCENTA (IC contém zero)
+C3,verdict,avaliação,k=1,,,geometrico,—,model_confidence+enrichment,model_confidence,0.2662,0.2521,-0.0141,-0.0198,-0.0085,2369,1506,0,ACRESCENTA
+C3,verdict,avaliação,k=2,,,geometrico,—,model_confidence+enrichment,model_confidence,0.2686,0.2709,0.0023,-0.0038,0.0095,1435,1034,0,NÃO ACRESCENTA (IC contém zero)
+C3,verdict,avaliação,k=3-4,,,geometrico,—,model_confidence+enrichment,model_confidence,0.1309,0.1321,0.0012,-0.002,0.0052,1043,827,0,NÃO ACRESCENTA (IC contém zero)
+C3,verdict,avaliação,k>=5,,,geometrico,—,model_confidence+enrichment,model_confidence,0.1439,0.1493,0.0055,0.0007,0.0129,252,224,0,PIOR que a base
+C3,verdict,avaliação,aninhado,,,geometrico,—,,,,,,,,36,,,NÃO AVALIADO (estrato pequeno ou de perda constante)
+C3,verdict,avaliação,plano,,,geometrico,—,model_confidence+enrichment,model_confidence,0.2298,0.2284,-0.0014,-0.005,0.0021,5063,2218,0,NÃO ACRESCENTA (IC contém zero)
+T1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9603,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.4564,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,todos,n_entidades,7321,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.8806,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.4993,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=1,n_entidades,3424,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.9418,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.4411,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=2,n_entidades,2014,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9766,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.421,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k=3-4,n_entidades,1535,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9718,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.4297,geometrico,—,,,,,,,,,,,
+T1,descriptive,teste inteiro,k>=5,n_entidades,348,geometrico,—,,,,,,,,,,,
+escores,descriptive,avaliação,todos,aurc_acaso,0.4677,geometrico,—,,,,,,,,,,,
+escores,descriptive,avaliação,todos,aurc_span_size,0.4216,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_geometric_fraction,0.4791,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_sentence_length,0.4172,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_row_entropy,0.4679,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_row_max,0.5005,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_emitted_mass,0.5591,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_hidden_norm,0.6556,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_hidden_dist_centroide,0.4608,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_hidden_delta_camadas,0.4941,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_logit_margin,0.2265,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_logit_entropy,0.6802,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_logit_max,0.2322,geometrico,—,,,,,,,,,,,melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_span_mass,0.4789,geometrico,—,,,,,,,,,,,NÃO melhor que o acaso
+escores,descriptive,avaliação,todos,aurc_model_confidence,0.2322,geometrico,—,,,,,,,,,,,melhor que o acaso
+controle,descriptive,teste inteiro,todos,corr_span_size_vs_comprimento,0.1061,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_geometric_fraction_vs_comprimento,-0.5135,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_sentence_length_vs_comprimento,1.0,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_row_entropy_vs_comprimento,0.8064,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_row_max_vs_comprimento,-0.5672,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_emitted_mass_vs_comprimento,0.101,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_hidden_norm_vs_comprimento,0.1598,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_hidden_dist_centroide_vs_comprimento,0.0373,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_hidden_delta_camadas_vs_comprimento,-0.0921,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_logit_margin_vs_comprimento,0.09,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_logit_entropy_vs_comprimento,-0.1805,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_logit_max_vs_comprimento,-0.0069,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_span_mass_vs_comprimento,-0.5125,geometrico,—,,,,,,,,,,,
+controle,descriptive,teste inteiro,todos,corr_model_confidence_vs_comprimento,-0.0069,geometrico,—,,,,,,,,,,,

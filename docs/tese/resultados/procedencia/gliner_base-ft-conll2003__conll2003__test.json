@@ -1,0 +1,60 @@
+{
+ "modelo": {
+  "id": "gliner_base-ft-conll2003",
+  "camadas": 12,
+  "cabecas": 12
+ },
+ "colunas": [
+  "sentence_id",
+  "loss",
+  "model_confidence",
+  "span_mass",
+  "is_nested",
+  "token_indices"
+ ],
+ "n_sentencas": 3453,
+ "n_entidades_preditas": 5839,
+ "taxa_de_erro_base": 0.10275732145915395,
+ "preregistro": {
+  "layers": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "heads": null,
+  "sink_policy": "drop_from_denominator",
+  "declaration_id": "decl-06-ajustado-conll",
+  "declaration_hash": "7726d98cdefd2ae6",
+  "measurement_hash": "4658eceda04c48df",
+  "source": "configs/decl-06-ajustado-conll.yaml",
+  "model": "gliner_base-ft-conll2003"
+ },
+ "atencao": {
+  "camadas": 12,
+  "cabecas": 12,
+  "dtype": "float16",
+  "fatias": 7,
+  "bytes": 447944912
+ },
+ "perfil_por_camada": {
+  "linhas": 70068,
+  "natureza": "exploratorio",
+  "nao_decide_veredito": true
+ },
+ "ressalvas": [],
+ "n_entidades_ouro": 5648,
+ "n_entidades_ouro_nota": "contagem de ANOTACAO, propriedade do corpus e nao do modelo; identica as medicoes anteriores. Nao altera measurement_hash.",
+ "checkpoint_sha256": "fa7e25b022cd5f3f5da80e5e0611bf9a",
+ "checkpoint_sha256_nota": "sha256 dos 4 arquivos do checkpoint (gliner_config.json, pytorch_model.bin, tokenizer.json, tokenizer_config.json), concatenados em ordem de nome, truncado em 32 hex. Calculado em 16/09/2026 na instancia da T4 ANTES do desligamento dela. EXISTE PARA FECHAR UMA FALHA DE PROCEDENCIA: o measurement_hash identifica o modelo pelo NOME, nao pelo conteudo, entao um retreino produziria o MESMO hash com pesos DIFERENTES — e o guarda aceitaria. Com este campo, um retreino pode ser conferido contra os pesos originais em vez de assumido equivalente. O treino NAO e bit-reproduzivel (nao determinismo de GPU), logo um retreino e outro modelo.",
+ "_origem": "results/gliner_base-ft-conll2003/conll2003/test/MEDIDA.json",
+ "_por_que_esta_copia_existe": "results/ esta inteiramente no .gitignore (linha 78), entao o MEDIDA.json — que e o que PROVA sob qual declaracao e com quais pesos cada tabela foi medida — vivia so no disco local. As tabelas confirmatorias sao copiadas para docs/tese/resultados/, mas a procedencia delas nao era. Esta copia versionada fecha a lacuna: perder results/ passa a custar remedir, e nao perder o registro de como foi medido."
+}

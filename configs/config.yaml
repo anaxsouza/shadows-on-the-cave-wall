@@ -1,0 +1,355 @@
+project_name: SENTINEL
+# ============================================================
+# CONFIGURATION — SENTINEL Experiment Framework
+# Last updated: 2026-05-28 (replaced GPT-2/Llama with Qwen2.5 decoders)
+# ============================================================
+general:
+  seed: null
+  device: null
+  output_dir: results
+  log_level: INFO
+model_cache:
+  base_models_dir: models/base
+  fine_tuned_dir: models/fine_tuned
+  use_local_cache: true
+  auto_download: true
+confidence:
+  temperature_range:
+  - 1.0
+  - 5.0
+  default_temperature: 1.0
+  calibration_samples: 1000
+  aggregation_method: geometric_mean
+  high_confidence_threshold: 0.8
+  low_confidence_threshold: 0.4
+  entropy_normalization: true
+  use_perplexity: true
+  ece_bins: 10
+  enable_calibration_validation: true
+models:
+  # UM modelo, e a razão é a pergunta: ela compara a atenção do modelo com a
+  # confiança DO MESMO modelo. Até 02/09/2026 este bloco listava bert-large e
+  # deberta-v3-base, mas nenhum dos dois encontra entidade — os dois são
+  # encoders crus (ner_specific: false) — e o processador chamava, fixo, um
+  # terceiro modelo para prever. A atenção viria de um modelo e a confiança de
+  # outro, o que não é imprecisão: é medida sem sentido.
+  #
+  # O GLiNER pontua TRECHOS em vez de etiquetar tokens, e é por isso que ele
+  # prevê entidade aninhada — etiquetagem BIO não consegue, porque exigiria dois
+  # rótulos no mesmo token, e metade da pergunta é sobre o aninhado.
+  #
+  # O roster tem DOIS tamanhos desde 15/09/2026, e a razão é uma objeção e não
+  # uma ambição: o resultado confirmatório é negativo, e o ataque mais previsível
+  # contra ele é sobre o EXTRATOR, que erra 48,2% e 53,1%. Uma segunda escala é a
+  # verificação mais barata dessa objeção — mesma arquitetura, mesma metodologia,
+  # só escala.
+  #
+  # A invariante NÃO é "um modelo no registro": é que cada DECLARAÇÃO fixe um
+  # modelo, porque a pergunta compara a atenção de um modelo com a confiança DO
+  # MESMO modelo. A hash_version 4 torna isso verificável ao pôr `model` dentro
+  # do hash de medição.
+  gliner-base:
+    model_name: urchade/gliner_base
+    architecture: gliner
+    is_autoregressive: false
+    max_length: 384
+    parameters: 209M
+    ner_specific: true
+    architecture_role: a primeira escala -- preve trechos e fornece a atencao (decl-01 a decl-03)
+  # Camadas e cabecas sondadas do config.json do checkpoint em 15/09/2026, nao
+  # supostas: deberta-v3-large tem 24 camadas e 16 cabecas, o dobro da
+  # profundidade do base. Mesmo tokenizador sentencepiece nos dois (vocab
+  # 128.100), logo os comprimentos de subpalavra nao mudam entre escalas.
+  # AJUSTADOS AO CORPUS, 15/09/2026. Um modelo POR corpus, porque ajuste fino e
+  # por corpus — e e por isso que sao DUAS declaracoes irmas (decl-05 e decl-06)
+  # em vez de uma: a invariante e que cada declaracao fixe UM modelo.
+  #
+  # model_name e o nome do DIRETORIO do checkpoint, resolvido relativo ao
+  # diretorio de trabalho. Nao e caminho absoluto de proposito: caminho absoluto
+  # codificado e anti-padrao declarado no AGENTS.md, e o checkpoint vive na
+  # maquina onde a medicao roda, nao aqui.
+  gliner_base-ft-genia:
+    model_name: gliner_base-ft-genia
+    architecture: gliner
+    is_autoregressive: false
+    max_length: 384
+    parameters: 197M
+    ner_specific: true
+    architecture_role: extrator ajustado ao GENIA -- F1 estrito 0,5597 -> 0,7678 na validacao (decl-05)
+  gliner_base-ft-conll2003:
+    model_name: gliner_base-ft-conll2003
+    architecture: gliner
+    is_autoregressive: false
+    max_length: 384
+    parameters: 197M
+    ner_specific: true
+    architecture_role: extrator ajustado ao CoNLL -- F1 estrito 0,6726 -> 0,9696 na validacao (decl-06)
+  gliner-large:
+    model_name: urchade/gliner_large
+    architecture: gliner
+    is_autoregressive: false
+    max_length: 384
+    parameters: 445M
+    ner_specific: true
+    architecture_role: a segunda escala -- a verificacao da objecao do extrator (decl-04)
+# =============================================================================
+# gliner_labels — as descrições de rótulo dadas ao modelo, por corpus
+# =============================================================================
+# NÃO é detalhe de implementação. O GLiNER pontua trechos CONTRA estas
+# descrições, então elas são entrada do modelo: trocar "person" por "human being"
+# muda o que ele prevê. Ficam aqui para serem versionadas e citáveis, e o mapa
+# liga cada descrição ao rótulo do corpus para o casamento com a anotação.
+# Consumido por src/selective/gliner_adapter.py.
+gliner_labels:
+  conll2003:
+    person: PER
+    organization: ORG
+    location: LOC
+    miscellaneous: MISC
+  genia:
+    protein: PROTEIN
+    DNA: DNA
+    RNA: RNA
+    cell type: CELL_TYPE
+    cell line: CELL_LINE
+    # Os rótulos do lado direito são os do CORPUS, conferidos carregando-o:
+    # PROTEIN, DNA, RNA, CELL_TYPE, CELL_LINE (maiúsculos). Escrevi minúsculos
+    # na primeira versão e nenhuma predição do GENIA casaria com a anotação —
+    # todas contariam como erro, e o teste falharia por um mapa e não pelo
+    # instrumento. Do lado esquerdo ficam as descrições dadas ao modelo.
+
+model_aliases:
+  gliner: gliner-base
+dataset_aliases:
+  conll: conll2003
+  genia: genia
+datasets:
+  conll2003:
+    name: eriktks/conll2003
+    # Revisão DECLARADA, e ela não é opcional. datasets >= 4 deixou de executar
+    # corpora baseados em script e este é um deles: sem esta linha o
+    # carregamento falha com "Dataset scripts are no longer supported".
+    # refs/convert/parquet é a conversão automática do próprio Hub.
+    # E declarar revisão é reprodutibilidade: "a última versão" não é
+    # declaração — duas execuções em datas diferentes podem ler dados
+    # diferentes sem que a diferença apareça em lugar nenhum.
+    revision: refs/convert/parquet
+    config: null
+    text_column: tokens
+    label_column: tags
+    has_nested: false
+    labels:
+    - O
+    - B-PER
+    - I-PER
+    - B-ORG
+    - I-ORG
+    - B-LOC
+    - I-LOC
+    - B-MISC
+    - I-MISC
+    num_splits:
+      train: 14041
+      validation: 3250
+      test: 3453
+  genia:
+    name: Aunderline/genia
+    config: null
+    text_column: tokens
+    label_column: ner_tags
+    has_nested: true
+    num_splits:
+      train: 15023
+      validation: 1669
+      test: 1854
+generation:
+  temperature: 0.7
+  top_p: 0.9
+  num_beams: 1
+  repetition_penalty: 1.0
+experiments:
+  base_ner:
+    description: Simple NER pipeline foundation
+    batch_size: 8
+    max_examples:
+      train: 1000
+      val: 200
+      test: 200
+    evaluation_metrics:
+    - f1
+    - precision
+    - recall
+logging:
+  wandb:
+    enabled: false
+    project: mechanistic-interpretability-ner
+    entity: null
+  tensorboard:
+    enabled: false
+    log_dir: runs
+  file_logging:
+    enabled: true
+    log_file: experiment.log
+    level: INFO
+model_limits:
+  gliner_base-ft-genia:
+    max_context_window: 384
+    max_tokenizer_length: 384
+    recommended_input_tokens: 320
+    recommended_output_tokens: 64
+    architecture_type: span-scoring
+  gliner_base-ft-conll2003:
+    max_context_window: 384
+    max_tokenizer_length: 384
+    recommended_input_tokens: 320
+    recommended_output_tokens: 64
+    architecture_type: span-scoring
+  gliner-large:
+    max_context_window: 384
+    max_tokenizer_length: 384
+    recommended_input_tokens: 320
+    recommended_output_tokens: 64
+    architecture_type: span-scoring
+  gliner-base:
+    max_context_window: 384
+    max_tokenizer_length: 384
+    recommended_input_tokens: 320
+    recommended_output_tokens: 64
+    architecture_type: span-scoring
+token_safety:
+  minimum_output_tokens: 500
+  safety_buffer_percent: 25
+  emergency_fallback_tokens: 800
+  max_cap_override: 32768
+  fail_on_missing_config: true
+  validate_token_usage: true
+token_allocation:
+  input_output_ratio: 0.6
+  prompt_overhead_buffer: 150
+  json_structure_buffer: 100
+  entity_estimation_buffer: 50
+  allocation_strategies:
+    decoder-only:
+      input_ratio: 0.5
+      output_ratio: 0.5
+    encoder-only-base:
+      input_ratio: 0.8
+      output_ratio: 0.2
+    encoder-decoder:
+      input_ratio: 0.6
+      output_ratio: 0.4
+dynamic_tokens:
+  enable_dataset_analysis: true
+  analysis_sample_size: 1000
+  use_worst_case_scenarios: true
+  apply_safety_buffer: true
+  char_to_token_ratios:
+    english: 4.0
+    json: 3.5
+    mixed: 3.8
+reproducibility:
+  deterministic: true
+  benchmark: false
+  seed_everything: true
+
+# =============================================================================
+# selective — os seis itens do pré-registro (documento 04, §3)
+# =============================================================================
+# Consumido por src/selective/preregistration.py:load_preregistration, que é
+# chamado antes de qualquer conta. Sem esta seção nada roda, e não há valor
+# padrão em código para nenhum destes itens: um padrão em código é uma escolha
+# que alguém pode ter feito depois de ver um resultado, e a objeção R4 da banca
+# é exatamente sobre cortes numéricos sem sistemática.
+#
+# ESTADO: ASSINADA em 02/09/2026. Os valores abaixo são COMPROMISSO.
+#
+# Mudar qualquer um deles e medir de novo não é proibido pelo git — é proibido
+# pelo desenho: o hash da declaração muda junto, e o teste recusa tabela medida
+# sob um hash e testada sob outro. Medir com outros valores exige uma declaração
+# NOVA, com outro declaration_id, congelada em docs/tese/declaracoes/ e assinada
+# antes de rodar. O que um pré-registro garante é a ORDEM, e é o git log que a
+# prova.
+selective:
+  # IDENTIDADE DA DECLARAÇÃO. O protocolo (docs/tese/PROTOCOLO.md) é
+  # parametrizável e reutilizável; esta seção é UMA instância congelada dele.
+  # O hash é calculado sobre os itens declarados e gravado ao lado de cada
+  # medição: tabela medida sob uma declaração não pode ser testada sob outra.
+  declaration_id: decl-01-gliner-base
+  # Item 1 — agregação de confiança por entidade.
+  # 'min': o token mais fraco governa a entidade. É a escolha conservadora, e a
+  # que faz sentido para abstenção: uma entidade com uma fronteira duvidosa é
+  # duvidosa, mesmo que os outros tokens estejam saturados.
+
+  # Item 2 — convenção de sumidouro e faixa de camadas/cabeças.
+  # O primeiro token absorve massa desproporcional sem carregar conteúdo
+  # proporcional; mantê-lo no denominador comprime a escala do span de conteúdo.
+  sink_policy: drop_from_denominator
+  # Terço médio de um modelo de 24 camadas: as iniciais carregam posição e as
+  # finais carregam a tarefa; a estrutura de span vive no meio.
+  # CONFIRMATÓRIO: as 12 camadas do gliner_base, e a escolha é deliberada.
+  # A faixa 8-15 aqui declarada até 02/09/2026 foi escolhida para um modelo de
+  # 24 camadas e NÃO EXISTE neste, que tem 12 (0 a 11) — o adaptador recusa a
+  # rodar em vez de truncar em silêncio.
+  #
+  # Declarar todas resolve o problema melhor que qualquer faixa: não há escolha
+  # arbitrária a defender (objeção R4 da banca) e não há nada escolhido depois de
+  # ver resultado. O risco de diluir o sinal deixa de ser cego porque o perfil
+  # por camada o mostra — ver layer_profile abaixo.
+  layers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+  # EXPLORATÓRIO, e a distinção é o que impede o perfil de virar pescaria: ele
+  # descreve onde o sinal mora ao longo da profundidade, NÃO escolhe a faixa e
+  # NÃO decide veredito. Medir 12 camadas e depois anunciar a melhor seria dar 12
+  # chances ao acaso; o veredito sai da faixa declarada acima, e só dela.
+  # Sai em layer_profile.csv, ao lado da tabela.
+  layer_profile: true
+  heads: null            # null = todas as cabeças
+
+  # Item 3 — regra de combinação e partição de calibração.
+  # convex e não logistic: o precedente citável é combinação CONVEXA ajustada em
+  # partição separada (Zheng et al. 2026), com UM peso. A regressão logística
+  # tem intercepto, dois coeficientes e uma função de ligação, e ninguém na
+  # linha citada usa. Com um peso só, "a combinação acrescenta algo?" se lê
+  # direto: peso indo a 0 ou 1 é a combinação colapsando para um sinal — foi o
+  # que aconteceu com eles (o segundo sinal deu AUROC 0,49-0,54).
+  combination_rule: convex
+  calibration_fraction: 0.3   # fração de SENTENÇAS, não de entidades
+
+  # Item 4 — níveis de cobertura reportados e o ponto operacional ÚNICO.
+  coverage_levels: [0.5, 0.7, 0.8, 0.9, 0.95]
+  # O ponto operacional é DERIVADO, não declarado, e a inversão vem da
+  # literatura canônica: Geifman & El-Yaniv (2017) fixam um risco alvo r* e
+  # maximizam a COBERTURA sujeita a ele — a Tabela 1 deles é indexada por
+  # r* em {0,01 ... 0,06}, reportando a cobertura obtida. O controle conformal
+  # de risco tem a mesma forma. Declarar cobertura de 80% era inconsistente com
+  # o próprio método que usamos para a garantia.
+  # Consequência: o ponto operacional é "a cobertura obtida ao risco alvo", e o
+  # risco alvo é o alpha declarado abaixo. Dois parâmetros viram um.
+  operating_point: derived_from_target_risk
+
+  # Item 5 — critério de valor adicionado e número de reamostragens.
+  added_value_ci_level: 0.95
+  n_bootstrap_resamples: 2000
+
+  # RELATO — a grade de riscos alvo r*.
+  # A forma vem da Tabela 1 de Geifman & El-Yaniv (2017), indexada por r* em
+  # {0,01 ... 0,06}, reportando a cobertura obtida em cada um. Reportar a grade
+  # não custa grau de liberdade: os critérios dos dois testes são intervalos
+  # sobre AURC e não olham para r*. E resolve uma assimetria — a taxa de erro
+  # base do modelo não se conhece antes de medir, então não se sabe de antemão
+  # se um r* apertado é alcançável; com a grade, "0,01 é inalcançável" sai como
+  # linha da tabela em vez de execução perdida.
+  target_risk_grid: [0.01, 0.02, 0.05, 0.1]
+
+  # GARANTIA — alpha do controle conformal de risco, que admite UM nível.
+  # alpha É um risco alvo. Faixa citada: 0,01-0,06 em Geifman & El-Yaniv (2017),
+  # 0,1 em Angelopoulos & Bates (2021), 0,1 e 0,05 em Singer et al. (2026).
+  # (Papamichalis & Ruane (2026) é a citação da convenção de SUMIDOURO, não do
+  # alpha — atribuição corrigida em 02/09/2026.)
+  # 0,05 é o meio da faixa citada e corresponde às 95% de cobertura de Singer et
+  # al. Tem de estar DENTRO da grade, para que o nível da garantia apareça
+  # também na tabela de relato.
+  conformal_alpha: 0.05
+
+  loss_bound: 1.0        # perda 0/1
+  seed: 42

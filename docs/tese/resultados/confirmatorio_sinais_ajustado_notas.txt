@@ -1,0 +1,153 @@
+[genia] partição por sentença: 510 sentenças de calibração (1591 entidades) e 1190 de avaliação (3685 entidades).
+[genia] geometric_fraction: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0149). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] span_mass: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0216). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] enrichment: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0272). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] enrichment: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0272). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] model_confidence+enrichment: peso 0.96 em model_confidence e 0.04 em enrichment, ajustado na calibração (AURC 0.1228). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[genia] T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] S1 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] S2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] S3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] S4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] S5 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] S6 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] S7 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] S8 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] S9 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] partição de avaliação: 3685 entidades em 1190 sentenças; calibração com 510 sentenças, separada por SENTENÇA
+[genia] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[genia] grade do VÃO em vigor: precisão de base da CALIBRAÇÃO = 0.7448; metas derivadas 25% -> 0.8086, 50% -> 0.8724, 75% -> 0.9362, 90% -> 0.9745. A fração está no hash; a meta absoluta é derivada, e vem da calibração porque derivá-la da avaliação fixaria o alvo olhando a resposta
+[genia] span_size: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0525). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] geometric_fraction: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0149). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] sentence_length: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0664). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] row_entropy: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0618). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] row_max: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.0476). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] emitted_mass: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1092). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] hidden_norm: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1006). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] hidden_dist_centroide: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.0745). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] hidden_delta_camadas: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1408). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] logit_margin: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.3660). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] logit_entropy: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.2001). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] span_mass: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0216). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] span_mass: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0216). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] T2 grade absoluta meta 0.80: 64 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1936 restantes
+[genia] T2 grade absoluta meta 0.90: 598 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1402 restantes
+[genia] T2 grade absoluta meta 0.95: 657 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1343 restantes
+[genia] T2 grade vao meta 0.25: 104 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1896 restantes
+[genia] T2 grade vao meta 0.50: 497 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1503 restantes
+[genia] T2 grade vao meta 0.75: 645 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1355 restantes
+[genia] T2 grade vao meta 0.90: 660 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1340 restantes
+[genia] enrichment: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0272). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] T3 grade absoluta meta 0.80: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[genia] T3 grade absoluta meta 0.90: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[genia] T3 grade absoluta meta 0.95: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[genia] T3 grade vao meta 0.25: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[genia] T3 grade vao meta 0.50: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[genia] T3 grade vao meta 0.75: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[genia] T3 grade vao meta 0.90: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[genia] enrichment: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0272). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] enrichment: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0272). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] model_confidence+enrichment: peso 0.96 em model_confidence e 0.04 em enrichment, ajustado na calibração (AURC 0.1228). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[genia] row_entropy: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0618). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] S1 grade absoluta meta 0.80: 355 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1645 restantes
+[genia] S1 grade absoluta meta 0.90: 498 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1502 restantes
+[genia] S1 grade absoluta meta 0.95: 526 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1474 restantes
+[genia] S1 grade vao meta 0.25: 401 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1599 restantes
+[genia] S1 grade vao meta 0.50: 482 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1518 restantes
+[genia] S1 grade vao meta 0.75: 525 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1475 restantes
+[genia] S1 grade vao meta 0.90: 526 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1474 restantes
+[genia] row_max: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.0476). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] S2 grade absoluta meta 0.80: 364 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1636 restantes
+[genia] S2 grade vao meta 0.25: 511 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1489 restantes
+[genia] emitted_mass: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1092). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] S3 grade absoluta meta 0.80: 228 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1772 restantes
+[genia] hidden_norm: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1006). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] S4 grade absoluta meta 0.80: 5 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1995 restantes
+[genia] S4 grade vao meta 0.25: 30 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1970 restantes
+[genia] hidden_dist_centroide: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.0745). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] S5 grade absoluta meta 0.80: 3 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1997 restantes
+[genia] S5 grade absoluta meta 0.90: 17 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1983 restantes
+[genia] S5 grade absoluta meta 0.95: 24 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1976 restantes
+[genia] S5 grade vao meta 0.25: 6 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1994 restantes
+[genia] S5 grade vao meta 0.50: 13 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1987 restantes
+[genia] S5 grade vao meta 0.75: 24 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1976 restantes
+[genia] S5 grade vao meta 0.90: 24 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1976 restantes
+[genia] hidden_delta_camadas: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1408). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] S6 grade absoluta meta 0.90: 2 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1998 restantes
+[genia] S6 grade absoluta meta 0.95: 5 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1995 restantes
+[genia] S6 grade vao meta 0.75: 5 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1995 restantes
+[genia] S6 grade vao meta 0.90: 9 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1991 restantes
+[genia] logit_margin: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.3660). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[genia] logit_entropy: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.2001). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] partição por sentença: 867 sentenças de calibração (1760 entidades) e 2023 de avaliação (4079 entidades).
+[conll2003] geometric_fraction: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1988). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] span_mass: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1808). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] enrichment: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0542). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] enrichment: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0542). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0525). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[conll2003] T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] S1 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] S2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] S3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] S4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] S5 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] S6 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] S7 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] S8 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] S9 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] partição de avaliação: 4079 entidades em 2023 sentenças; calibração com 867 sentenças, separada por SENTENÇA
+[conll2003] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[conll2003] grade do VÃO em vigor: precisão de base da CALIBRAÇÃO = 0.8915; metas derivadas 25% -> 0.9186, 50% -> 0.9457, 75% -> 0.9729, 90% -> 0.9891. A fração está no hash; a meta absoluta é derivada, e vem da calibração porque derivá-la da avaliação fixaria o alvo olhando a resposta
+[conll2003] span_size: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.0534). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] geometric_fraction: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1988). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] sentence_length: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0890). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] row_entropy: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0796). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] row_max: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.0319). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] emitted_mass: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.1087). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] hidden_norm: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1375). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] hidden_dist_centroide: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.1103). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] hidden_delta_camadas: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.0231). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] logit_margin: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.3013). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] logit_entropy: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.3029). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] span_mass: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1808). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] span_mass: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1808). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] T2 grade absoluta meta 0.95: 159 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1841 restantes
+[conll2003] T2 grade vao meta 0.50: 9 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1991 restantes
+[conll2003] enrichment: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0542). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] T3 grade absoluta meta 0.95: 159 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1841 restantes
+[conll2003] T3 grade vao meta 0.50: 9 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1991 restantes
+[conll2003] enrichment: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0542). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] enrichment: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0542). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0525). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[conll2003] T4 grade absoluta meta 0.95: 159 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1841 restantes
+[conll2003] T4 grade vao meta 0.50: 9 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1991 restantes
+[conll2003] row_entropy: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.0796). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] S1 grade absoluta meta 0.95: 167 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1833 restantes
+[conll2003] S1 grade vao meta 0.25: 3 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1997 restantes
+[conll2003] S1 grade vao meta 0.50: 16 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1984 restantes
+[conll2003] row_max: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.0319). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] S2 grade absoluta meta 0.95: 163 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1837 restantes
+[conll2003] S2 grade vao meta 0.25: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[conll2003] S2 grade vao meta 0.50: 13 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1987 restantes
+[conll2003] emitted_mass: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.1087). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] S3 grade vao meta 0.25: 343 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1657 restantes
+[conll2003] hidden_norm: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.1375). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] S4 grade vao meta 0.25: 4 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1996 restantes
+[conll2003] hidden_dist_centroide: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.1103). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] S5 grade absoluta meta 0.95: 817 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1183 restantes
+[conll2003] S5 grade vao meta 0.25: 55 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1945 restantes
+[conll2003] S5 grade vao meta 0.50: 724 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1276 restantes
+[conll2003] hidden_delta_camadas: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.0231). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] S6 grade vao meta 0.25: 51 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1949 restantes
+[conll2003] logit_margin: orientação +1 (correlação com acerto na CALIBRAÇÃO r=+0.3013). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] S7 grade absoluta meta 0.95: 159 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1841 restantes
+[conll2003] S7 grade vao meta 0.50: 9 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1991 restantes
+[conll2003] logit_entropy: orientação -1 (correlação com acerto na CALIBRAÇÃO r=-0.3029). Decidida antes de olhar a avaliação, por invariante do protocolo, e não por escolha
+[conll2003] S8 grade absoluta meta 0.95: 288 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1712 restantes
+[conll2003] S8 grade vao meta 0.50: 28 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1972 restantes
+[conll2003] S9 grade absoluta meta 0.95: 159 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1841 restantes
+[conll2003] S9 grade vao meta 0.50: 9 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1991 restantes

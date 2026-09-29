@@ -1,0 +1,26 @@
+[geometria genia] partição por sentença: 510 sentenças de calibração (1591 entidades) e 1190 de avaliação (3685 entidades).
+[geometria genia] model_confidence+enrichment: peso 0.96 em model_confidence e 0.04 em enrichment, ajustado na calibração (AURC 0.1228). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[geometria genia] T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[geometria genia] T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[geometria genia] T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[tarefa genia] partição de avaliação: 3685 entidades em 1190 sentenças; calibração com 510 sentenças, separada por SENTENÇA
+[tarefa genia] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[tarefa genia] T2 meta 80%: 64 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1936 restantes
+[tarefa genia] T2 meta 90%: 598 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1402 restantes
+[tarefa genia] T2 meta 95%: 657 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1343 restantes
+[tarefa genia] T3 meta 80%: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[tarefa genia] T3 meta 90%: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[tarefa genia] T3 meta 95%: 1 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1999 restantes
+[tarefa genia] model_confidence+enrichment: peso 0.96 em model_confidence e 0.04 em enrichment, ajustado na calibração (AURC 0.1228). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[geometria conll2003] partição por sentença: 867 sentenças de calibração (1760 entidades) e 2023 de avaliação (4079 entidades).
+[geometria conll2003] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0525). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[geometria conll2003] T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[geometria conll2003] T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[geometria conll2003] T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[tarefa conll2003] partição de avaliação: 4079 entidades em 2023 sentenças; calibração com 867 sentenças, separada por SENTENÇA
+[tarefa conll2003] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[tarefa conll2003] T2 meta 90%: 248 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1752 restantes
+[tarefa conll2003] T2 meta 95%: 658 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1342 restantes
+[tarefa conll2003] T3 meta 95%: 159 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1841 restantes
+[tarefa conll2003] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0525). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[tarefa conll2003] T4 meta 95%: 159 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1841 restantes

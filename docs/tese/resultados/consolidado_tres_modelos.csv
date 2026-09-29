@@ -1,0 +1,37 @@
+modelo,corpus,erro_base,R2_geometria,mediana_obs_esp,comparacao,meta,valor_supervisor,valor_confianca,delta,ci_low,ci_high,veredito
+gliner-base,genia,0.4818,0.9589,0.5655,C2,—,—,—,-0.0039,-0.0071,-0.0009,ACRESCENTA
+gliner-base,genia,0.4818,0.9589,0.5655,C3,—,—,—,0.0,0.0,0.0,NÃO ACRESCENTA (IC contém zero)
+gliner-base,conll2003,0.5310,0.9319,0.511,C2,—,—,—,0.001,-0.0021,0.0039,NÃO ACRESCENTA (IC contém zero)
+gliner-base,conll2003,0.5310,0.9319,0.511,C3,—,—,—,-0.0004,-0.0015,0.0008,NÃO ACRESCENTA (IC contém zero)
+gliner-large,genia,0.4224,0.961,0.4674,C2,—,—,—,-0.0036,-0.0067,-0.0006,ACRESCENTA
+gliner-large,genia,0.4224,0.961,0.4674,C3,—,—,—,0.0071,0.001,0.0133,PIOR que a base
+gliner-large,conll2003,0.4667,0.9603,0.4564,C2,—,—,—,-0.0002,-0.0029,0.0028,NÃO ACRESCENTA (IC contém zero)
+gliner-large,conll2003,0.4667,0.9603,0.4564,C3,—,—,—,-0.0013,-0.0049,0.0022,NÃO ACRESCENTA (IC contém zero)
+ajustado,genia,0.2458,0.9648,0.5339,C2,—,—,—,-0.0014,-0.0042,0.0014,NÃO ACRESCENTA (IC contém zero)
+ajustado,genia,0.2458,0.9648,0.5339,C3,—,—,—,0.002,-0.0008,0.0051,NÃO ACRESCENTA (IC contém zero)
+ajustado,conll2003,0.1028,0.9222,0.4693,C2,—,—,—,-0.0024,-0.006,0.001,NÃO ACRESCENTA (IC contém zero)
+ajustado,conll2003,0.1028,0.9222,0.4693,C3,—,—,—,0.0,0.0,0.0,NÃO ACRESCENTA (IC contém zero)
+gliner-base,genia,0.4818,—,—,T2,0.70,INALC.,0.5649,—,,,inalcançável para span_mass
+gliner-base,genia,0.4818,—,—,T2,0.80,INALC.,0.8489,—,,,inalcançável para span_mass
+gliner-base,genia,0.4818,—,—,T2,0.90,INALC.,0.9817,—,,,inalcançável para span_mass
+gliner-base,genia,0.4818,—,—,T2,0.95,INALC.,INALC.,—,,,inalcançável para span_mass e model_confidence
+gliner-base,conll2003,0.5310,—,—,T2,0.70,INALC.,0.4264,—,,,inalcançável para span_mass
+gliner-base,conll2003,0.5310,—,—,T2,0.80,INALC.,0.6188,—,,,inalcançável para span_mass
+gliner-base,conll2003,0.5310,—,—,T2,0.90,INALC.,0.7623,—,,,inalcançável para span_mass
+gliner-base,conll2003,0.5310,—,—,T2,0.95,INALC.,0.8728,—,,,inalcançável para span_mass
+gliner-large,genia,0.4224,—,—,T2,0.70,INALC.,0.4510,—,,,inalcançável para span_mass
+gliner-large,genia,0.4224,—,—,T2,0.80,INALC.,0.7560,—,,,inalcançável para span_mass
+gliner-large,genia,0.4224,—,—,T2,0.90,INALC.,0.9651,—,,,inalcançável para span_mass
+gliner-large,genia,0.4224,—,—,T2,0.95,INALC.,0.9979,—,,,inalcançável para span_mass
+gliner-large,conll2003,0.4667,—,—,T2,0.70,0.9992,0.3230,0.6762,0.6255,0.7285,span_mass EXIGE MAIS revisão
+gliner-large,conll2003,0.4667,—,—,T2,0.80,0.9994,0.5607,0.4387,0.3939,0.4806,span_mass EXIGE MAIS revisão
+gliner-large,conll2003,0.4667,—,—,T2,0.90,0.9994,0.7715,0.2279,0.1733,0.2744,span_mass EXIGE MAIS revisão
+gliner-large,conll2003,0.4667,—,—,T2,0.95,0.9994,0.9910,0.0084,0.0035,0.1167,span_mass EXIGE MAIS revisão
+ajustado,genia,0.2458,—,—,T2,0.70,0.0000,0.0000,0.0000,0.0,0.0,NÃO DISTINGUE (IC contém zero)
+ajustado,genia,0.2458,—,—,T2,0.80,0.9387,0.0950,0.8437,0.5631,0.9098,span_mass EXIGE MAIS revisão
+ajustado,genia,0.2458,—,—,T2,0.90,0.9997,0.4583,0.5414,0.4647,0.6149,span_mass EXIGE MAIS revisão
+ajustado,genia,0.2458,—,—,T2,0.95,0.9997,0.9004,0.0993,0.0211,0.253,span_mass EXIGE MAIS revisão
+ajustado,conll2003,0.1028,—,—,T2,0.70,0.0000,0.0000,0.0000,0.0,0.0,NÃO DISTINGUE (IC contém zero)
+ajustado,conll2003,0.1028,—,—,T2,0.80,0.0000,0.0000,0.0000,0.0,0.0,NÃO DISTINGUE (IC contém zero)
+ajustado,conll2003,0.1028,—,—,T2,0.90,0.9998,0.0005,0.9993,0.0,0.9982,NÃO DISTINGUE (IC contém zero)
+ajustado,conll2003,0.1028,—,—,T2,0.95,0.9998,0.1429,0.8568,0.8193,0.8992,span_mass EXIGE MAIS revisão

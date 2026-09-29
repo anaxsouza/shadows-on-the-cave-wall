@@ -1,0 +1,7 @@
+corpus,escore,violacao_total,cobertura_no_ponto,n_entregue_no_ponto,violacao_n_min_30,violacao_n_min_100,razao_total_sobre_n100
+genia,model_confidence,0.083333,0.000608,3,0.003448,0.001713,48.6
+genia,span_mass,0.083333,0.000608,3,0.009195,0.003333,25.0
+genia,enrichment,0.142857,0.001217,6,0.021849,0.006116,23.4
+conll2003,model_confidence,0.000724,0.472075,3998,0.000724,0.000724,1.0
+conll2003,span_mass,0.065934,0.001535,13,0.024194,0.011948,5.5
+conll2003,enrichment,0.166667,0.000354,3,0.008046,0.002535,65.7

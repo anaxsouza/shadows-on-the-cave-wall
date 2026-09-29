@@ -1,0 +1,11 @@
+# pesos ajustados: publicados fora do git, com impressão digital (see REPRODUCE.md)
+gliner_base-ft-*/
+qwen*-ft-*/
+# medições: dezenas de GB de tensores; as tabelas publicadas estão em docs/tese/resultados/
+results/
+dados_decoder/*.jsonl
+__pycache__/
+*.pyc
+.venv/
+# saídas da reprodução: são regeradas, não publicadas
+saida/

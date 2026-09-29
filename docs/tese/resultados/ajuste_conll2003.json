@@ -1,0 +1,40 @@
+{
+ "corpus": "conll2003",
+ "checkpoint": "checkpoint-4176",
+ "f1_val": 0.9696,
+ "f1_val_antes": 0.6726,
+ "p_antes": 0.6512,
+ "r_antes": 0.6954,
+ "por_epoca": [
+  {
+   "checkpoint": "checkpoint-1392",
+   "f1": 0.9557,
+   "p": 0.9563,
+   "r": 0.9552
+  },
+  {
+   "checkpoint": "checkpoint-2784",
+   "f1": 0.9667,
+   "p": 0.9645,
+   "r": 0.969
+  },
+  {
+   "checkpoint": "checkpoint-4176",
+   "f1": 0.9696,
+   "p": 0.969,
+   "r": 0.9701
+  }
+ ],
+ "rotulos": [
+  "location",
+  "miscellaneous",
+  "organization",
+  "person"
+ ],
+ "seed": 42,
+ "epocas": 3,
+ "lote": 8,
+ "n_val_avaliadas": 400,
+ "regra_checkpoint": "melhor F1 estrito na validacao; nunca olha ΔAURC",
+ "hiperparametros": "receita padrao do gliner, nao varrida"
+}

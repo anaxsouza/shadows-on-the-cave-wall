@@ -1,0 +1,83 @@
+corpus,comparacao,tipo,supervisor,contra,meta,alcancavel,review_load,review_load_contra,coverage,precision,recall,f1,n_delivered,delta,ci_low,ci_high,n_entidades,n_sentencas,n_reamostragens,n_degeneradas,veredito
+genia,T1,descriptive,(sem supervisor),,—,sim,0.0,,1.0,0.5191,0.3807,0.4392,4038,,,,,,,,
+genia,T1,descriptive,span_size,,0.70,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,span_size,,0.80,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,span_size,,0.90,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,span_size,,0.95,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,geometric_fraction,,0.70,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,geometric_fraction,,0.80,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,geometric_fraction,,0.90,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,geometric_fraction,,0.95,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,enrichment,,0.70,sim,0.9965,,0.0035,0.7143,0.0018,0.0036,14,,,,,,,,
+genia,T1,descriptive,enrichment,,0.80,sim,0.997,,0.003,0.8333,0.0018,0.0036,12,,,,,,,,
+genia,T1,descriptive,enrichment,,0.90,sim,0.9998,,0.0002,1.0,0.0002,0.0004,1,,,,,,,,
+genia,T1,descriptive,enrichment,,0.95,sim,0.9998,,0.0002,1.0,0.0002,0.0004,1,,,,,,,,
+genia,T1,descriptive,geometric_residual,,0.70,sim,0.997,,0.003,0.75,0.0016,0.0033,12,,,,,,,,
+genia,T1,descriptive,geometric_residual,,0.80,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,geometric_residual,,0.90,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,geometric_residual,,0.95,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,sentence_length,,0.70,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,sentence_length,,0.80,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,sentence_length,,0.90,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,sentence_length,,0.95,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,span_mass,,0.70,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,span_mass,,0.80,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,span_mass,,0.90,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,span_mass,,0.95,não,inalcançável,,,,,,0,,,,,,,,
+genia,T1,descriptive,model_confidence,,0.70,sim,0.5649,,0.4351,0.7001,0.2234,0.3387,1757,,,,,,,,
+genia,T1,descriptive,model_confidence,,0.80,sim,0.8489,,0.1511,0.8,0.0886,0.1596,610,,,,,,,,
+genia,T1,descriptive,model_confidence,,0.90,sim,0.9817,,0.0183,0.9054,0.0122,0.024,74,,,,,,,,
+genia,T1,descriptive,model_confidence,,0.95,não,inalcançável,,,,,,0,,,,,,,,
+genia,T2,task_verdict,span_mass,model_confidence,0.70,não,inalcançável,0.5649,,,,,,,,,4038,1229,0,0,inalcançável para span_mass
+genia,T2,task_verdict,span_mass,model_confidence,0.80,não,inalcançável,0.8489,,,,,,,,,4038,1229,0,0,inalcançável para span_mass
+genia,T2,task_verdict,span_mass,model_confidence,0.90,não,inalcançável,0.9817,,,,,,,,,4038,1229,0,0,inalcançável para span_mass
+genia,T2,task_verdict,span_mass,model_confidence,0.95,não,inalcançável,inalcançável,,,,,,,,,4038,1229,0,0,inalcançável para span_mass e model_confidence
+genia,T3,task_verdict,enrichment,model_confidence,0.70,sim,0.9965,0.5649,,,,,,0.4316,0.3567,0.498,4038,1229,1914,86,enrichment EXIGE MAIS revisão
+genia,T3,task_verdict,enrichment,model_confidence,0.80,sim,0.997,0.8489,,,,,,0.1481,0.0906,0.2342,4038,1229,1776,224,enrichment EXIGE MAIS revisão
+genia,T3,task_verdict,enrichment,model_confidence,0.90,sim,0.9998,0.9817,,,,,,0.0181,0.0005,0.0711,4038,1229,1388,612,enrichment EXIGE MAIS revisão
+genia,T3,task_verdict,enrichment,model_confidence,0.95,não,0.9998,inalcançável,,,,,,,,,4038,1229,0,0,inalcançável para model_confidence
+genia,T4,task_verdict,model_confidence+enrichment,model_confidence,0.70,sim,0.5649,0.5649,,,,,,0.0,0.0,0.0,4038,1229,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,T4,task_verdict,model_confidence+enrichment,model_confidence,0.80,sim,0.8489,0.8489,,,,,,0.0,0.0,0.0,4038,1229,2000,0,NÃO DISTINGUE (IC contém zero)
+genia,T4,task_verdict,model_confidence+enrichment,model_confidence,0.90,sim,0.9817,0.9817,,,,,,0.0,0.0,0.0,4038,1229,1753,247,NÃO DISTINGUE (IC contém zero)
+genia,T4,task_verdict,model_confidence+enrichment,model_confidence,0.95,não,inalcançável,inalcançável,,,,,,,,,4038,1229,0,0,inalcançável para model_confidence+enrichment e model_confidence
+conll2003,T1,descriptive,(sem supervisor),,—,sim,0.0,,1.0,0.469,0.4734,0.4712,5701,,,,,,,,
+conll2003,T1,descriptive,span_size,,0.70,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,span_size,,0.80,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,span_size,,0.90,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,span_size,,0.95,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,,0.70,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,,0.80,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,,0.90,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,geometric_fraction,,0.95,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,enrichment,,0.70,sim,0.9754,,0.0246,0.7,0.0174,0.0339,140,,,,,,,,
+conll2003,T1,descriptive,enrichment,,0.80,sim,0.997,,0.003,0.8235,0.0025,0.0049,17,,,,,,,,
+conll2003,T1,descriptive,enrichment,,0.90,sim,0.9974,,0.0026,0.9333,0.0025,0.0049,15,,,,,,,,
+conll2003,T1,descriptive,enrichment,,0.95,sim,0.9982,,0.0018,1.0,0.0018,0.0035,10,,,,,,,,
+conll2003,T1,descriptive,geometric_residual,,0.70,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,geometric_residual,,0.80,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,geometric_residual,,0.90,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,geometric_residual,,0.95,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,sentence_length,,0.70,sim,0.9053,,0.0947,0.7,0.0669,0.1222,540,,,,,,,,
+conll2003,T1,descriptive,sentence_length,,0.80,sim,0.9553,,0.0447,0.8235,0.0372,0.0712,255,,,,,,,,
+conll2003,T1,descriptive,sentence_length,,0.90,sim,0.9693,,0.0307,0.9029,0.028,0.0543,175,,,,,,,,
+conll2003,T1,descriptive,sentence_length,,0.95,sim,0.9763,,0.0237,0.9704,0.0232,0.0453,135,,,,,,,,
+conll2003,T1,descriptive,span_mass,,0.70,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,span_mass,,0.80,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,span_mass,,0.90,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,span_mass,,0.95,não,inalcançável,,,,,,0,,,,,,,,
+conll2003,T1,descriptive,model_confidence,,0.70,sim,0.4264,,0.5736,0.7,0.4053,0.5133,3270,,,,,,,,
+conll2003,T1,descriptive,model_confidence,,0.80,sim,0.6188,,0.3812,0.8003,0.3079,0.4447,2173,,,,,,,,
+conll2003,T1,descriptive,model_confidence,,0.90,sim,0.7623,,0.2377,0.9004,0.216,0.3484,1355,,,,,,,,
+conll2003,T1,descriptive,model_confidence,,0.95,sim,0.8728,,0.1272,0.9503,0.122,0.2162,725,,,,,,,,
+conll2003,T2,task_verdict,span_mass,model_confidence,0.70,não,inalcançável,0.4264,,,,,,,,,5701,2313,0,0,inalcançável para span_mass
+conll2003,T2,task_verdict,span_mass,model_confidence,0.80,não,inalcançável,0.6188,,,,,,,,,5701,2313,0,0,inalcançável para span_mass
+conll2003,T2,task_verdict,span_mass,model_confidence,0.90,não,inalcançável,0.7623,,,,,,,,,5701,2313,0,0,inalcançável para span_mass
+conll2003,T2,task_verdict,span_mass,model_confidence,0.95,não,inalcançável,0.8728,,,,,,,,,5701,2313,0,0,inalcançável para span_mass
+conll2003,T3,task_verdict,enrichment,model_confidence,0.70,sim,0.9754,0.4264,,,,,,0.549,0.508,0.5915,5701,2313,2000,0,enrichment EXIGE MAIS revisão
+conll2003,T3,task_verdict,enrichment,model_confidence,0.80,sim,0.997,0.6188,,,,,,0.3782,0.335,0.4156,5701,2313,2000,0,enrichment EXIGE MAIS revisão
+conll2003,T3,task_verdict,enrichment,model_confidence,0.90,sim,0.9974,0.7623,,,,,,0.235,0.2078,0.262,5701,2313,2000,0,enrichment EXIGE MAIS revisão
+conll2003,T3,task_verdict,enrichment,model_confidence,0.95,sim,0.9982,0.8728,,,,,,0.1254,0.0982,0.1769,5701,2313,2000,0,enrichment EXIGE MAIS revisão
+conll2003,T4,task_verdict,model_confidence+enrichment,model_confidence,0.70,sim,0.4275,0.4264,,,,,,0.0011,-0.0035,0.0028,5701,2313,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,model_confidence,0.80,sim,0.615,0.6188,,,,,,-0.0039,-0.0115,0.0062,5701,2313,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,model_confidence,0.90,sim,0.7479,0.7623,,,,,,-0.0144,-0.0228,0.0026,5701,2313,2000,0,NÃO DISTINGUE (IC contém zero)
+conll2003,T4,task_verdict,model_confidence+enrichment,model_confidence,0.95,sim,0.8758,0.8728,,,,,,0.003,-0.014,0.0244,5701,2313,2000,0,NÃO DISTINGUE (IC contém zero)

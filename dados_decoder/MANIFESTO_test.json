@@ -1,0 +1,17 @@
+{
+ "origem": "loaders do projeto, split test, reexportado em 23/09/2026",
+ "arquivos": {
+  "genia_test.jsonl": {
+   "sha256": "f61f5c8ab37dcb268bd53a32152631de138c6f9728b6338f1f612fa583786d25",
+   "n_sentencas": 1854,
+   "campo_entidades": "ner_char (POSICAO DE CARACTERE)",
+   "aviso": "os *_train.jsonl e *_validation.jsonl deste canal usam `ner` em INDICE DE PALAVRA. Convencoes diferentes, nomes diferentes, de proposito."
+  },
+  "conll2003_test.jsonl": {
+   "sha256": "125d865497f040cab29162554ac72a4d162da82f6b10eece61d2bb7a53637d7e",
+   "n_sentencas": 3453,
+   "campo_entidades": "ner_char (POSICAO DE CARACTERE)",
+   "aviso": "os *_train.jsonl e *_validation.jsonl deste canal usam `ner` em INDICE DE PALAVRA. Convencoes diferentes, nomes diferentes, de proposito."
+  }
+ }
+}

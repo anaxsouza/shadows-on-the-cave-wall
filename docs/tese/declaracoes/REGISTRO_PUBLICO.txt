@@ -1,0 +1,33 @@
+# Public registry of the pre-registered declarations for the article
+# 'Attention Is Not Not Geometry'.
+# SHA-256 of each file; check with: python tools/registro_publico.py --conferir
+# The date that counts is the date of the Zenodo deposit, not that of any file listed here.
+
+b3ec3b08daff4b75ea4b7189965c81de45a01bbfd7b5731eb833146f3d7996e0  docs/tese/declaracoes/decl-01-gliner-base.md
+31f2242fd696b0400e5654478e5ef27ec81cb985e0e4a95bf2821b2e8f201926  docs/tese/declaracoes/decl-02-geometria.md
+ef37197ccbfac30bee3476c51a723ffb65e129b6df5be5d7a6ffe271b8d51733  configs/decl-02-geometria.yaml  declaration_hash=4d91c3607206b9ab  measurement_hash=8a798025fb755a32
+0a23a2c4fb48087b4b74a017713967e058dd6d6e2331631f2d05ea2f700eabcc  docs/tese/declaracoes/decl-03-tarefa.md
+96a95882c7b4796ea51de53455ca2e43e4eefb00b5da7a7fd88c66afd9fcea8a  configs/decl-03-tarefa.yaml  declaration_hash=5f30a2ff3e493c19  measurement_hash=8a798025fb755a32
+db3a148aa2c6973c54dcddfd9f22dc84431352523c252a19fb9562c725d26fb0  docs/tese/declaracoes/decl-04-escala.md
+70591b499a2614d512c517e124a555a8e67a0f09c5ed2995b20b597a11a1f938  configs/decl-04-escala.yaml  declaration_hash=58a3fa48845bb673  measurement_hash=5454128f1df4da6f
+d1705eace50447e2c748f2d9d5103885e5ce024d7e7258e228318a64b6024ddf  docs/tese/declaracoes/decl-05-ajustado-genia.md
+94b93bb0615683b00b59fb765602f423db143a76ea6af68c104a19833bf77691  configs/decl-05-ajustado-genia.yaml  declaration_hash=74a976d10b39b0cb  measurement_hash=a068f4f0daf00399
+afbd968d63d30934eb8a18b64115e4a5648100debf6b274bfea8000367affc38  docs/tese/declaracoes/decl-06-ajustado-conll.md
+4637e2a5858ff419095d5d441b0449f1f76223a84486c7be2e1ebd9254820da0  configs/decl-06-ajustado-conll.yaml  declaration_hash=7726d98cdefd2ae6  measurement_hash=4658eceda04c48df
+3ba4e28dfaf1fc1201aeb832a071b7af161995929268e06719132f6324ed9593  docs/tese/declaracoes/decl-07-sinais-genia.md
+14b9ad7153c8e3b0ff8ab3b0324c6a378e63f13208b95d6aaf4d9721e4a36446  configs/decl-07-sinais-genia.yaml  declaration_hash=5eff5178cb46307f  measurement_hash=a068f4f0daf00399
+b00d88ca49c8370da20b7abc14a3a4190a4726fc9c329348957794c1e4e5d597  docs/tese/declaracoes/decl-08-sinais-conll.md
+fe20118c2c86752b98c8e2d7f755e5635bfd1fcb400e7843cdf697500efd2191  configs/decl-08-sinais-conll.yaml  declaration_hash=a271865be0993e6b  measurement_hash=4658eceda04c48df
+68517dd0274ba72dcf0b296ab930c68715eb52a15ee3259ef1298c29e85caafb  docs/tese/declaracoes/decl-09-sinais-large.md
+e869ed784bcfc3568db082fb7ac4df999e1bd922415f42164cd08076c084968e  configs/decl-09-sinais-large.yaml  declaration_hash=bc162a9a0cb9e256  measurement_hash=5454128f1df4da6f
+4e69293b901a716e6813c4c4dabfa8ff691a575f31a0b3455805aff9e37a6b95  docs/tese/declaracoes/decl-10-decoder-05b-genia.md
+9772491c1e2dc647df1a685c114d7475b3425a8dcf272c2f825f3c57eda9b2ac  configs/decl-10-decoder-05b-genia.yaml  declaration_hash=a3df344d97b54f8e  measurement_hash=7e83ec650511f2e5
+5441f4fe48f642059d2faa3fba23cec75769bf812c1f930dce8cc17133a46709  docs/tese/declaracoes/decl-11-decoder-05b-conll.md
+438815e2d715f37d61bcacce70324d8bff5f79a126b238b775ba5949698e2545  configs/decl-11-decoder-05b-conll.yaml  declaration_hash=1e2fa0630172d38b  measurement_hash=cd343817643081d8
+f8f3b49610ab2448282028289415c7128c658462e8c1606abfed77ea1caf756d  docs/tese/declaracoes/decl-12-decoder-15b-genia.md
+e9cfe5362449969fd3672c861d4da3a53bb879803a9a0ffea776c235f659c99b  configs/decl-12-decoder-15b-genia.yaml  declaration_hash=8cde6729246f9209  measurement_hash=4d8a138acc663343
+40f99372a4715c60bc2ac5ade9b34647b4a6bbc66f0d18bf0d6d9ddec727e428  docs/tese/declaracoes/decl-13-decoder-15b-conll.md
+296c91416d8839f2b483b1a2f686c0aec37d7342b260f8874d8e9fdb94bd6290  configs/decl-13-decoder-15b-conll.yaml  declaration_hash=4d3f6cbde4df318e  measurement_hash=e02dbb705bca90c1
+c72e63e0456160b3bd5c3067fde123853a5379fc28f5b886e7ea9bf68458dbf1  docs/tese/declaracoes/adenda-01-decoder-base-treinada.md
+9a8071cc0c6944f4a987f5655933ddafd8a90115289945730c93e423f681e2b8  docs/tese/declaracoes/adenda-02-decoder-leitura-dos-nomes.md
+3476c53996eab36cd37cb1506381e51fae7b143ba67a44c346b64fbd13982fd5  docs/tese/PREREGISTRO.md

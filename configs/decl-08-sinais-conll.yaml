@@ -1,0 +1,233 @@
+# =============================================================================
+# decl-08-sinais-conll — as três famílias de sinal contra a confiança do modelo
+# =============================================================================
+# A PERGUNTA: o nulo da atenção está fechado em três arranjos. A pergunta que vem
+# depois dele, e que a banca faria, é — então ONDE mora a informação de decisão,
+# se não na atenção? Esta declaração é o teste dessa pergunta.
+#
+# ZERO PARÂMETRO LIVRE, e é isso que torna esta assinatura defensável mesmo
+# concedida sem leitura prévia do texto:
+#
+#  - Todo item de análise é copiado LITERALMENTE de `decl-06-ajustado-conll.yaml`.
+#  - Todo item de medição é o mesmo, incluindo a faixa de camadas: os estados
+#    ocultos são medidos na MESMA faixa declarada, logo o `measurement_hash`
+#    NÃO muda e a tabela pode ser remedida sob esta identidade.
+#  - O conjunto de sinais é o registro de `src/selective/signals.py`, e o
+#    estatuto do nulo de cada um está fixado em código e em teste, não aqui.
+#  - As comparações são MECÂNICAS: todo sinal que não é a própria confiança ganha
+#    um veredito contra `model_confidence`. Não há seleção de sinal, então não há
+#    onde escolher o favorito depois de ver o resultado.
+#  - O critério de cada tipo de veredito é fixo por par em `CRITERIO_DO_TIPO`.
+#
+# O QUE ESTA DECLARAÇÃO NÃO PODE AFIRMAR, e fica escrito antes de medir:
+# os sinais de nulo EMPÍRICO (estados ocultos e logits) são desconfundidos por
+# REGRESSÃO nas covariáveis geométricas. Se um deles bater a confiança, a
+# afirmação é mais fraca que a de um sinal de nulo exato, por duas razões: a
+# forma da relação é suposta linear e os coeficientes são ajustados no mesmo
+# dado. Isso viaja com o número em toda tabela e em todo texto.
+#
+# UMA VERIFICAÇÃO DE IDENTIDADE ESTÁ EMBUTIDA: `logit_max` é, por construção, o
+# maior escore de rótulo do trecho — a MESMA quantidade que `model_confidence`.
+# O veredito dele contra a confiança tem de dar Δ exatamente zero. Se não der, o
+# encanamento está errado, e é melhor descobrir isso por um sinal cujo valor
+# esperado se conhece do que por um cujo valor esperado se está medindo.
+
+selective:
+  declaration_id: 'decl-08-sinais-conll'
+  hash_version: 5
+
+  # ---------------------------------------------------------------------------
+  # ITEM NOVO DA VERSÃO 4 — o modelo entra no hash de MEDIÇÃO
+  # ---------------------------------------------------------------------------
+  # Item de medição e não de análise porque trocar de modelo muda os números
+  # DENTRO da tabela. Sem heranca declarada: esta declaração exige medição
+  # própria, e é isso que impede uma tabela do base ser testada aqui.
+  model: 'gliner_base-ft-conll2003'
+
+  # ---------------------------------------------------------------------------
+  # MEDIÇÃO — a mesma regra, aplicada ao modelo deste declaration_id
+  # ---------------------------------------------------------------------------
+  sink_policy: 'drop_from_denominator'
+  layers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  heads: null
+
+  # ---------------------------------------------------------------------------
+  # ANÁLISE — copiados literalmente da decl-02 e da decl-03
+  # ---------------------------------------------------------------------------
+  combination_rule: 'convex'
+  calibration_fraction: 0.30
+  coverage_levels: [0.5, 0.7, 0.8, 0.9, 0.95]
+  operating_point: 'derived_from_target_risk'
+  target_risk_grid: [0.01, 0.02, 0.05, 0.10]
+  added_value_ci_level: 0.95
+  n_bootstrap_resamples: 2000
+  conformal_alpha: 0.05
+  loss_bound: 1.0
+  seed: 42
+  # Os nove sinais do registro de signals.py, mais os adversários geométricos
+  # que já estavam declarados. O estatuto do nulo de cada um NÃO é declarado
+  # aqui: ele está em signals.py, fixado em teste, e é de lá que o relatório
+  # o lê. Declarar duas vezes criaria duas versões da mesma verdade.
+  comparison_scores: [span_size, geometric_fraction, sentence_length,
+                      row_entropy, row_max, emitted_mass,
+                      hidden_norm, hidden_dist_centroide, hidden_delta_camadas,
+                      logit_margin, logit_entropy, logit_max]
+  stratify_by: [span_size, is_nested]
+  span_size_bins: [[1, 1], [2, 2], [3, 4], [5, null]]
+  # Grade do VÃO, invariante à qualidade do extrator: a meta fecha uma fração
+  # da distância entre a precisão de base e 1,0. A absoluta fica também, para o
+  # relato ser comparável com as declarações anteriores.
+  task_gap_grid: [0.25, 0.50, 0.75, 0.90]
+  task_quality_grid: [0.70, 0.80, 0.90, 0.95]
+  task_metrics:
+    - precision_delivered
+    - recall_delivered
+    - f1_delivered
+    - review_load
+
+  # EXPLORATÓRIO, e com 24 camadas ele descreve o dobro do que descrevia. Segue
+  # sem decidir veredito: o veredito sai de `layers`, e só dele.
+  layer_profile: true
+
+  # ---------------------------------------------------------------------------
+  # AS COMPARAÇÕES — todas as sete, e a razão de C1-C3 voltarem
+  # ---------------------------------------------------------------------------
+  # A `decl-03` deixou C1, C2 e C3 de fora dizendo que já estavam decididas. Ali
+  # estava certo: era o mesmo modelo. Aqui é OUTRO modelo, e nada sobre ele foi
+  # decidido — repetir as sete é o que torna a comparação entre escalas uma
+  # comparação, e não duas medições sobre perguntas diferentes.
+  comparisons:
+    - id: 'C1'
+      kind: 'descriptive'
+      question: 'A massa de atenção acompanha o nulo k/|K|? Relata R² contra a fração
+        geométrica e a mediana da razão observado/esperado, por corpus e por faixa.'
+
+    - id: 'C2'
+      kind: 'verdict'
+      question: 'A massa de atenção acrescenta sobre a geometria pura?'
+      score: 'span_mass'
+      against: 'geometric_fraction'
+      criterion: 'paired_delta_aurc_ci_excludes_zero'
+
+    - id: 'C3'
+      kind: 'verdict'
+      question: 'O instrumento desconfundido acrescenta sobre a confiança do modelo?'
+      score: 'model_confidence+enrichment'
+      against: 'model_confidence'
+      criterion: 'paired_delta_aurc_ci_excludes_zero'
+
+    - id: 'T1'
+      kind: 'descriptive'
+      question: >-
+        Em cada meta de qualidade, qual a carga de revisão exigida por cada
+        supervisor, e qual precisão, recall e F1 saem entre os entregues? Inclui
+        a linha SEM supervisor (cobertura total) como referência, e declara
+        "inalcançável" como resultado possível.
+
+    - id: 'T2'
+      kind: 'task_verdict'
+      question: >-
+        O supervisor baseado na massa de atenção exige MENOS revisão humana que
+        a confiança do próprio modelo, para a mesma qualidade entregue?
+      score: 'span_mass'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'T3'
+      kind: 'task_verdict'
+      question: >-
+        E o instrumento desconfundido pela razão — o enriquecimento — exige menos
+        revisão que a confiança do próprio modelo?
+      score: 'enrichment'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'T4'
+      kind: 'task_verdict'
+      question: >-
+        A combinação da confiança com o enriquecimento exige menos revisão que a
+        confiança sozinha?
+      score: 'model_confidence+enrichment'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    # ------------------------------------------------------------------
+    # OS NOVE SINAIS, um veredito cada, contra a confiança do modelo.
+    #
+    # Geradas MECANICAMENTE do registro de signals.py: todo sinal que não é a
+    # própria confiança entra, na ordem do registro. Não há seleção, então não
+    # há onde escolher o favorito depois de ver o resultado — e a ausência de
+    # seleção é o que substitui aqui a correção de multiplicidade.
+    # ------------------------------------------------------------------
+
+    - id: 'S1'
+      kind: 'task_verdict'
+      question: >-
+        A entropia das linhas de atenção do trecho — cujo nulo é EXATO, log|K| — exige menos revisão que a confiança do próprio modelo?
+      score: 'row_entropy'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'S2'
+      kind: 'task_verdict'
+      question: >-
+        O máximo das linhas de atenção do trecho — nulo EXATO, 1/|K| — exige menos revisão que a confiança do próprio modelo?
+      score: 'row_max'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'S3'
+      kind: 'task_verdict'
+      question: >-
+        A massa que o trecho EMITE para fora de si — nulo EXATO, complemento da recebida — exige menos revisão que a confiança?
+      score: 'emitted_mass'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'S4'
+      kind: 'task_verdict'
+      question: >-
+        A norma dos estados ocultos do trecho — nulo EMPÍRICO, desconfundido por regressão — exige menos revisão que a confiança?
+      score: 'hidden_norm'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'S5'
+      kind: 'task_verdict'
+      question: >-
+        A distância do trecho ao centroide da camada — nulo EMPÍRICO — exige menos revisão que a confiança?
+      score: 'hidden_dist_centroide'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'S6'
+      kind: 'task_verdict'
+      question: >-
+        A variação do estado do trecho entre a primeira e a última camada declarada — nulo EMPÍRICO — exige menos revisão que a confiança?
+      score: 'hidden_delta_camadas'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'S7'
+      kind: 'task_verdict'
+      question: >-
+        A margem entre o maior e o segundo maior escore de rótulo — nulo EMPÍRICO — exige menos revisão que a confiança?
+      score: 'logit_margin'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'S8'
+      kind: 'task_verdict'
+      question: >-
+        A entropia normalizada dos escores de rótulo — nulo EMPÍRICO — exige menos revisão que a confiança?
+      score: 'logit_entropy'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'S9'
+      kind: 'task_verdict'
+      question: >-
+        VERIFICAÇÃO DE IDENTIDADE: o maior escore de rótulo é, por construção, a própria confiança. O delta tem de ser EXATAMENTE zero; se não for, o encanamento está errado.
+      score: 'logit_max'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'

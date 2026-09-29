@@ -1,0 +1,88 @@
+{
+ "receita": "sha256-bytes-dos-pesos-v1",
+ "como_conferir": "python tools/impressao_digital.py <diretorio_do_peso>",
+ "pesos": [
+  {
+   "nome": "gliner_base-ft-genia",
+   "impressao": "c3494fc957821206c6afc4b8b95d417c8cb6720f6d2b12e77b7f7525e80b87ed",
+   "arquivos": [
+    {
+     "arquivo": "pytorch_model.bin",
+     "bytes": 791794259
+    }
+   ],
+   "modelo_base": "urchade/gliner_base",
+   "licenca": "CC-BY-NC-4.0",
+   "declaracoes": "decl-05, decl-07"
+  },
+  {
+   "nome": "gliner_base-ft-conll2003",
+   "impressao": "f04b3983a54b7a6ba1189e643aabf7360c762408f07e93c1fcfa99e094d9ddeb",
+   "arquivos": [
+    {
+     "arquivo": "pytorch_model.bin",
+     "bytes": 791794259
+    }
+   ],
+   "modelo_base": "urchade/gliner_base",
+   "licenca": "CC-BY-NC-4.0",
+   "declaracoes": "decl-06, decl-08"
+  },
+  {
+   "nome": "qwen05b-ft-genia",
+   "impressao": "925fa854a2b27a38383b05bacf9c473eb306bfeda21ce54888bc7c9207ac7c85",
+   "arquivos": [
+    {
+     "arquivo": "model.safetensors",
+     "bytes": 1976163472
+    }
+   ],
+   "modelo_base": "Qwen/Qwen2.5-0.5B",
+   "licenca": "Apache-2.0",
+   "declaracoes": "decl-10",
+   "modelo_base_impressao": "7e3b2f82b79f4cab09a55349369d3a8ad49bfbbd6c415f067d115ea3c267f965"
+  },
+  {
+   "nome": "qwen05b-ft-conll2003",
+   "impressao": "69ca3f4e384ab23230ac112d0520157894caf80e87d2e119a32cd02f08e91f6c",
+   "arquivos": [
+    {
+     "arquivo": "model.safetensors",
+     "bytes": 1976163472
+    }
+   ],
+   "modelo_base": "Qwen/Qwen2.5-0.5B",
+   "licenca": "Apache-2.0",
+   "declaracoes": "decl-11",
+   "modelo_base_impressao": "7e3b2f82b79f4cab09a55349369d3a8ad49bfbbd6c415f067d115ea3c267f965"
+  },
+  {
+   "nome": "qwen15b-ft-genia",
+   "impressao": "7089f77bbcc3b3f0d5f6fc7503ea90311e301c22586801f79386787e70407653",
+   "arquivos": [
+    {
+     "arquivo": "model.safetensors",
+     "bytes": 6174895536
+    }
+   ],
+   "modelo_base": "Qwen/Qwen2.5-1.5B",
+   "licenca": "Apache-2.0",
+   "declaracoes": "decl-12",
+   "modelo_base_impressao": "b92b4bb34bddfb5b0c1c277e390bc1302112bed15131e50fc9ebe43ee41102b8"
+  },
+  {
+   "nome": "qwen15b-ft-conll2003",
+   "impressao": "d607843e6d323435f153b0f48c672fe593f789ddfa2f7fd4879bbfdcc339888b",
+   "arquivos": [
+    {
+     "arquivo": "model.safetensors",
+     "bytes": 6174895536
+    }
+   ],
+   "modelo_base": "Qwen/Qwen2.5-1.5B",
+   "licenca": "Apache-2.0",
+   "declaracoes": "decl-13",
+   "modelo_base_impressao": "b92b4bb34bddfb5b0c1c277e390bc1302112bed15131e50fc9ebe43ee41102b8"
+  }
+ ]
+}
