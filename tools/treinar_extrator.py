@@ -27,6 +27,7 @@ O split de TESTE não é tocado por nada aqui.
 from __future__ import annotations
 
 import json
+import os
 
 import numpy as np
 import torch
@@ -37,6 +38,22 @@ from pathlib import Path
 
 SEED, EPOCAS, LOTE = 42, 3, 8
 N_VAL = 400  # sentenças de validação usadas na avaliação: F1 em 400 já separa épocas
+
+# O QUE O AMBIENTE MOVE (acrescentado em 01/10/2026 para o BC5CDR, decl-19), e o que NÃO move.
+# Move: quais corpora, de onde o dado entra, onde o peso e a procedência saem, o dispositivo, e um
+# limite de sentenças para o teste de fumaça. Os PADRÕES são os de antes (genia e conll2003, dado e
+# saída no diretório corrente, cuda), então quem já rodava isto roda igual. NÃO move: semente,
+# épocas, lote, taxas de aprendizado, regra de checkpoint — são a receita, e a receita é a mesma
+# em todos os corpora.
+CORPORA = tuple(os.environ.get("SENTINEL_CORPORA", "genia,conll2003").split(","))
+DADOS = Path(os.environ.get("SENTINEL_DADOS", "."))
+SAIDA = Path(os.environ.get("SENTINEL_MODELOS", "."))
+CKPT = Path(os.environ.get("SENTINEL_CKPT", "."))
+DISPOSITIVO = os.environ.get("SENTINEL_DISPOSITIVO", "cuda")
+LIMITE = int(os.environ.get("SENTINEL_LIMITE", "0"))   # 0 = corpus inteiro; >0 = FUMAÇA
+# nome do diretório do peso: o padrão antigo `ajustado-<corpus>` para genia/conll; BC5CDR segue o
+# nome que a decl-19 declara em `model`.
+NOME_DO_PESO = {"bc5cdr": "gliner_base-ft-bc5cdr"}
 
 
 def carregar(caminho: str) -> list[dict]:
@@ -76,27 +93,30 @@ def main() -> None:
     torch.manual_seed(SEED)
     np.random.seed(SEED)
 
-    for corpus in ("genia", "conll2003"):
-        treino = carregar(f"{corpus}_train.jsonl")
-        val = carregar(f"{corpus}_validation.jsonl")
+    for corpus in CORPORA:
+        treino = carregar(str(DADOS / f"{corpus}_train.jsonl"))
+        val = carregar(str(DADOS / f"{corpus}_validation.jsonl"))
+        if LIMITE:
+            treino, val = treino[:LIMITE], val[:LIMITE]
+            print(f"*** FUMAÇA: {LIMITE} exemplos. NÃO é corrida de resultado.", flush=True)
         rotulos = sorted({l for ex in treino for _, _, l in ex["ner"]})
         print(f"\n===== {corpus}: {len(treino)} treino, {len(val)} validacao, "
               f"rotulos {rotulos}", flush=True)
 
         m = GLiNER.from_pretrained("urchade/gliner_base")
-        f0, p0, r0 = f1_estrito(m.eval().to("cuda"), val[:N_VAL], rotulos)
+        f0, p0, r0 = f1_estrito(m.eval().to(DISPOSITIVO), val[:N_VAL], rotulos)
         print(f"ANTES do ajuste  F1 {f0:.4f}  P {p0:.4f}  R {r0:.4f}", flush=True)
 
         m = m.train()
         col = UniEncoderSpanDataCollator(
             m.config, data_processor=m.data_processor, prepare_labels=True)
         args = TrainingArguments(
-            output_dir=f"ckpt/{corpus}", learning_rate=5e-6, others_lr=5e-5,
+            output_dir=str(CKPT / f"ckpt/{corpus}"), learning_rate=5e-6, others_lr=5e-5,
             weight_decay=0.01, others_weight_decay=0.01, lr_scheduler_type="linear",
             warmup_ratio=0.1, per_device_train_batch_size=LOTE,
             num_train_epochs=EPOCAS, eval_strategy="no", save_strategy="epoch",
-            save_total_limit=EPOCAS, dataloader_num_workers=0, use_cpu=False,
-            report_to="none", seed=SEED, logging_steps=200, fp16=True,
+            save_total_limit=EPOCAS, dataloader_num_workers=0, use_cpu=(DISPOSITIVO == "cpu"),
+            report_to="none", seed=SEED, logging_steps=200, fp16=(DISPOSITIVO == "cuda"),
         )
         # `processing_class` e nao `tokenizer`: o transformers novo renomeou o
         # argumento, e a assinatura foi lida do pacote instalado em vez de
@@ -106,9 +126,9 @@ def main() -> None:
 
         melhor, escolhido = -1.0, None
         pontos = []
-        for ep in sorted(Path(f"ckpt/{corpus}").glob("checkpoint-*"),
+        for ep in sorted((CKPT / f"ckpt/{corpus}").glob("checkpoint-*"),
                          key=lambda p: int(p.name.split("-")[1])):
-            mm = GLiNER.from_pretrained(str(ep), local_files_only=True).eval().to("cuda")
+            mm = GLiNER.from_pretrained(str(ep), local_files_only=True).eval().to(DISPOSITIVO)
             f, p_, r_ = f1_estrito(mm, val[:N_VAL], rotulos)
             pontos.append({"checkpoint": ep.name, "f1": round(f, 4),
                            "p": round(p_, 4), "r": round(r_, 4)})
@@ -116,12 +136,13 @@ def main() -> None:
             if f > melhor:
                 melhor, escolhido = f, ep
             del mm
-            torch.cuda.empty_cache()
+            if DISPOSITIVO == "cuda":
+                torch.cuda.empty_cache()
 
         print(f"ESCOLHIDO {escolhido.name} por F1 de validacao {melhor:.4f} "
               f"(antes do ajuste {f0:.4f}, ganho {melhor - f0:+.4f})", flush=True)
         GLiNER.from_pretrained(str(escolhido), local_files_only=True).save_pretrained(
-            f"ajustado-{corpus}")
+            str(SAIDA / NOME_DO_PESO.get(corpus, f"ajustado-{corpus}")))
         json.dump({"corpus": corpus, "checkpoint": escolhido.name,
                    "f1_val": round(melhor, 4), "f1_val_antes": round(f0, 4),
                    "p_antes": round(p0, 4), "r_antes": round(r0, 4),
@@ -129,9 +150,10 @@ def main() -> None:
                    "epocas": EPOCAS, "lote": LOTE, "n_val_avaliadas": N_VAL,
                    "regra_checkpoint": "melhor F1 estrito na validacao; nunca olha ΔAURC",
                    "hiperparametros": "receita padrao do gliner, nao varrida"},
-                  open(f"ajuste_{corpus}.json", "w"), ensure_ascii=False, indent=1)
+                  open(SAIDA / f"ajuste_{corpus}.json", "w"), ensure_ascii=False, indent=1)
         del m
-        torch.cuda.empty_cache()
+        if DISPOSITIVO == "cuda":
+            torch.cuda.empty_cache()
 
     print("\nFIM", flush=True)
 

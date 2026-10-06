@@ -39,7 +39,33 @@ def fig_mecanismo():
     dec = N.ed.copy()
     dec["x"] = dec.aurc_geometric_fraction - dec.aurc_acaso
     dec["y"] = dec.aurc_span_mass - dec.aurc_acaso
-    lim = 1.12 * max(np.abs(np.r_[enc.x, enc.y, dec.x, dec.y]).max(), 0.01)
+    # the same decoders with each direction set on calibration, as their declarations prescribe
+    cal = N.edc.copy()
+    cal["x"] = cal.aurc_contra - cal.aurc_acaso
+    cal["y"] = cal.aurc_escore - cal.aurc_acaso
+    # BERT (third family) on GENIA and CoNLL, and every extractor on BC5CDR (the unseen corpus, decl-16)
+    GREEN = "#3a8f5c"
+    ext = []
+    for nome, c in (("Genia", BLUE), ("Conll", ORANGE), ("Bc", GREEN)):
+        ch = float(N.M[f"bert{nome}Chance"])
+        ext.append(("bert", c, float(N.M[f"bert{nome}Geo"]) - ch, float(N.M[f"bert{nome}Mass"]) - ch))
+    for nome, mk in (("Base", "o"), ("Large", "s"), ("Tuned", "D"), ("Small", "^"), ("Big", "v")):
+        ch = float(N.M[f"bc{nome}Chance"])
+        ext.append((mk, GREEN, float(N.M[f"bc{nome}Geo"]) - ch, float(N.M[f"bc{nome}Mass"]) - ch))
+    ex = np.array([e[2] for e in ext]); ey = np.array([e[3] for e in ext])
+    lim = 1.12 * max(np.abs(np.r_[enc.x, enc.y, dec.x, dec.y, cal.x, cal.y, ex, ey]).max(), 0.01)
+    for mk, c, x_, y_ in ext:
+        if mk == "bert":
+            ax.scatter(x_, y_, marker="P", s=46, color=c, edgecolor="white", lw=0.6, zorder=4)
+        elif mk in ("^", "v"):
+            ax.scatter(x_, y_, marker=mk, s=36, facecolor="white", edgecolor=c, lw=1.1, zorder=3)
+        else:
+            ax.scatter(x_, y_, marker=mk, s=34, color=c, edgecolor="white", lw=0.6, zorder=3)
+    for pt, r in cal.iterrows():
+        c = BLUE if "genia" in pt else ORANGE
+        ax.plot([dec.loc[pt, "x"], r.x], [dec.loc[pt, "y"], r.y], color=c, lw=0.6, alpha=0.5, zorder=2)
+        ax.scatter(r.x, r.y, marker="^" if "05b" in pt else "v", s=36, facecolor=c, alpha=0.45,
+                   edgecolor=c, lw=1.1, zorder=3)
     ax.axhline(0, color=GREY, lw=0.6, zorder=1); ax.axvline(0, color=GREY, lw=0.6, zorder=1)
     ax.plot([-lim, lim], [-lim, lim], color=GREY, lw=0.8, ls="--", zorder=1)
     for _, r in enc.iterrows():
@@ -54,16 +80,19 @@ def fig_mecanismo():
     ax.set_ylabel("AURC of attention mass − chance")
     ax.set_title("Attention mass tracks the geometric fraction, sign included", loc="left")
     ax.text(0.05 * lim, 0.95 * lim, "both worse\nthan chance", fontsize=7, color=GREY, va="top", ha="left")
-    ax.text(-0.95 * lim, -0.12 * lim, "both better\nthan chance", fontsize=7, color=GREY, va="top", ha="left")
+    ax.text(-0.58 * lim, -0.72 * lim, "both better\nthan chance", fontsize=7, color=GREY, va="top", ha="left")
     ax.xaxis.set_major_locator(mpl.ticker.MaxNLocator(4)); ax.yaxis.set_major_locator(mpl.ticker.MaxNLocator(4, prune="lower"))
     from matplotlib.lines import Line2D
     h = [Line2D([], [], ls="", marker="o", color=BLUE, label="GENIA"),
          Line2D([], [], ls="", marker="o", color=ORANGE, label="CoNLL-2003"),
+         Line2D([], [], ls="", marker="o", color="#3a8f5c", label="BC5CDR (unseen)"),
          Line2D([], [], ls="", marker="o", color="k", mfc="k", label="GLiNER base"),
          Line2D([], [], ls="", marker="s", color="k", label="GLiNER large"),
          Line2D([], [], ls="", marker="D", color="k", label="GLiNER fine-tuned"),
+         Line2D([], [], ls="", marker="P", color="k", label="BERT base"),
          Line2D([], [], ls="", marker="^", mfc="white", color="k", label="Qwen2.5-0.5B (causal)"),
-         Line2D([], [], ls="", marker="v", mfc="white", color="k", label="Qwen2.5-1.5B (causal)")]
+         Line2D([], [], ls="", marker="v", mfc="white", color="k", label="Qwen2.5-1.5B (causal)"),
+         Line2D([], [], ls="", marker="^", mfc="0.6", color="0.6", label="Qwen2.5, calibrated direction")]
     ax.legend(handles=h, frameon=False, loc="center left", bbox_to_anchor=(1.01, 0.5), handletextpad=0.3)
     ax.margins(0.04)
     return fig, dict(enc=enc[["modelo", "corpus", "x", "y"]], dec=dec[["x", "y"]])

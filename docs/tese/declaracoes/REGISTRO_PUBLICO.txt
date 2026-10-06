@@ -1,5 +1,6 @@
 # Public registry of the pre-registered declarations for the article
-# 'Attention Is Not Not Geometry'.
+# 'Shadows on the Cave Wall: What Attention Says About Extraction Errors Is Mostly Geometry'
+# (first deposited as 'Attention Is Not Not Geometry'; version 2 adds decl-14 to decl-25; version 3 adds decl-26).
 # SHA-256 of each file; check with: python tools/registro_publico.py --conferir
 # The date that counts is the date of the Zenodo deposit, not that of any file listed here.
 
@@ -28,6 +29,28 @@ f8f3b49610ab2448282028289415c7128c658462e8c1606abfed77ea1caf756d  docs/tese/decl
 e9cfe5362449969fd3672c861d4da3a53bb879803a9a0ffea776c235f659c99b  configs/decl-12-decoder-15b-genia.yaml  declaration_hash=8cde6729246f9209  measurement_hash=4d8a138acc663343
 40f99372a4715c60bc2ac5ade9b34647b4a6bbc66f0d18bf0d6d9ddec727e428  docs/tese/declaracoes/decl-13-decoder-15b-conll.md
 296c91416d8839f2b483b1a2f686c0aec37d7342b260f8874d8e9fdb94bd6290  configs/decl-13-decoder-15b-conll.yaml  declaration_hash=4d3f6cbde4df318e  measurement_hash=e02dbb705bca90c1
+c205f8987356f4663afa76619763ed1a736a88cc32a0347590a9e13f28b6749f  docs/tese/declaracoes/decl-14-tipos-de-erro.md
+0ac738b7885b3db8875b56cd8e8ee6227dafc0fa0e23da506ca1eedb8361795c  docs/tese/declaracoes/decl-15-janelas-de-controle.md
+0e964e0150e5c32344e399baa9202d3a21a763498c1b9a021c860b8e33e9ca23  docs/tese/declaracoes/decl-16-previsao-bc5cdr.md
+a9deabaa92d086d1bec52c346f5ca1bbca2cac6331fed96fada8db09e16b1795  docs/tese/declaracoes/decl-17-bc5cdr-gliner-base.md
+7da9e876cb0c5552429b7f7f2747dc26dd02ba2131a4fc5ba3754a36ee6e3dc4  configs/decl-17-bc5cdr-gliner-base.yaml  declaration_hash=e8277ca90a6b8325  measurement_hash=29639aed1edd1342
+6f4dbebe5256cff86de8d0203edd6d91ac9d0cba39ab06ac94d67972eaa93339  docs/tese/declaracoes/decl-18-bc5cdr-gliner-large.md
+7c9f3107ac72fdcc07b10e989e868f373bf5959e8349ac331cfcd6b1e1006333  configs/decl-18-bc5cdr-gliner-large.yaml  declaration_hash=58a3fa48845bb673  measurement_hash=5454128f1df4da6f
+721615ae2e6b490ffe7bf2d5ab37283578e247b108769861ace29902a4c9633a  docs/tese/declaracoes/decl-19-bc5cdr-ajustado.md
+96cc7685c33e1431edac8cbb9383c08de5978bd82282ab173419aa0546c124c2  configs/decl-19-bc5cdr-ajustado.yaml  declaration_hash=6b6b05ab90df00a3  measurement_hash=503cd1b0b98cacef
+22101673bd28bc1c09c19ec3dc04bb9da3aba6985294f106f2201aee7f3134ff  docs/tese/declaracoes/decl-20-bc5cdr-decoder-05b.md
+cdc8857575200ee4fa35f7d189fe8fb5a910fb44a93120342d729a92f20fce88  configs/decl-20-bc5cdr-decoder-05b.yaml  declaration_hash=fc42da0e78be0beb  measurement_hash=afe6a84294888252
+0003c064cab093fcf5a53ed93f901c23f22a744b987aeb69b930f13089f3cb06  docs/tese/declaracoes/decl-21-bc5cdr-decoder-15b.md
+5946ebf21f430b00fb8295a3324e706b57f8505ae14ac399a7da2dac71531c75  configs/decl-21-bc5cdr-decoder-15b.yaml  declaration_hash=e2d51936b9f8f285  measurement_hash=84b51948c3c3c0fe
+3fd635de63fef390b037951b6fb1ef41128b9afd485a96a7e1034e20cb3659b7  docs/tese/declaracoes/decl-22-bert.md
+697497493767571bcdcfd06e1508709306c930f4b0574cb3ed9ffdc74cc79bdb  docs/tese/declaracoes/decl-23-bert-genia.md
+eea33b854d6b270529420eb3c38cc8e422abec9f2ff708ffec0dbeccaf491e58  configs/decl-23-bert-genia.yaml  declaration_hash=85ae715cfe4a11eb  measurement_hash=c5068b677fbfdf82
+983a530b6485529a9a4131ced3e5bd8d2bfb50b9c77eaebdf626f95ece94cc9b  docs/tese/declaracoes/decl-24-bert-conll.md
+43e6f27118ba7853a1e53090e10457485bf4576467551658fe53fd4070cadd71  configs/decl-24-bert-conll.yaml  declaration_hash=abfa342d1eb08889  measurement_hash=e634bbf5ee255027
+bb1664452073343bcbfc4092013c3a0e4aedba62bf39b3f9383cd95e95f2e6da  docs/tese/declaracoes/decl-25-bert-bc5cdr.md
+382615bc75365d4914b08792c225b10826521b7d3634428e72dd82962e79b46e  configs/decl-25-bert-bc5cdr.yaml  declaration_hash=0e2393d0fb9ceb70  measurement_hash=3e83ea02cc918bf2
+103a96dd9149ad73da7929f4d465e2738e78f5b6dbcabc6d1b4b5f835a887c77  docs/tese/declaracoes/decl-26-bc5cdr-gliner-base.md
+845802b9c6493f450b5face35c20574e4592b945f3425387526eb17ece059aa5  configs/decl-26-bc5cdr-gliner-base.yaml  declaration_hash=59ab28f110d1c092  measurement_hash=fcf84d0cc9391e66
 c72e63e0456160b3bd5c3067fde123853a5379fc28f5b886e7ea9bf68458dbf1  docs/tese/declaracoes/adenda-01-decoder-base-treinada.md
 9a8071cc0c6944f4a987f5655933ddafd8a90115289945730c93e423f681e2b8  docs/tese/declaracoes/adenda-02-decoder-leitura-dos-nomes.md
 3476c53996eab36cd37cb1506381e51fae7b143ba67a44c346b64fbd13982fd5  docs/tese/PREREGISTRO.md

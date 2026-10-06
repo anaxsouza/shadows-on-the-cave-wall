@@ -1,27 +1,35 @@
 cff-version: 1.2.0
-repository-code: "https://github.com/anaxsouza/attention-is-not-not-geometry"
+repository-code: "https://github.com/anaxsouza/shadows-on-the-cave-wall"
 message: "If you use this code or these tables, please cite the article below."
-title: "attention-is-not-not-geometry: code, pre-registered declarations and measured tables"
+title: "shadows-on-the-cave-wall: code, pre-registered declarations and measured tables"
 type: software
 license: MIT
 authors:
   - family-names: Souza
     given-names: Anaximandro
     email: anaximandro.souza@coc.ufrj.br
-    affiliation: "PEC/COPPE, Universidade Federal do Rio de Janeiro"
+    affiliation: "PEC/COPPE, Universidade Federal do Rio de Janeiro; PUC-Behring Institute for AI"
+  - family-names: Miranda e Silva
+    given-names: João Victor
+    email: j.v.silva@esp.puc-rio.br
+    affiliation: "PUC-Behring Institute for AI"
   - family-names: Espíndola
     given-names: Rogério Pinto
     affiliation: "PEC/COPPE, Universidade Federal do Rio de Janeiro"
   - family-names: Cerqueira
     given-names: Renato
     affiliation: "PUC-Behring Institute for AI"
-# version, date-released and doi: fill in for the tagged release archived by Zenodo
+version: "v2.0-submission"
+date-released: "2026-10-05"
+doi: "10.5281/zenodo.23163910"
 preferred-citation:
   type: article
-  title: "Attention Is Not Not Geometry"
+  title: "Shadows on the Cave Wall: What Attention Says About Extraction Errors Is Mostly Geometry"
   authors:
     - family-names: Souza
       given-names: Anaximandro
+    - family-names: Miranda e Silva
+      given-names: João Victor
     - family-names: Espíndola
       given-names: Rogério Pinto
     - family-names: Cerqueira

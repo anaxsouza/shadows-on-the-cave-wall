@@ -1,0 +1,46 @@
+{
+ "corpus": "bc5cdr",
+ "checkpoint": "checkpoint-1962",
+ "f1_val": 0.8718,
+ "f1_val_antes": 0.67,
+ "p_antes": 0.6271,
+ "r_antes": 0.7191,
+ "por_epoca": [
+  {
+   "checkpoint": "checkpoint-654",
+   "f1": 0.8606,
+   "p": 0.8342,
+   "r": 0.8887
+  },
+  {
+   "checkpoint": "checkpoint-1308",
+   "f1": 0.8666,
+   "p": 0.8301,
+   "r": 0.9064
+  },
+  {
+   "checkpoint": "checkpoint-1962",
+   "f1": 0.8718,
+   "p": 0.8339,
+   "r": 0.9134
+  }
+ ],
+ "rotulos": [
+  "chemical",
+  "disease"
+ ],
+ "seed": 42,
+ "epocas": 3,
+ "lote": 8,
+ "n_val_avaliadas": 400,
+ "regra_checkpoint": "melhor F1 estrito na validacao; nunca olha ΔAURC",
+ "hiperparametros": "receita padrao do gliner, nao varrida",
+ "checkpoint_sha256_v1": "cf39f4d1efe0282a12ecb03f103456f6b97bcf2e5ae7b269e28a138f3b87b080",
+ "receita": "sha256-bytes-dos-pesos-v1",
+ "arquivos": [
+  {
+   "arquivo": "pytorch_model.bin",
+   "bytes": 791794259
+  }
+ ]
+}

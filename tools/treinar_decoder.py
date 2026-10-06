@@ -84,7 +84,14 @@ EPOCAS = 3
 # espaços de trabalho do cuBLAS. Fórmula fechada não prevê isso; medir prevê.
 LOTE_EFETIVO = 16
 FATIA = {"qwen2.5-0.5b": 4, "qwen2.5-1.5b": 1}
-LOTE = FATIA.get(os.environ.get("SENTINEL_MODELO", "qwen2.5-0.5b"), 4)
+# CORREÇÃO DE 01/10/2026 (BC5CDR), sem efeito sobre o que já foi treinado: `submeter_sagemaker.py` passa
+# em SENTINEL_MODELO o NOME DO HUB ("Qwen/Qwen2.5-1.5B"), enquanto `FATIA` e `curto` (mais abaixo)
+# são indexados pela CHAVE CURTA ("qwen2.5-1.5b"). Sem a tradução, o 1,5B caía no padrão 4 (a fatia
+# que estourou a A10G) e o nome do peso não era resolvido. A tradução aceita as duas grafias.
+CHAVE_DO_MODELO = {"Qwen/Qwen2.5-0.5B": "qwen2.5-0.5b", "Qwen/Qwen2.5-1.5B": "qwen2.5-1.5b"}
+_MODELO_ENV = os.environ.get("SENTINEL_MODELO", "qwen2.5-0.5b")
+CHAVE = CHAVE_DO_MODELO.get(_MODELO_ENV, _MODELO_ENV)
+LOTE = FATIA.get(CHAVE, 4)
 ACUM = LOTE_EFETIVO // LOTE
 assert LOTE * ACUM == LOTE_EFETIVO, (LOTE, ACUM)
 MAX_LEN = 320
@@ -397,7 +404,7 @@ def main():
         # `SENTINEL_MODELO` é a mesma variável que escolhe a fatia de lote, então
         # nome e configuração não podem divergir.
         curto = {"qwen2.5-0.5b": "qwen05b", "qwen2.5-1.5b": "qwen15b"}
-        ponto = os.environ.get("SENTINEL_MODELO", "qwen2.5-0.5b")
+        ponto = CHAVE
         if ponto not in curto:
             raise SystemExit(
                 f"SENTINEL_MODELO={ponto!r} sem nome curto registrado. Acrescente-o "

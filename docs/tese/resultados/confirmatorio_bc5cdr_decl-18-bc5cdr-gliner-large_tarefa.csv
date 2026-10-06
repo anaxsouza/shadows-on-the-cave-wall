@@ -1,0 +1,42 @@
+modelo,corpus,comparacao,tipo,supervisor,grade,meta,meta_absoluta,vao_fechado,alcancavel,review_load,coverage,precision,recall,f1,n_delivered,contra,review_load_contra,delta,ci_low,ci_high,n_entidades,n_sentencas,n_reamostragens,n_degeneradas,veredito
+gliner-large,bc5cdr,T1,descriptive,(sem supervisor),—,—,,0.0,sim,0.0,1.0,0.6552,0.5203,0.58,7790.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,span_size,absoluta,0.70,,0.3307,sim,0.9983,0.0017,0.7692,0.001,0.002,13.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,span_size,absoluta,0.80,,0.42,sim,0.9987,0.0013,0.8,0.0008,0.0016,10.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,span_size,absoluta,0.90,,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,2.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,span_size,absoluta,0.95,,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,2.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.70,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.80,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.90,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.95,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,enrichment,absoluta,0.70,,0.1299,sim,0.7086,0.2914,0.7,0.162,0.2631,2270.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,enrichment,absoluta,0.80,,0.42,sim,0.9865,0.0135,0.8,0.0086,0.0169,105.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,enrichment,absoluta,0.90,,0.7583,sim,0.9985,0.0015,0.9167,0.0011,0.0022,12.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,enrichment,absoluta,0.95,,1.0,sim,0.9994,0.0006,1.0,0.0005,0.001,5.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.70,,0.42,sim,0.9994,0.0006,0.8,0.0004,0.0008,5.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.80,,0.42,sim,0.9994,0.0006,0.8,0.0004,0.0008,5.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.90,,1.0,sim,0.9999,0.0001,1.0,0.0001,0.0002,1.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.95,,1.0,sim,0.9999,0.0001,1.0,0.0001,0.0002,1.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,sentence_length,absoluta,0.70,,0.1299,sim,0.9602,0.0398,0.7,0.0221,0.0429,310.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,sentence_length,absoluta,0.80,,0.4281,sim,0.9909,0.0091,0.8028,0.0058,0.0115,71.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,sentence_length,absoluta,0.90,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,sentence_length,absoluta,0.95,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,span_mass,absoluta,0.70,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,span_mass,absoluta,0.80,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,span_mass,absoluta,0.90,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,span_mass,absoluta,0.95,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,model_confidence,absoluta,0.70,,0.1299,sim,0.1117,0.8883,0.7,0.4938,0.5791,6920.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,model_confidence,absoluta,0.80,,0.42,sim,0.3562,0.6438,0.8,0.409,0.5413,5015.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,model_confidence,absoluta,0.90,,0.7101,sim,0.6481,0.3519,0.9,0.2515,0.3931,2741.0,,,,,,,,,,
+gliner-large,bc5cdr,T1,descriptive,model_confidence,absoluta,0.95,,0.8555,sim,0.8995,0.1005,0.9502,0.0758,0.1405,783.0,,,,,,,,,,
+gliner-large,bc5cdr,T2,task_verdict,span_mass,absoluta,0.70,,,não,inalcançável,,,,,,model_confidence,0.1117,,,,7790.0,3028.0,0.0,0.0,inalcançável para span_mass
+gliner-large,bc5cdr,T2,task_verdict,span_mass,absoluta,0.80,,,não,inalcançável,,,,,,model_confidence,0.3562,,,,7790.0,3028.0,0.0,0.0,inalcançável para span_mass
+gliner-large,bc5cdr,T2,task_verdict,span_mass,absoluta,0.90,,,não,inalcançável,,,,,,model_confidence,0.6481,,,,7790.0,3028.0,0.0,0.0,inalcançável para span_mass
+gliner-large,bc5cdr,T2,task_verdict,span_mass,absoluta,0.95,,,não,inalcançável,,,,,,model_confidence,0.8995,,,,7790.0,3028.0,0.0,0.0,inalcançável para span_mass
+gliner-large,bc5cdr,T3,task_verdict,enrichment,absoluta,0.70,,,sim,0.7086,,,,,,model_confidence,0.1117,0.5969,0.5249,0.7256,7790.0,3028.0,2000.0,0.0,enrichment EXIGE MAIS revisão
+gliner-large,bc5cdr,T3,task_verdict,enrichment,absoluta,0.80,,,sim,0.9865,,,,,,model_confidence,0.3562,0.6303,0.5879,0.6671,7790.0,3028.0,1999.0,1.0,enrichment EXIGE MAIS revisão
+gliner-large,bc5cdr,T3,task_verdict,enrichment,absoluta,0.90,,,sim,0.9985,,,,,,model_confidence,0.6481,0.3503,0.3007,0.3842,7790.0,3028.0,1992.0,8.0,enrichment EXIGE MAIS revisão
+gliner-large,bc5cdr,T3,task_verdict,enrichment,absoluta,0.95,,,sim,0.9994,,,,,,model_confidence,0.8995,0.0999,0.0129,0.1859,7790.0,3028.0,1991.0,9.0,enrichment EXIGE MAIS revisão
+gliner-large,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.70,,,sim,0.1114,,,,,,model_confidence,0.1117,-0.0003,-0.0017,0.0011,7790.0,3028.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)
+gliner-large,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.80,,,sim,0.3575,,,,,,model_confidence,0.3562,0.0013,-0.0046,0.0053,7790.0,3028.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)
+gliner-large,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.90,,,sim,0.6503,,,,,,model_confidence,0.6481,0.0022,-0.0103,0.0168,7790.0,3028.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)
+gliner-large,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.95,,,sim,0.9223,,,,,,model_confidence,0.8995,0.0228,-0.0489,0.0951,7790.0,3028.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)

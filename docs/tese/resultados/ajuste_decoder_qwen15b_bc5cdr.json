@@ -1,0 +1,57 @@
+{
+ "corpus": "bc5cdr",
+ "modelo_base": "Qwen/Qwen2.5-1.5B",
+ "modelo_base_caminho": "/opt/ml/input/data/base",
+ "modelo_base_sha256_v1": "b92b4bb34bddfb5b0c1c277e390bc1302112bed15131e50fc9ebe43ee41102b8",
+ "checkpoint_sha256_v1": "f2027393ad6538ce7d980e97b6f5170fe2a7990a9bbb43982d9bf451c5c98437",
+ "receita": "sha256-bytes-dos-pesos-v1",
+ "arquivos": [
+  {
+   "arquivo": "model.safetensors",
+   "bytes": 6174895536
+  }
+ ],
+ "precisao": "bf16",
+ "otimizador": "adamw_bnb_8bit",
+ "selecao_e_medicao_em": "fp32",
+ "fumaca": false,
+ "f1_val": 0.9302857142857143,
+ "p_val": 0.9166666666666666,
+ "r_val": 0.9443155452436195,
+ "f1_val_antes": 0.0,
+ "p_antes": 0.0,
+ "r_antes": 0.0,
+ "checkpoint": "checkpoint-981",
+ "por_epoca": [
+  {
+   "checkpoint": "checkpoint-327",
+   "f1": 0.8523809523809525,
+   "p": 0.8753056234718827,
+   "r": 0.8306264501160093
+  },
+  {
+   "checkpoint": "checkpoint-654",
+   "f1": 0.9128919860627178,
+   "p": 0.913953488372093,
+   "r": 0.9118329466357309
+  },
+  {
+   "checkpoint": "checkpoint-981",
+   "f1": 0.9302857142857143,
+   "p": 0.9166666666666666,
+   "r": 0.9443155452436195
+  }
+ ],
+ "rotulos": [
+  "chemical",
+  "disease"
+ ],
+ "seed": 42,
+ "epocas": 3,
+ "lote": 1,
+ "acumulacao": 16,
+ "n_val_avaliadas": 300,
+ "regra_checkpoint": "melhor F1 estrito na validacao; nunca olha nenhuma quantidade da hipotese",
+ "hiperparametros": "receita padrao, nao varrida",
+ "attn_implementation": "eager (obrigatorio: sdpa devolve atencao vazia)"
+}

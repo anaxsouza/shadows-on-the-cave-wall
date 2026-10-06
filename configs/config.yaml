@@ -84,6 +84,15 @@ models:
     parameters: 197M
     ner_specific: true
     architecture_role: extrator ajustado ao CoNLL -- F1 estrito 0,6726 -> 0,9696 na validacao (decl-06)
+  # AJUSTADO AO BC5CDR, 01/10/2026 (decl-19). Mesma receita de tools/treinar_extrator.py.
+  gliner_base-ft-bc5cdr:
+    model_name: gliner_base-ft-bc5cdr
+    architecture: gliner
+    is_autoregressive: false
+    max_length: 384
+    parameters: 197M
+    ner_specific: true
+    architecture_role: extrator ajustado ao BC5CDR (decl-19)
   gliner-large:
     model_name: urchade/gliner_large
     architecture: gliner
@@ -117,12 +126,18 @@ gliner_labels:
     # na primeira versão e nenhuma predição do GENIA casaria com a anotação —
     # todas contariam como erro, e o teste falharia por um mapa e não pelo
     # instrumento. Do lado esquerdo ficam as descrições dadas ao modelo.
+  # BC5CDR (decl-16): a descricao dada ao modelo e o nome do tipo em minusculas; o lado
+  # direito e o rotulo do corpus (conferido em label.json: Chemical, Disease).
+  bc5cdr:
+    chemical: Chemical
+    disease: Disease
 
 model_aliases:
   gliner: gliner-base
 dataset_aliases:
   conll: conll2003
   genia: genia
+  bc5cdr: bc5cdr
 datasets:
   conll2003:
     name: eriktks/conll2003
@@ -162,6 +177,20 @@ datasets:
       train: 15023
       validation: 1669
       test: 1854
+  bc5cdr:
+    # tner/bc5cdr, revisao declarada na decl-16. Leitura LOCAL de dados_bc5cdr/ com SHA-256
+    # conferido (src/core/loaders/biomedical/bc5cdr.py); o texto nao e redistribuido.
+    name: tner/bc5cdr
+    revision: f68cdc7db924369241e7868656f583072acd4e90
+    config: null
+    local_dir: dados_bc5cdr
+    text_column: tokens
+    label_column: tags
+    has_nested: false
+    num_splits:
+      train: 5227
+      validation: 5329
+      test: 5864
 generation:
   temperature: 0.7
   top_p: 0.9
@@ -199,6 +228,12 @@ model_limits:
     recommended_output_tokens: 64
     architecture_type: span-scoring
   gliner_base-ft-conll2003:
+    max_context_window: 384
+    max_tokenizer_length: 384
+    recommended_input_tokens: 320
+    recommended_output_tokens: 64
+    architecture_type: span-scoring
+  gliner_base-ft-bc5cdr:
     max_context_window: 384
     max_tokenizer_length: 384
     recommended_input_tokens: 320

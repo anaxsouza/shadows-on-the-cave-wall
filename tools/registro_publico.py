@@ -58,7 +58,8 @@ def main() -> int:
         print("IDÊNTICO ao registro depositado" if not dif else "DIFERE:\n" + "\n".join(dif))
         return 1 if dif else 0
     cab = ["# Public registry of the pre-registered declarations for the article",
-           "# 'Attention Is Not Not Geometry'.",
+           "# 'Shadows on the Cave Wall: What Attention Says About Extraction Errors Is Mostly Geometry'",
+           "# (first deposited as 'Attention Is Not Not Geometry'; version 2 adds decl-14 to decl-25; version 3 adds decl-26).",
            "# SHA-256 of each file; check with: python tools/registro_publico.py --conferir",
            "# The date that counts is the date of the Zenodo deposit, not that of any file listed here.", ""]
     SAIDA.write_text("\n".join(cab + atual) + "\n", encoding="utf-8")

@@ -1,0 +1,124 @@
+modelo,declaracao,corpus,comparacao,tipo,supervisor,grade,meta,meta_absoluta,vao_fechado,alcancavel,review_load,coverage,precision,recall,f1,n_delivered,contra,review_load_contra,delta,ci_low,ci_high,n_entidades,n_sentencas,n_reamostragens,n_degeneradas,veredito
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,(sem supervisor),—,—,,0.0,sim,0.0,1.0,0.7223,0.4969,0.5888,3788,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,span_size,absoluta,0.70,,0.0,sim,0.0,1.0,0.7223,0.4969,0.5888,3788,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,span_size,absoluta,0.80,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,span_size,absoluta,0.90,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,span_size,absoluta,0.95,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,geometric_fraction,absoluta,0.70,,0.0,sim,0.0,1.0,0.7223,0.4969,0.5888,3788,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,geometric_fraction,absoluta,0.80,,0.3056,sim,0.963,0.037,0.8071,0.0205,0.04,140,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,geometric_fraction,absoluta,0.90,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,geometric_fraction,absoluta,0.95,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,enrichment,absoluta,0.70,,0.0,sim,0.0,1.0,0.7223,0.4969,0.5888,3788,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,enrichment,absoluta,0.80,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,enrichment,absoluta,0.90,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,enrichment,absoluta,0.95,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,geometric_residual,absoluta,0.70,,0.0,sim,0.0,1.0,0.7223,0.4969,0.5888,3788,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,geometric_residual,absoluta,0.80,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,geometric_residual,absoluta,0.90,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,geometric_residual,absoluta,0.95,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,sentence_length,absoluta,0.70,,0.0,sim,0.0,1.0,0.7223,0.4969,0.5888,3788,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,sentence_length,absoluta,0.80,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,sentence_length,absoluta,0.90,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,sentence_length,absoluta,0.95,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,span_mass,absoluta,0.70,,0.0,sim,0.0,1.0,0.7223,0.4969,0.5888,3788,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,span_mass,absoluta,0.80,,0.2798,sim,0.9987,0.0013,0.8,0.0007,0.0015,5,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,span_mass,absoluta,0.90,,1.0,sim,0.9989,0.0011,1.0,0.0007,0.0015,4,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,span_mass,absoluta,0.95,,1.0,sim,0.9989,0.0011,1.0,0.0007,0.0015,4,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,model_confidence,absoluta,0.70,,0.0,sim,0.0,1.0,0.7223,0.4969,0.5888,3788,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,model_confidence,absoluta,0.80,,0.2803,sim,0.1573,0.8427,0.8001,0.4639,0.5873,3192,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,model_confidence,absoluta,0.90,,0.6399,sim,0.5539,0.4461,0.9,0.2762,0.4227,1690,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T1,descriptive,model_confidence,absoluta,0.95,,0.8219,sim,0.8292,0.1708,0.9505,0.1117,0.1999,647,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T2,task_verdict,span_mass,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,3788,1154,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T2,task_verdict,span_mass,absoluta,0.80,,,sim,0.9987,,,,,,model_confidence,0.1573,0.8413,0.5999,0.8684,3788,1154,1990,10,span_mass EXIGE MAIS revisão
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T2,task_verdict,span_mass,absoluta,0.90,,,sim,0.9989,,,,,,model_confidence,0.5539,0.4451,0.3058,0.5477,3788,1154,1971,29,span_mass EXIGE MAIS revisão
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T2,task_verdict,span_mass,absoluta,0.95,,,sim,0.9989,,,,,,model_confidence,0.8292,0.1697,0.1108,0.217,3788,1154,1968,32,span_mass EXIGE MAIS revisão
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T3,task_verdict,enrichment,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,3788,1154,1997,3,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T3,task_verdict,enrichment,absoluta,0.80,,,não,inalcançável,,,,,,model_confidence,0.1573,,,,3788,1154,0,0,inalcançável para enrichment
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T3,task_verdict,enrichment,absoluta,0.90,,,não,inalcançável,,,,,,model_confidence,0.5539,,,,3788,1154,0,0,inalcançável para enrichment
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T3,task_verdict,enrichment,absoluta,0.95,,,não,inalcançável,,,,,,model_confidence,0.8292,,,,3788,1154,0,0,inalcançável para enrichment
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T4,task_verdict,model_confidence+enrichment,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,3788,1154,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T4,task_verdict,model_confidence+enrichment,absoluta,0.80,,,sim,0.1573,,,,,,model_confidence,0.1573,0.0,0.0,0.0,3788,1154,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T4,task_verdict,model_confidence+enrichment,absoluta,0.90,,,sim,0.5539,,,,,,model_confidence,0.5539,0.0,0.0,0.0,3788,1154,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,genia,T4,task_verdict,model_confidence+enrichment,absoluta,0.95,,,sim,0.8292,,,,,,model_confidence,0.8292,0.0,0.0,0.0,3788,1154,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,(sem supervisor),—,—,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,span_size,absoluta,0.70,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,span_size,absoluta,0.80,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,span_size,absoluta,0.90,,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,span_size,absoluta,0.95,,1.0,sim,0.9998,0.0002,1.0,0.0002,0.0004,1,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,geometric_fraction,absoluta,0.70,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,geometric_fraction,absoluta,0.80,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,geometric_fraction,absoluta,0.90,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,geometric_fraction,absoluta,0.95,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,enrichment,absoluta,0.70,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,enrichment,absoluta,0.80,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,enrichment,absoluta,0.90,,1.0,sim,0.9995,0.0005,1.0,0.0004,0.0007,2,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,enrichment,absoluta,0.95,,1.0,sim,0.9995,0.0005,1.0,0.0004,0.0007,2,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,geometric_residual,absoluta,0.70,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,geometric_residual,absoluta,0.80,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,geometric_residual,absoluta,0.90,,1.0,sim,0.9993,0.0007,1.0,0.0005,0.0011,3,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,geometric_residual,absoluta,0.95,,1.0,sim,0.9993,0.0007,1.0,0.0005,0.0011,3,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,sentence_length,absoluta,0.70,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,sentence_length,absoluta,0.80,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,sentence_length,absoluta,0.90,,0.138,sim,0.61,0.39,0.901,0.2512,0.3929,1575,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,sentence_length,absoluta,0.95,,0.6436,sim,0.9274,0.0726,0.959,0.0498,0.0946,293,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,span_mass,absoluta,0.70,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,span_mass,absoluta,0.80,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,span_mass,absoluta,0.90,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,span_mass,absoluta,0.95,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,model_confidence,absoluta,0.70,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,model_confidence,absoluta,0.80,,0.0,sim,0.0,1.0,0.8851,0.6328,0.738,4038,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,model_confidence,absoluta,0.90,,0.1311,sim,0.0203,0.9797,0.9002,0.6305,0.7416,3956,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T1,descriptive,model_confidence,absoluta,0.95,,0.5661,sim,0.1258,0.8742,0.9501,0.5938,0.7309,3530,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T2,task_verdict,span_mass,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,4038,2013,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T2,task_verdict,span_mass,absoluta,0.80,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,4038,2013,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T2,task_verdict,span_mass,absoluta,0.90,,,não,inalcançável,,,,,,model_confidence,0.0203,,,,4038,2013,0,0,inalcançável para span_mass
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T2,task_verdict,span_mass,absoluta,0.95,,,não,inalcançável,,,,,,model_confidence,0.1258,,,,4038,2013,0,0,inalcançável para span_mass
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T3,task_verdict,enrichment,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,4038,2013,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T3,task_verdict,enrichment,absoluta,0.80,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,4038,2013,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T3,task_verdict,enrichment,absoluta,0.90,,,sim,0.9995,,,,,,model_confidence,0.0203,0.9792,0.8923,0.9933,4038,2013,1869,131,enrichment EXIGE MAIS revisão
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T3,task_verdict,enrichment,absoluta,0.95,,,sim,0.9995,,,,,,model_confidence,0.1258,0.8737,0.8373,0.9069,4038,2013,1824,176,enrichment EXIGE MAIS revisão
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T4,task_verdict,model_confidence+enrichment,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,4038,2013,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T4,task_verdict,model_confidence+enrichment,absoluta,0.80,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,4038,2013,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T4,task_verdict,model_confidence+enrichment,absoluta,0.90,,,sim,0.0203,,,,,,model_confidence,0.0203,0.0,0.0,0.0,4038,2013,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,conll2003,T4,task_verdict,model_confidence+enrichment,absoluta,0.95,,,sim,0.1258,,,,,,model_confidence,0.1258,0.0,0.0,0.0,4038,2013,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,(sem supervisor),—,—,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,span_size,absoluta,0.70,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,span_size,absoluta,0.80,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,span_size,absoluta,0.90,,0.616,sim,0.9979,0.0021,0.9333,0.0014,0.0029,15,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,span_size,absoluta,0.95,,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,2,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.70,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.80,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.90,,0.4764,sim,0.9969,0.0031,0.9091,0.002,0.0041,22,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.95,,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,2,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,enrichment,absoluta,0.70,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,enrichment,absoluta,0.80,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,enrichment,absoluta,0.90,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,enrichment,absoluta,0.95,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.70,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.80,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.90,,0.52,sim,0.9983,0.0017,0.9167,0.0011,0.0022,12,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.95,,1.0,sim,0.9999,0.0001,1.0,0.0001,0.0002,1,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,sentence_length,absoluta,0.70,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,sentence_length,absoluta,0.80,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,sentence_length,absoluta,0.90,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,sentence_length,absoluta,0.95,,,não,inalcançável,,,,,0,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,span_mass,absoluta,0.70,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,span_mass,absoluta,0.80,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,span_mass,absoluta,0.90,,0.52,sim,0.9983,0.0017,0.9167,0.0011,0.0022,12,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,span_mass,absoluta,0.95,,1.0,sim,0.9999,0.0001,1.0,0.0001,0.0002,1,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,model_confidence,absoluta,0.70,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,model_confidence,absoluta,0.80,,0.0,sim,0.0,1.0,0.8264,0.6061,0.6993,7194,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,model_confidence,absoluta,0.90,,0.4244,sim,0.1543,0.8457,0.9001,0.5583,0.6891,6084,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T1,descriptive,model_confidence,absoluta,0.95,,0.7126,sim,0.3036,0.6964,0.9501,0.4853,0.6424,5010,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T2,task_verdict,span_mass,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7194,2914,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T2,task_verdict,span_mass,absoluta,0.80,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7194,2914,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T2,task_verdict,span_mass,absoluta,0.90,,,sim,0.9983,,,,,,model_confidence,0.1543,0.844,0.8117,0.8641,7194,2914,1775,225,span_mass EXIGE MAIS revisão
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T2,task_verdict,span_mass,absoluta,0.95,,,sim,0.9999,,,,,,model_confidence,0.3036,0.6963,0.6644,0.7214,7194,2914,1569,431,span_mass EXIGE MAIS revisão
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T3,task_verdict,enrichment,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7194,2914,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T3,task_verdict,enrichment,absoluta,0.80,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7194,2914,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T3,task_verdict,enrichment,absoluta,0.90,,,não,inalcançável,,,,,,model_confidence,0.1543,,,,7194,2914,0,0,inalcançável para enrichment
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T3,task_verdict,enrichment,absoluta,0.95,,,não,inalcançável,,,,,,model_confidence,0.3036,,,,7194,2914,0,0,inalcançável para enrichment
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7194,2914,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.80,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7194,2914,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.90,,,sim,0.1543,,,,,,model_confidence,0.1543,0.0,0.0,0.0,7194,2914,2000,0,NÃO DISTINGUE (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.95,,,sim,0.3036,,,,,,model_confidence,0.3036,0.0,0.0,0.0,7194,2914,2000,0,NÃO DISTINGUE (IC contém zero)

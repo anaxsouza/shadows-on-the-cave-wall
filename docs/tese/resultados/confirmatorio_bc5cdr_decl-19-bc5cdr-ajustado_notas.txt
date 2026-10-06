@@ -1,0 +1,10 @@
+partição por sentença: 1307 sentenças de calibração (3124 entidades) e 3050 de avaliação (7354 entidades).
+model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0430). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+partição de avaliação: 7354 entidades em 3050 sentenças; calibração com 1307 sentenças, separada por SENTENÇA
+o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+T2 grade absoluta meta 0.90: 199 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1801 restantes
+T2 grade absoluta meta 0.95: 217 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1783 restantes
+model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0430). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.

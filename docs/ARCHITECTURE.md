@@ -306,6 +306,7 @@ hash.
 | `gliner-large` | `urchade/gliner_large` | `deberta-v3-large` | 24 x 16 | 445M | `decl-04-escala` |
 | `gliner_base-ft-genia` | fine-tuned from `gliner_base` | `deberta-v3-base` | 12 x 12 | 197M | `decl-05-ajustado-genia` |
 | `gliner_base-ft-conll2003` | fine-tuned from `gliner_base` | `deberta-v3-base` | 12 x 12 | 197M | `decl-06-ajustado-conll` |
+| `gliner_base-ft-bc5cdr` | fine-tuned from `gliner_base` | `deberta-v3-base` | 12 x 12 | 197M | `decl-19-bc5cdr-ajustado` |
 
 The registry grew to two entries on 2026-09-15, and the reason is an objection
 rather than an ambition: the confirmatory result is negative, and the most

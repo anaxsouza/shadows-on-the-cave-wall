@@ -55,8 +55,8 @@ def build_selective_parser(p: argparse.ArgumentParser) -> None:
     p.add_argument(
         "--dataset",
         required=True,
-        choices=("conll2003", "genia"),
-        help="conll2003 (plano) ou genia (aninhado) — o contraste é metade da pergunta",
+        choices=("conll2003", "genia", "bc5cdr"),
+        help="conll2003 (plano), genia (aninhado) ou bc5cdr (plano, decl-16) — o contraste é metade da pergunta",
     )
     p.add_argument("--config", default="configs/config.yaml",
                    help="A DECLARAÇÃO em vigor: só itens pré-registrados, e é o que o hash cobre")
@@ -199,7 +199,9 @@ def _run_measure(args: argparse.Namespace) -> int:
     from src.core.loaders.biomedical.genia import GENIALoader
     from src.core.loaders.conll.loader import CONLLLoader
 
-    Loader = {"conll2003": CONLLLoader, "genia": GENIALoader}[args.dataset]
+    from src.core.loaders.biomedical.bc5cdr import BC5CDRLoader
+
+    Loader = {"conll2003": CONLLLoader, "genia": GENIALoader, "bc5cdr": BC5CDRLoader}[args.dataset]
     exemplos = Loader().load_split(args.split)
     if args.max_samples and args.max_samples > 0:
         exemplos = exemplos[: args.max_samples]

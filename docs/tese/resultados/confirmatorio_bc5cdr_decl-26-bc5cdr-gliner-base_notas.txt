@@ -1,0 +1,16 @@
+partição por sentença: 1328 sentenças de calibração (3282 entidades) e 3099 de avaliação (7952 entidades).
+model_confidence+enrichment: peso 0.96 em model_confidence e 0.04 em enrichment, ajustado na calibração (AURC 0.2096). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+partição de avaliação: 7952 entidades em 3099 sentenças; calibração com 1328 sentenças, separada por SENTENÇA
+o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+T2 grade absoluta meta 0.70: 86 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1914 restantes
+T2 grade absoluta meta 0.80: 121 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1879 restantes
+T2 grade absoluta meta 0.90: 176 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1824 restantes
+T2 grade absoluta meta 0.95: 517 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1483 restantes
+T3 grade absoluta meta 0.90: 6 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1994 restantes
+T3 grade absoluta meta 0.95: 377 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1623 restantes
+model_confidence+enrichment: peso 0.96 em model_confidence e 0.04 em enrichment, ajustado na calibração (AURC 0.2096). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+T4 grade absoluta meta 0.90: 6 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1994 restantes
+T4 grade absoluta meta 0.95: 377 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1623 restantes

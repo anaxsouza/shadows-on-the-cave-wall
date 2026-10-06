@@ -22,8 +22,8 @@ PRE = r"""% ====================================================================
 \jnum{nn}
 \jyear{2026}
 \dochead{Short Paper}
-\runningtitle{Attention Is Not Not Geometry}
-\runningauthor{Souza, Espíndola, and Cerqueira}
+\runningtitle{Shadows on the Cave Wall}
+\runningauthor{Souza, Miranda e Silva, Espíndola, and Cerqueira}
 
 \usepackage{amsmath,amssymb,mathtools}
 \usepackage{graphicx}
@@ -40,7 +40,6 @@ PRE = r"""% ====================================================================
 \newunicodechar{—}{---}
 \newunicodechar{–}{--}
 \newunicodechar{−}{\ensuremath{-}}
-
 \newcommand{\gliner}{GLiNER}
 \newcommand{\aurc}{\textsc{aurc}}
 \newcommand{\authornote}[1]{\textcolor{BrickRed}{\textbf{[Open decision:} #1\textbf{]}}}
@@ -49,8 +48,8 @@ PRE = r"""% ====================================================================
 \input{../publicacao}
 
 \begin{document}
-\title{Attention Is Not Not Geometry}
-\author{Anaximandro Souza\thanks{Corresponding author}$^{,1}$, Rogério Pinto Espíndola$^{1}$, Renato Cerqueira$^{2}$}
+\title{Shadows on the Cave Wall: What Attention Says About Extraction Errors Is Mostly Geometry}
+\author{Anaximandro Souza\thanks{Corresponding author}$^{,1,2}$, João Victor de Oliveira Miranda e Silva$^{2}$, Rogério Pinto Espíndola$^{1}$, Renato Cerqueira$^{2}$}
 \affilblock{
     \affil{PEC/COPPE, Universidade Federal do Rio de Janeiro (UFRJ)\\\quad \email{anaximandro.souza@coc.ufrj.br}}
     \affil{PUC-Behring Institute for AI}
@@ -61,8 +60,8 @@ PRE = r"""% ====================================================================
 src = (AQUI.parent / "main.tex").read_text(encoding="utf-8")
 body = src[src.index("\\begin{abstract}"):]
 body = body.replace("img/fig_", "fig_")
-body = body.replace("\\input{tab_estratos}", "\\input{../tab_estratos}")
-body = body.replace("\\input{tab_estratos_decoder}", "\\input{../tab_estratos_decoder}")
+import re as _re
+body = _re.sub(r"\\input\{(tab_[A-Za-z_]+)\}", r"\\input{../\1}", body)
 body = body.replace("\\bibliographystyle{plainnat}\n\\bibliography{references}",
                     "\\bibliographystyle{compling}\n\\bibliography{../references}")
 body = body.replace("\\section{Pre-registration and analysis protocol}", "\\appendixsection{Pre-registration and analysis protocol}")

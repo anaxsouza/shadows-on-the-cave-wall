@@ -1,12 +1,16 @@
 {
   "upload_type": "software",
-  "title": "attention-is-not-not-geometry: code, pre-registered declarations and measured tables for \"Attention Is Not Not Geometry\"",
-  "description": "Code, pre-registered declarations and measured tables (without corpus text) for the article \"Attention Is Not Not Geometry\". Every verdict, number, table and figure of the article is regenerated from this archive by a single command and compared byte for byte with the published version. The fine-tuned weights are archived separately, each with a content fingerprint checked by tools/impressao_digital.py.",
+  "title": "shadows-on-the-cave-wall: code, pre-registered declarations and measured tables for \"Shadows on the Cave Wall: What Attention Says About Extraction Errors Is Mostly Geometry\"",
+  "description": "Code, pre-registered declarations and measured tables (without corpus text) for the article \"Shadows on the Cave Wall: What Attention Says About Extraction Errors Is Mostly Geometry\". Every verdict, number, table and figure of the article is regenerated from this archive by a single command and compared byte for byte with the published version. The fine-tuned weights are archived separately, each with a content fingerprint checked by tools/impressao_digital.py. Version 2 adds the BERT extractors, the BC5CDR corpus, the control windows, the error taxonomy and the prediction declared for BC5CDR (declarations decl-14 to decl-26).  The article was first deposited under the working title \"Attention Is Not Not Geometry\".",
   "license": "MIT",
   "creators": [
     {
       "name": "Souza, Anaximandro",
-      "affiliation": "PEC/COPPE, Universidade Federal do Rio de Janeiro"
+      "affiliation": "PEC/COPPE, Universidade Federal do Rio de Janeiro; PUC-Behring Institute for AI"
+    },
+    {
+      "name": "Miranda e Silva, João Victor de Oliveira",
+      "affiliation": "PUC-Behring Institute for AI"
     },
     {
       "name": "Espíndola, Rogério Pinto",
@@ -25,5 +29,31 @@
     "pre-registration",
     "reproducibility"
   ],
-  "notes": "Add under 'related identifiers': the DOI of the pre-registration hash deposit, and the DOIs of the two weights deposits (GLiNER, CC-BY-NC-4.0; Qwen2.5, Apache-2.0)."
+  "related_identifiers": [
+    {
+      "relation": "isSupplementedBy",
+      "identifier": "10.5281/zenodo.23163905",
+      "scheme": "doi"
+    },
+    {
+      "relation": "isSupplementedBy",
+      "identifier": "10.5281/zenodo.23163906",
+      "scheme": "doi"
+    },
+    {
+      "relation": "isSupplementedBy",
+      "identifier": "10.5281/zenodo.23163909",
+      "scheme": "doi"
+    },
+    {
+      "relation": "references",
+      "identifier": "10.5281/zenodo.23045549",
+      "scheme": "doi"
+    },
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/anaxsouza/shadows-on-the-cave-wall",
+      "scheme": "url"
+    }
+  ]
 }

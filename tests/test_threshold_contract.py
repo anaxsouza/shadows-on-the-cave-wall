@@ -463,6 +463,25 @@ def test_o_documento_nao_diverge_da_fonte(fonte_path):
     doc = doc_path.read_text(encoding="utf-8")
     fonte = yaml.safe_load(fonte_path.read_text(encoding="utf-8"))["selective"]
 
+    # AS DECLARAÇÕES DA REVISÃO (decl-17 a decl-25, 01/10/2026) não embutem o bloco
+    # YAML: o gerador `tools/gerar_decl_revisao.py` escreveu documentos que citam a
+    # fonte em vez de copiá-la, e eles foram depositados assim (registro v2,
+    # 10.5281/zenodo.23086955). Editá-los agora quebraria o depósito. O guarda de
+    # divergência, para elas, passa a ser o próprio registro: o SHA-256 do documento
+    # e o da fonte estão listados lado a lado no REGISTRO_PUBLICO.txt depositado, e o
+    # documento tem de nomear a fonte e registrar os dois hashes de identidade.
+    if "```yaml" not in doc:
+        import hashlib
+        reg = (RAIZ / "docs" / "tese" / "declaracoes" / "REGISTRO_PUBLICO.txt").read_text(encoding="utf-8")
+        sha_fonte = hashlib.sha256(fonte_path.read_bytes()).hexdigest()
+        sha_doc = hashlib.sha256(doc_path.read_bytes()).hexdigest()
+        assert f"{sha_fonte}  configs/{fonte_path.name}" in reg, f"{fonte_path.name} fora do registro"
+        assert f"{sha_doc}  docs/tese/declaracoes/{doc_path.name}" in reg, f"{doc_path.name} fora do registro"
+        assert "tools/gerar_decl_revisao.py" in doc
+        for h in (p.declaration_hash, p.measurement_hash):
+            assert h in doc, f"hash {h} não aparece em {doc_path.name}"
+        return
+
     # O invólucro `selective:` aparece em alguns documentos e não em outros —
     # decisão de formatação do gerador, não do que foi declarado. O guarda
     # compara os VALORES; exigir o invólucro faria um teste de conteúdo falhar

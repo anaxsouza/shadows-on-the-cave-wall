@@ -65,12 +65,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from rotulos import descricao, descricoes  # noqa: E402
 from features_sonda import Acumulador  # noqa: E402
 
-from src.selective.decoder_adapter import DecoderAdapter  # noqa: E402
+from src.selective.decoder_adapter import DecoderAdapter, indices_de_token, prompt_de  # noqa: E402
 from src.selective.geometry import (  # noqa: E402
     causal_mass,
     expected_mass,
     expected_mass_causal,
 )
+from src.selective.janelas import (  # noqa: E402
+    enriquecimento_decoder, janelas_da_entidade, media_decoder, tipo_erro)
 from src.selective.signals import (  # noqa: E402
     row_ceiling_entropy,
     row_ceiling_max,
@@ -102,6 +104,20 @@ COLUNAS = (
     "mencao", "rotulo",
 )
 
+# REMEDIÇÃO (decl-14 e decl-15), ligada por SENTINEL_REMEDICAO=1. Escreve
+# `remedicao.csv` AO LADO de `entities.csv`, sem mudar nenhum escalar dele: as
+# janelas e o tipo de erro são calculados depois de a linha original estar pronta,
+# com a mesma atenção da mesma passagem. Só as menções ANCORADAS com token entram,
+# as mesmas linhas da tabela derivada; as não ancoradas (alucinadas) são contadas
+# em MEDIDA_remedicao.json (por construção não se sobrepõem a nada: `sem_par`).
+COLUNAS_REMEDICAO = (
+    "sentence_id", "loss", "pred_start", "pred_end", "pred_label", "tipo_erro",
+    "janelas_n", "janelas_enr_media", "enr_entidade",
+    "model_confidence", "span_mass", "fracao_geometrica",
+    "span_size", "n_tokens", "span_position", "token_indices", "is_nested",
+    "causal_mass_prompt", "causal_mass_geracao", "causal_mass_autofoco",
+    "expected_causal", "expected_bidir", "mencao", "rotulo",
+)
 CARREGADOR = {
     "genia": ("src.core.loaders.biomedical.genia", "GENIALoader"),
     "conll2003": ("src.core.loaders.conll.loader", "CONLLLoader"),
@@ -294,6 +310,8 @@ def main(corpus: str, split: str, caminho_modelo: str, saida: str, max_samples: 
     ad = DecoderAdapter(m, tok, rotulos)
 
     linhas, n_alucinadas, n_ouro, n_descartadas = [], 0, 0, 0
+    remedir = os.environ.get("SENTINEL_REMEDICAO") == "1"
+    linhas_rem, n_sem_janela = [], 0
     for i, ex in enumerate(exemplos):
         texto, ouro, intervalos = trechos_de_ouro(ex, corpus)
         n_ouro += len(ouro)
@@ -305,6 +323,21 @@ def main(corpus: str, split: str, caminho_modelo: str, saida: str, max_samples: 
         T = int(r["n_prompt"])
         A_p, A_t = r["attentions_prompt"], r["attentions_total"]
         H = r.get("hidden_states")          # [camadas+1, T, d], ou None
+        if remedir:
+            # Os offsets do MESMO prompt que o adaptador tokenizou (determinístico).
+            p_txt = prompt_de(texto, rotulos)
+            desloc = p_txt.index(texto)
+            offs = [tuple(x) for x in tok(p_txt, return_offsets_mapping=True,
+                                          add_special_tokens=False)["offset_mapping"]]
+            assert len(offs) == T, (i, len(offs), T)
+            tokens_frase = indices_de_token(offs, 0, len(texto), desloc)
+            ocupados = set()
+            for g0, g1 in intervalos:
+                ocupados.update(indices_de_token(offs, g0, g1, desloc))
+            for m_ in r["mencoes"]:
+                if m_.get("ancorada"):
+                    ocupados.update(m_["token_indices"])
+            media_p = media_decoder(A_p)
         n_descartadas += int(r.get("n_descartadas", 0))
         for men in r["mencoes"]:
             if not men.get("ancorada"):
@@ -346,6 +379,32 @@ def main(corpus: str, split: str, caminho_modelo: str, saida: str, max_samples: 
                 "ancorada": 1,
                 "mencao": men["texto"], "rotulo": men["rotulo"],
             })
+            if remedir:
+                lin = linhas[-1]
+                n_j, enr_j = janelas_da_entidade(
+                    idx, tokens_frase, ocupados,
+                    lambda w: enriquecimento_decoder(media_p, w, T))
+                n_sem_janela += int(n_j == 0)
+                tipo = tipo_erro(ci, cf, men["rotulo"], ouro)
+                assert (tipo == "acerto") == bool(acerto), (i, ci, cf, tipo)
+                linhas_rem.append({
+                    "sentence_id": lin["sentence_id"], "loss": lin["loss"],
+                    "pred_start": ci, "pred_end": cf, "pred_label": men["rotulo"],
+                    "tipo_erro": tipo, "janelas_n": n_j, "janelas_enr_media": enr_j,
+                    "enr_entidade": float(lin["causal_mass_prompt"])
+                    / float(lin["expected_causal"]),
+                    "model_confidence": lin["model_confidence"],
+                    "span_mass": lin["causal_mass_prompt"],
+                    "fracao_geometrica": lin["expected_causal"],
+                    "span_size": k, "n_tokens": T, "span_position": a0,
+                    "token_indices": lin["token_indices"], "is_nested": lin["is_nested"],
+                    "causal_mass_prompt": lin["causal_mass_prompt"],
+                    "causal_mass_geracao": lin["causal_mass_geracao"],
+                    "causal_mass_autofoco": lin["causal_mass_autofoco"],
+                    "expected_causal": lin["expected_causal"],
+                    "expected_bidir": lin["expected_bidir"],
+                    "mencao": men["texto"], "rotulo": men["rotulo"],
+                })
             if acum is not None:
                 # `len(linhas) - 1`: a linha acabou de ser acrescentada, e este e
                 # o indice dela no entities.csv. E a chave de juncao com o rotulo
@@ -361,6 +420,20 @@ def main(corpus: str, split: str, caminho_modelo: str, saida: str, max_samples: 
         w = csv.DictWriter(fh, fieldnames=list(COLUNAS), extrasaction="ignore")
         w.writeheader()
         w.writerows(linhas)
+    if remedir:
+        with (d / "remedicao.csv").open("w", newline="", encoding="utf-8") as fh:
+            w = csv.DictWriter(fh, fieldnames=list(COLUNAS_REMEDICAO))
+            w.writeheader()
+            for l in linhas_rem:
+                w.writerow({k: (repr(float(v)) if isinstance(v, float) else v)
+                            for k, v in l.items()})
+        (d / "MEDIDA_remedicao.json").write_text(json.dumps({
+            "corpus": corpus, "split": split, "modelo": caminho_modelo,
+            "n_sentencas": len(exemplos), "n_linhas": len(linhas_rem),
+            "n_alucinadas_nao_ancoradas_fora_da_tabela": n_alucinadas,
+            "n_entidades_sem_janela": n_sem_janela,
+            "janelas": "tokens da frase dentro do prompt, livres de anotadas e previstas",
+        }, indent=1, ensure_ascii=False), encoding="utf-8")
     ancoradas = [l for l in linhas if l.get("ancorada") == 1]
     erro = (sum(int(l["loss"]) for l in ancoradas) / len(ancoradas)) if ancoradas else float("nan")
     meta = {

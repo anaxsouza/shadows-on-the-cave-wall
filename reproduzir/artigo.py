@@ -20,7 +20,8 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
 ART = RAIZ / "artigo"
-GERADOS = ("numeros.tex", "tab_estratos.tex", "tab_estratos_decoder.tex", "numeros_nulo.tex")
+GERADOS = ("numeros.tex", "tab_estratos.tex", "tab_estratos_decoder.tex", "numeros_nulo.tex",
+           "tab_previsao.tex", "tab_tipos_erro.tex", "tab_janelas.tex")
 PASSOS = (("números e tabela por estrato", "numeros.py"),
           ("conferência numérica dos nulos", "verificar_nulo.py"),
           ("figuras", "figuras.py"))

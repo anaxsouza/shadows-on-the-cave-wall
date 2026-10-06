@@ -1,0 +1,32 @@
+[genia] partição por sentença: 494 sentenças de calibração (1578 entidades) e 1154 de avaliação (3788 entidades).
+[genia] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.1154). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[genia] T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[genia] partição de avaliação: 3788 entidades em 1154 sentenças; calibração com 494 sentenças, separada por SENTENÇA
+[genia] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[genia] T2 grade absoluta meta 0.80: 10 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1990 restantes
+[genia] T2 grade absoluta meta 0.90: 29 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1971 restantes
+[genia] T2 grade absoluta meta 0.95: 32 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1968 restantes
+[genia] T3 grade absoluta meta 0.70: 3 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1997 restantes
+[genia] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.1154). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[conll2003] partição por sentença: 862 sentenças de calibração (1828 entidades) e 2013 de avaliação (4038 entidades).
+[conll2003] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0214). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[conll2003] T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[conll2003] partição de avaliação: 4038 entidades em 2013 sentenças; calibração com 862 sentenças, separada por SENTENÇA
+[conll2003] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[conll2003] T3 grade absoluta meta 0.90: 131 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1869 restantes
+[conll2003] T3 grade absoluta meta 0.95: 176 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1824 restantes
+[conll2003] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0214). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[bc5cdr] partição por sentença: 1249 sentenças de calibração (3151 entidades) e 2914 de avaliação (7194 entidades).
+[bc5cdr] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0431). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.
+[bc5cdr] T2 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[bc5cdr] T3 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[bc5cdr] T4 não é julgada aqui: o critério declarado dela é 'paired_review_load_ci_excludes_zero', de carga de revisão, e quem julga é task_impact.run_task_impact. Omitida deste relatório de propósito.
+[bc5cdr] partição de avaliação: 7194 entidades em 2914 sentenças; calibração com 1249 sentenças, separada por SENTENÇA
+[bc5cdr] o recall usa o total de entidades anotadas do SPLIT INTEIRO como denominador, incluindo as das sentenças de calibração; é o recall do sistema, não da partição
+[bc5cdr] T2 grade absoluta meta 0.90: 225 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1775 restantes
+[bc5cdr] T2 grade absoluta meta 0.95: 431 de 2000 reamostragens degeneradas (a meta não foi atingida nelas); o intervalo descreve as 1569 restantes
+[bc5cdr] model_confidence+enrichment: peso 1.00 em model_confidence e 0.00 em enrichment, ajustado na calibração (AURC 0.0431). Peso em 0,00 ou 1,00 é a combinação COLAPSANDO para um sinal isolado — o que distingue 'descartou o outro' de 'empatou'.

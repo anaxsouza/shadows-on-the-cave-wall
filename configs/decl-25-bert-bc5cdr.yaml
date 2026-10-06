@@ -1,0 +1,143 @@
+# decl-25-bert-bc5cdr: copia de configs/decl-05-ajustado-genia.yaml; trocados SO o declaration_id e o model.
+# Gerado por tools/gerar_decl_revisao.py em 2026-10-01. Nao editar.
+# =============================================================================
+# decl-05-ajustado-genia — o extrator COMPETENTE, para fechar o Perímetro 2
+# =============================================================================
+# ESTADO: ASSINADA em 2026-09-15. Os valores e critérios abaixo são COMPROMISSO.
+#
+# ESTA DECLARAÇÃO NÃO TEM NENHUM PARÂMETRO LIVRE, e isso é verificável: todos os
+# itens de análise são copiados LITERALMENTE da decl-04 (que os copiou da
+# decl-02 e da decl-03), a regra de camadas é a mesma das três anteriores
+# ("todas as camadas"), e o modelo foi determinado por uma regra de escolha de
+# checkpoint declarada ANTES do treino, dentro de tools/treinar_extrator.py:
+# melhor F1 estrito na validação, que nunca olha ΔAURC nem qualquer quantidade
+# da hipótese. Não houve o que escolher aqui.
+#
+# POR QUE ELA EXISTE
+#
+# O confirmatório é negativo em duas escalas, e a objeção que continuava de pé
+# era o extrator: os dois modelos medidos eram de prateleira e erravam 42% e
+# 47%. Este é ajustado ao corpus:
+#   F1 estrito na validação: 0.5597 -> 0.7678
+#   checkpoint checkpoint-3378, escolhido pela regra declarada antes do treino
+#   semente 42, 3 épocas, lote 8, receita padrão do gliner, NÃO varrida
+# Procedência completa em docs/tese/resultados/ajuste_genia.json.
+#
+# UMA DECLARAÇÃO POR CORPUS, e a razão é a invariante
+#
+# O ajuste fino produz um modelo POR corpus, e a invariante do projeto é que
+# cada declaração fixe UM modelo — porque a pergunta compara a atenção de um
+# modelo com a confiança DO MESMO modelo. São duas declarações irmãs,
+# decl-05-ajustado-genia e decl-06-ajustado-conll, idênticas exceto no modelo e
+# no corpus. Uma declaração cobrindo os dois violaria a invariante que a
+# hash_version 4 existe para tornar verificável.
+#
+# Escopo: corpus genia, partição de teste.
+
+selective:
+  declaration_id: 'decl-25-bert-bc5cdr'
+  hash_version: 4
+
+  # ---------------------------------------------------------------------------
+  # ITEM NOVO DA VERSÃO 4 — o modelo entra no hash de MEDIÇÃO
+  # ---------------------------------------------------------------------------
+  # Item de medição e não de análise porque trocar de modelo muda os números
+  # DENTRO da tabela. Sem heranca declarada: esta declaração exige medição
+  # própria, e é isso que impede uma tabela do base ser testada aqui.
+  model: 'bert-base-cased-ft-bc5cdr'
+
+  # ---------------------------------------------------------------------------
+  # MEDIÇÃO — a mesma regra, aplicada ao modelo deste declaration_id
+  # ---------------------------------------------------------------------------
+  sink_policy: 'drop_from_denominator'
+  layers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  heads: null
+
+  # ---------------------------------------------------------------------------
+  # ANÁLISE — copiados literalmente da decl-02 e da decl-03
+  # ---------------------------------------------------------------------------
+  combination_rule: 'convex'
+  calibration_fraction: 0.30
+  coverage_levels: [0.5, 0.7, 0.8, 0.9, 0.95]
+  operating_point: 'derived_from_target_risk'
+  target_risk_grid: [0.01, 0.02, 0.05, 0.10]
+  added_value_ci_level: 0.95
+  n_bootstrap_resamples: 2000
+  conformal_alpha: 0.05
+  loss_bound: 1.0
+  seed: 42
+  comparison_scores: [span_size, geometric_fraction, enrichment, geometric_residual, sentence_length]
+  stratify_by: [span_size, is_nested]
+  span_size_bins: [[1, 1], [2, 2], [3, 4], [5, null]]
+  task_quality_grid: [0.70, 0.80, 0.90, 0.95]
+  task_metrics:
+    - precision_delivered
+    - recall_delivered
+    - f1_delivered
+    - review_load
+
+  # EXPLORATÓRIO, e com 24 camadas ele descreve o dobro do que descrevia. Segue
+  # sem decidir veredito: o veredito sai de `layers`, e só dele.
+  layer_profile: true
+
+  # ---------------------------------------------------------------------------
+  # AS COMPARAÇÕES — todas as sete, e a razão de C1-C3 voltarem
+  # ---------------------------------------------------------------------------
+  # A `decl-03` deixou C1, C2 e C3 de fora dizendo que já estavam decididas. Ali
+  # estava certo: era o mesmo modelo. Aqui é OUTRO modelo, e nada sobre ele foi
+  # decidido — repetir as sete é o que torna a comparação entre escalas uma
+  # comparação, e não duas medições sobre perguntas diferentes.
+  comparisons:
+    - id: 'C1'
+      kind: 'descriptive'
+      question: 'A massa de atenção acompanha o nulo k/|K|? Relata R² contra a fração
+        geométrica e a mediana da razão observado/esperado, por corpus e por faixa.'
+
+    - id: 'C2'
+      kind: 'verdict'
+      question: 'A massa de atenção acrescenta sobre a geometria pura?'
+      score: 'span_mass'
+      against: 'geometric_fraction'
+      criterion: 'paired_delta_aurc_ci_excludes_zero'
+
+    - id: 'C3'
+      kind: 'verdict'
+      question: 'O instrumento desconfundido acrescenta sobre a confiança do modelo?'
+      score: 'model_confidence+enrichment'
+      against: 'model_confidence'
+      criterion: 'paired_delta_aurc_ci_excludes_zero'
+
+    - id: 'T1'
+      kind: 'descriptive'
+      question: >-
+        Em cada meta de qualidade, qual a carga de revisão exigida por cada
+        supervisor, e qual precisão, recall e F1 saem entre os entregues? Inclui
+        a linha SEM supervisor (cobertura total) como referência, e declara
+        "inalcançável" como resultado possível.
+
+    - id: 'T2'
+      kind: 'task_verdict'
+      question: >-
+        O supervisor baseado na massa de atenção exige MENOS revisão humana que
+        a confiança do próprio modelo, para a mesma qualidade entregue?
+      score: 'span_mass'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'T3'
+      kind: 'task_verdict'
+      question: >-
+        E o instrumento desconfundido pela razão — o enriquecimento — exige menos
+        revisão que a confiança do próprio modelo?
+      score: 'enrichment'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'
+
+    - id: 'T4'
+      kind: 'task_verdict'
+      question: >-
+        A combinação da confiança com o enriquecimento exige menos revisão que a
+        confiança sozinha?
+      score: 'model_confidence+enrichment'
+      against: 'model_confidence'
+      criterion: 'paired_review_load_ci_excludes_zero'

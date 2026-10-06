@@ -1,5 +1,16 @@
 % Filtered from the authors' bibliography: cited entries only, reading notes removed.
 
+@inproceedings{Devlin2019,
+  author    = {Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  title     = {{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding},
+  booktitle = {Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics},
+  year      = {2019},
+  pages     = {4171--4186},
+  publisher = {Association for Computational Linguistics},
+  address   = {Minneapolis, Minnesota},
+  doi       = {10.18653/v1/N19-1423}
+}
+
 @article{Kim2003genia,
   author  = {Kim, J.-D. and Ohta, T. and Tateisi, Y. and Tsujii, J.},
   title   = {{GENIA} corpus—a semantically annotated corpus for bio-textmining},
@@ -11,14 +22,25 @@
   doi     = {10.1093/bioinformatics/btg1023}
 }
 
+@inproceedings{Vaswani2017,
+  author    = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  title     = {Attention is All You Need},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {30},
+  year      = {2017},
+  pages     = {5998--6008},
+  publisher = {Curran Associates, Inc.},
+  address   = {Long Beach, CA, USA}
+}
+
 @inproceedings{Zaratiana2024gliner,
-  author    = {Zaratiana, U. and Tomeh, N. and Holat, P. and Charnois, T.},
+  author    = {Zaratiana, Urchade and Tomeh, Nadi and Holat, Pierre and Charnois, Thierry},
   title     = {{GLiNER}: Generalist Model for Named Entity Recognition using Bidirectional Transformer},
-  booktitle = {Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics},
-  year      = {2024},
-  pages     = {4930--4946},
-  publisher = {Association for Computational Linguistics},
+  booktitle = {Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)},
+  pages     = {5364--5376},
   address   = {Mexico City, Mexico},
+  publisher = {Association for Computational Linguistics},
+  year      = {2024},
   doi       = {10.18653/v1/2024.naacl-long.300}
 }
 
@@ -31,29 +53,107 @@
   doi       = {10.18653/v1/2020.acl-main.385}
 }
 
-@article{angelopoulos2022crc,
-  title  = {Conformal Risk Control},
-  author = {Angelopoulos, Anastasios N. and Bates, Stephen and Fisch, Adam and
-            Lei, Lihua},
-  journal = {arXiv preprint arXiv:2208.02814},
-  year   = {2022}
+@inproceedings{barbero2025first,
+  author    = {Barbero, Federico and Arroyo, Álvaro and Gu, Xiangming and Perivolaropoulos, Christos and Bronstein, Michael and Veličković, Petar and Pascanu, Razvan},
+  title     = {Why do {LLMs} attend to the first token?},
+  booktitle = {Second Conference on Language Modeling},
+  year      = {2025},
+  eprint    = {2504.02732},
+  archiveprefix = {arXiv}
 }
 
-@article{dukic2024lookingright,
-  title   = {Looking Right is Sometimes Right: Investigating the Capabilities of Decoder-only LLMs for Sequence Labeling},
-  author  = {David Dukić and Jan Šnajder},
-  journal = {arXiv preprint arXiv:2401.14556},
-  year    = {2024},
-  eprint  = {2401.14556},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CL}
+@inproceedings{bastings2020elephant,
+  author = {Bastings, Jasmijn and Filippova, Katja},
+  title = {The elephant in the interpretability room: Why use attention as explanation when we have saliency methods?},
+  year = {2020},
+  doi = {10.18653/v1/2020.blackboxnlp-1.14},
+  booktitle = {Proceedings of the Third BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP},
+  pages = {149--155},
+  publisher = {Association for Computational Linguistics},
+  eprint = {2010.05607},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{brunner2020identifiability,
+  author    = {Brunner, Gino and Liu, Yang and Pascual, Damián and Richter, Oliver and Ciaramita, Massimiliano and Wattenhofer, Roger},
+  title     = {On Identifiability in Transformers},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2020},
+  eprint    = {1908.04211},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{chuang2024lookback,
+  author = {Chuang, Yung-Sung and Qiu, Linlu and Hsieh, Cheng-Yu and Krishna, Ranjay and Kim, Yoon and Glass, James R.},
+  title = {Lookback Lens: Detecting and Mitigating Contextual Hallucinations in Large Language Models Using Only Attention Maps},
+  year = {2024},
+  doi = {10.18653/v1/2024.emnlp-main.84},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  pages = {1419--1436},
+  publisher = {Association for Computational Linguistics},
+  eprint = {2407.07071},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{clark2019bert,
+  author    = {Clark, Kevin and Khandelwal, Urvashi and Levy, Omer and Manning, Christopher D.},
+  title     = {What Does {BERT} Look at? An Analysis of {BERT}'s Attention},
+  booktitle = {Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP},
+  pages     = {276--286},
+  address   = {Florence, Italy},
+  publisher = {Association for Computational Linguistics},
+  year      = {2019},
+  doi       = {10.18653/v1/W19-4828}
+}
+
+@inproceedings{dukic2024lookingright,
+  author    = {David Dukić and Jan Šnajder},
+  title     = {Looking Right is Sometimes Right: Investigating the Capabilities of Decoder-only {LLMs} for Sequence Labeling},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},
+  pages     = {14168--14181},
+  address   = {Bangkok, Thailand},
+  publisher = {Association for Computational Linguistics},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-acl.843}
+}
+
+@article{elyaniv2010foundations,
+  author = {El-Yaniv, Ran and Wiener, Yair},
+  title = {On the Foundations of Noise-free Selective Classification},
+  journal = {Journal of Machine Learning Research},
+  year = {2010},
+  doi = {10.5555/1756006.1859904}
+}
+
+@inproceedings{fu2020interpretable,
+  author = {Fu, Jinlan and Liu, Pengfei and Neubig, Graham},
+  title = {Interpretable Multi-dataset Evaluation for Named Entity Recognition},
+  year = {2020},
+  doi = {10.18653/v1/2020.emnlp-main.489},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages = {6058--6069},
+  publisher = {Association for Computational Linguistics},
+  eprint = {2011.06854},
+  archiveprefix = {arXiv}
 }
 
 @inproceedings{geifman2017selective,
-  title     = {Selective Classification for Deep Neural Networks},
   author    = {Geifman, Yonatan and El-Yaniv, Ran},
-  booktitle = {Advances in Neural Information Processing Systems},
-  year      = {2017}
+  title     = {Selective Classification for Deep Neural Networks},
+  booktitle = {Advances in Neural Information Processing Systems 30},
+  pages     = {4878--4887},
+  year      = {2017},
+  eprint    = {1705.08500},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{gu2024sink,
+  author    = {Gu, Xiangming and Pang, Tianyu and Du, Chao and Liu, Qian and Zhang, Fengzhuo and Du, Cunxiao and Wang, Ye and Lin, Min},
+  title     = {When Attention Sink Emerges in Language Models: An Empirical View},
+  booktitle = {The Thirteenth International Conference on Learning Representations},
+  year      = {2025},
+  eprint    = {2410.10781},
+  archiveprefix = {arXiv}
 }
 
 @inproceedings{hashimoto2024beam,
@@ -64,6 +164,17 @@
   year      = {2024},
   publisher = {Association for Computational Linguistics},
   doi       = {10.18653/v1/2024.uncertainlp-1.6}
+}
+
+@inproceedings{jagannatha2020calibrating,
+  author    = {Jagannatha, Abhyuday and Yu, Hong},
+  title     = {Calibrating Structured Output Predictors for Natural Language Processing},
+  booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  pages     = {2078--2092},
+  address   = {Online},
+  publisher = {Association for Computational Linguistics},
+  year      = {2020},
+  doi       = {10.18653/v1/2020.acl-main.188}
 }
 
 @inproceedings{jain-wallace-2019-attention,
@@ -85,12 +196,24 @@
   doi       = {10.18653/v1/2020.emnlp-main.574}
 }
 
-@article{papamichalis2026attentionrows,
-  title  = {Which Question Is Your Attention Metric Answering? Attention Rows
-            as Compositional Data},
-  author = {Papamichalis, Marios and Ruane, Regina},
-  journal = {arXiv preprint arXiv:2608.14712},
-  year   = {2026}
+@article{li2016bc5cdr,
+  author  = {Li, Jiao and Sun, Yueping and Johnson, Robin J. and Sciaky, Daniela and Wei, Chih-Hsuan and Leaman, Robert and Davis, Allan Peter and Mattingly, Carolyn J. and Wiegers, Thomas C. and Lu, Zhiyong},
+  title   = {{BioCreative V CDR} task corpus: a resource for chemical disease relation extraction},
+  journal = {Database},
+  volume  = {2016},
+  pages   = {baw068},
+  year    = {2016},
+  doi     = {10.1093/database/baw068}
+}
+
+@misc{papamichalis2026attentionrows,
+  author    = {Papamichalis, Marios and Ruane, Regina},
+  title     = {Which Question Is Your Attention Metric Answering? Attention Rows as Compositional Data},
+  year      = {2026},
+  eprint    = {2608.14712},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.CL},
+  url       = {https://arxiv.org/abs/2608.14712}
 }
 
 @misc{qwen2025,
@@ -104,18 +227,21 @@
 }
 
 @article{saghir2026twopathway,
-  title  = {How Language Models Process Out-of-Distribution Inputs:
-            A Two-Pathway Framework},
+  title = {How Language Models Process Out-of-Distribution Inputs: A Two-Pathway Framework},
   author = {Saghir, Hamidreza},
   journal = {arXiv preprint arXiv:2605.00269},
   year   = {2026}
 }
 
 @inproceedings{serrano2019attention,
-  title     = {Is Attention Interpretable?},
   author    = {Serrano, Sofia and Smith, Noah A.},
-  booktitle = {Proceedings of ACL},
-  year      = {2019}
+  title     = {Is Attention Interpretable?},
+  booktitle = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  pages     = {2931--2951},
+  address   = {Florence, Italy},
+  publisher = {Association for Computational Linguistics},
+  year      = {2019},
+  doi       = {10.18653/v1/P19-1282}
 }
 
 @inproceedings{tjongkimsang2003conll,
@@ -129,6 +255,17 @@
   doi       = {10.3115/1119176.1119195}
 }
 
+@inproceedings{vazhentsev2025rauq,
+  author    = {Vazhentsev, Artem and Rvanova, Lyudmila and Kuzmin, Gleb and Fadeeva, Ekaterina and Lazichny, Ivan and Panchenko, Alexander and Panov, Maxim and Sachan, Mrinmaya and Nakov, Preslav and Baldwin, Timothy and Shelmanov, Artem},
+  title     = {Efficient Hallucination Detection for {LLMs} Using Uncertainty-Aware Attention Heads},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {306},
+  year      = {2026},
+  eprint    = {2505.20045},
+  archiveprefix = {arXiv}
+}
+
 @inproceedings{wiegreffe-pinter-2019-attention,
   author    = {Wiegreffe, Sarah and Pinter, Yuval},
   title     = {Attention is not not Explanation},
@@ -139,6 +276,15 @@
   url       = {https://aclanthology.org/D19-1002}
 }
 
+@inproceedings{xiao2023sinks,
+  author    = {Xiao, Guangxuan and Tian, Yuandong and Chen, Beidi and Han, Song and Lewis, Mike},
+  title     = {Efficient Streaming Language Models with Attention Sinks},
+  booktitle = {The Twelfth International Conference on Learning Representations},
+  year      = {2024},
+  eprint    = {2309.17453},
+  archiveprefix = {arXiv}
+}
+
 @article{yan2026abstention,
   author  = {Yan, Qianqi and Nguyen, Huy and Srivatsa, Sumana and Bandi, Hari and Wang, Xin Eric and Kenthapadi, Krishnaram},
   title   = {From Attribution to Abstention: Training-Free Attention-Based Auditing for Clinical Summarization},
@@ -146,9 +292,20 @@
   year    = {2026}
 }
 
-@article{yuksekgonul2023attention,
-  author  = {Yuksekgonul, Mert and Chandrasekaran, Varun and Jones, Erik and Gunasekar, Suriya and Naik, Ranjita and Palangi, Hamid and Kamar, Ece and Nushi, Besmira},
-  title   = {Attention Satisfies: A Constraint-Satisfaction Lens on Factual Errors of Language Models},
-  journal = {arXiv preprint arXiv:2309.15098},
-  year    = {2023}
+@inproceedings{yuksekgonul2023attention,
+  author    = {Yuksekgonul, Mert and Chandrasekaran, Varun and Jones, Erik and Gunasekar, Suriya and Naik, Ranjita and Palangi, Hamid and Kamar, Ece and Nushi, Besmira},
+  title     = {Attention Satisfies: A Constraint-Satisfaction Lens on Factual Errors of Language Models},
+  booktitle = {The Twelfth International Conference on Learning Representations},
+  year      = {2024},
+  eprint    = {2309.15098},
+  archiveprefix = {arXiv}
+}
+
+@misc{zheng2026financial,
+  author = {Zheng, Zihao and Li, Baichuan and Yao, Junyi and Long, Jiayu},
+  title = {Reliable Financial Named Entity Recognition Under Domain Shift: Confidence Estimation and Selective Prediction},
+  year = {2026},
+  eprint = {2608.19558},
+  archiveprefix = {arXiv},
+  url = {https://arxiv.org/abs/2608.19558}
 }

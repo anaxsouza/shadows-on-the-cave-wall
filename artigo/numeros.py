@@ -171,6 +171,26 @@ for pt, row in ed.iterrows():
                    ("Conf", "aurc_model_confidence"), ("Probe", "aurc_sonda_ocultos"), ("Size", "aurc_span_size")):
         put(f"dec{PT[pt]}{k}", row[col], "{:.3f}")
 put("decMassWorseThanChance", int((ed.aurc_span_mass > ed.aurc_acaso).sum()))
+# The decoder verdicts (C2) orient each score on the calibration part, as their declarations
+# prescribe (NOTAS.json: orientation -1 for span_mass and geometric_fraction at all four points);
+# the descriptive rows above keep the fixed direction (+1) used for the encoders. Both are
+# reported, side by side, so the reader sees what the direction does to the decoder numbers.
+_cal = da[(da.tipo == "verdict") & (da.origem != "adenda-01") & (da.comparacao == "C2")
+          & (da.estrato == "todos")].drop_duplicates(["ponto"]).set_index("ponto")
+assert set(_cal.index) == set(PT), _cal.index
+assert (_cal.escore == "span_mass").all() and (_cal.contra == "geometric_fraction").all()
+edc = ed.join(_cal[["aurc_escore", "aurc_contra", "delta", "ci_low", "ci_high"]])
+for pt, row in edc.iterrows():
+    put(f"dec{PT[pt]}MassCal", row.aurc_escore, "{:.3f}")
+    put(f"dec{PT[pt]}GeoCal", row.aurc_contra, "{:.3f}")
+put("decCalGapMin", edc.delta.min(), "{:.3f}"); put("decCalGapMax", edc.delta.max(), "{:.3f}")
+put("decCalGapAdv", int((edc.ci_low > 0).sum()))
+put("decRawGapMin", (edc.aurc_span_mass - edc.aurc_geometric_fraction).min(), "{:.3f}")
+put("decRawGapMax", (edc.aurc_span_mass - edc.aurc_geometric_fraction).max(), "{:.3f}")
+_rrm = 1 - edc.aurc_escore / edc.aurc_acaso; _rrg = 1 - edc.aurc_contra / edc.aurc_acaso
+put("rrDecMassCalMin", 100 * _rrm.min(), "{:.0f}"); put("rrDecMassCalMax", 100 * _rrm.max(), "{:.0f}")
+put("rrDecGeoCalMin", 100 * _rrg.min(), "{:.0f}"); put("rrDecGeoCalMax", 100 * _rrg.max(), "{:.0f}")
+put("decCalBothBeatChance", int(((edc.aurc_escore < edc.aurc_acaso) & (edc.aurc_contra < edc.aurc_acaso)).sum()))
 UNSUP = ["span_mass", "row_entropy_causal", "row_max_causal", "hidden_norm", "hidden_dist_centroide", "hidden_delta_camadas"]
 vd = da[(da.tipo == "verdict") & (da.origem != "adenda-01")]
 todos = vd[vd.estrato == "todos"]
@@ -336,7 +356,13 @@ for comp, nome in (("C2", "Ctwo"), ("C3", "Cthree")):
     put(f"strata{nome}Fav", int((x.ci_high < 0).sum()))
     put(f"strata{nome}Adv", int((x.ci_low > 0).sum()))
     put(f"strata{nome}MaxAbs", x.delta.abs().max(), "{:.3f}")
-    put(f"strata{nome}Chance", 0.025 * len(x), "{:.1f}")
+    # chance rate over NON-degenerate intervals only: a degenerate interval (both bounds zero)
+    # cannot land favourable, so counting it inflates the expected number (Appendix convention).
+    nd = x[~((x.ci_low == 0) & (x.ci_high == 0))]
+    put(f"strata{nome}NonDeg", len(nd))
+    put(f"strata{nome}Chance", 0.025 * len(nd), "{:.2f}")
+    xa = vv[(vv.comparacao == comp) & vv.delta.notna()]
+    put(f"strata{nome}NAll", len(xa))
 c3f = sub[(sub.comparacao == "C3") & (sub.ci_high < 0)]
 assert set(c3f.estrato) == {"k=1"} and set(c3f.corpus) == {"conll2003"}, c3f[["modelo", "corpus", "estrato"]]
 put("cthreeKoneConllBaseD", float(c3f[c3f.modelo == "gliner-base"].delta.iloc[0]), "{:.4f}")
@@ -375,9 +401,14 @@ subd = vd2[(vd2.estrato != "todos") & vd2.delta.notna()]
 for comp, nome in (("C2", "Ctwo"), ("C3", "Cthree")):
     x = subd[subd.comparacao == comp]
     put(f"decStrata{nome}N", len(x)); put(f"decStrata{nome}Fav", int((x.ci_high < 0).sum()))
-    put(f"decStrata{nome}Adv", int((x.ci_low > 0).sum())); put(f"decStrata{nome}Chance", 0.025 * len(x), "{:.1f}")
+    nd = x[~((x.ci_low == 0) & (x.ci_high == 0))]
+    put(f"decStrata{nome}Adv", int((x.ci_low > 0).sum())); put(f"decStrata{nome}Chance", 0.025 * len(nd), "{:.2f}")
+    put(f"decStrata{nome}NonDeg", len(nd))
     put(f"decStrata{nome}MaxAbs", x.delta.abs().max(), "{:.3f}")
     put(f"decStrata{nome}ZeroW", int(((x.ci_low == 0) & (x.ci_high == 0)).sum()))
+
+# ---------------------------------------------------------------- revision tests (decl-14 to decl-26)
+exec((AQUI / "numeros_revisao.py").read_text(encoding="utf-8"))
 
 (AQUI / "numeros.json").write_text(json.dumps(M, indent=1, ensure_ascii=False), encoding="utf-8")
 with (AQUI / "numeros.tex").open("w", encoding="utf-8") as fh:

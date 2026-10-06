@@ -83,6 +83,86 @@
    "licenca": "Apache-2.0",
    "declaracoes": "decl-13",
    "modelo_base_impressao": "b92b4bb34bddfb5b0c1c277e390bc1302112bed15131e50fc9ebe43ee41102b8"
+  },
+  {
+   "nome": "gliner_base-ft-bc5cdr",
+   "impressao": "cf39f4d1efe0282a12ecb03f103456f6b97bcf2e5ae7b269e28a138f3b87b080",
+   "arquivos": [
+    {
+     "arquivo": "pytorch_model.bin",
+     "bytes": 791794259
+    }
+   ],
+   "modelo_base": "urchade/gliner_base",
+   "licenca": "CC-BY-NC-4.0",
+   "declaracoes": "decl-19"
+  },
+  {
+   "nome": "qwen05b-ft-bc5cdr",
+   "impressao": "a54941ea137c03b96e12972c915edcf89a6d389edfdd2aca0b9cafe1310b3fd5",
+   "arquivos": [
+    {
+     "arquivo": "model.safetensors",
+     "bytes": 1976163472
+    }
+   ],
+   "modelo_base": "Qwen/Qwen2.5-0.5B",
+   "licenca": "Apache-2.0",
+   "declaracoes": "decl-20",
+   "modelo_base_impressao": "7e3b2f82b79f4cab09a55349369d3a8ad49bfbbd6c415f067d115ea3c267f965"
+  },
+  {
+   "nome": "qwen15b-ft-bc5cdr",
+   "impressao": "f2027393ad6538ce7d980e97b6f5170fe2a7990a9bbb43982d9bf451c5c98437",
+   "arquivos": [
+    {
+     "arquivo": "model.safetensors",
+     "bytes": 6174895536
+    }
+   ],
+   "modelo_base": "Qwen/Qwen2.5-1.5B",
+   "licenca": "Apache-2.0",
+   "declaracoes": "decl-21",
+   "modelo_base_impressao": "b92b4bb34bddfb5b0c1c277e390bc1302112bed15131e50fc9ebe43ee41102b8"
+  },
+  {
+   "nome": "bert-base-cased-ft-genia",
+   "impressao": "ca32dd2892944ffecb04f769c2827381f07131504c641097a14886da97f00926",
+   "arquivos": [
+    {
+     "arquivo": "model.safetensors",
+     "bytes": 430935868
+    }
+   ],
+   "modelo_base": "google-bert/bert-base-cased",
+   "licenca": "Apache-2.0",
+   "declaracoes": "decl-22, decl-23"
+  },
+  {
+   "nome": "bert-base-cased-ft-conll2003",
+   "impressao": "6f925d398ba25a61a5a20276d8df232765ea2dabb6a9f072d4f7487dd5715c3a",
+   "arquivos": [
+    {
+     "arquivo": "model.safetensors",
+     "bytes": 430929716
+    }
+   ],
+   "modelo_base": "google-bert/bert-base-cased",
+   "licenca": "Apache-2.0",
+   "declaracoes": "decl-22, decl-24"
+  },
+  {
+   "nome": "bert-base-cased-ft-bc5cdr",
+   "impressao": "27c98c2390f87178c4835d396ee887eb500187321080ac04fc85e8f8822c9041",
+   "arquivos": [
+    {
+     "arquivo": "model.safetensors",
+     "bytes": 430917412
+    }
+   ],
+   "modelo_base": "google-bert/bert-base-cased",
+   "licenca": "Apache-2.0",
+   "declaracoes": "decl-22, decl-25"
   }
  ]
 }

@@ -68,7 +68,9 @@ byte-identical to the published files; it also redraws the figures in `artigo/im
 
 ## Level 2: the tables come from those weights
 
-1. Download the weights (the two DOIs are in the article) and check each one:
+1. Download the weights (the three DOIs are in the article). Archives added in the revision are
+   stored in 100 MB parts; rebuild each with the `cat` line in the record's `PARTS.txt` and run
+   `shasum -a 256 -c SHA256SUMS`. Then unpack each archive and check its fingerprint:
 
        python tools/impressao_digital.py gliner_base-ft-genia qwen05b-ft-genia ...
 

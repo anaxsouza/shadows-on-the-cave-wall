@@ -1,0 +1,178 @@
+modelo,declaracao,comparacao,tipo,particao,estrato,metrica,valor,escore,contra,aurc_contra,aurc_escore,delta,ci_low,ci_high,n_entidades,n_sentencas,n_degeneradas,veredito
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9626,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.5657,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,todos,n_entidades,5366,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.5466,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.6929,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k=1,n_entidades,267,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.8035,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.613,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k=2,n_entidades,820,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9015,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.5595,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k=3-4,n_entidades,2051,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9579,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.557,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C1,descriptive,teste inteiro,k>=5,n_entidades,2228,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,C2,verdict,avaliação,todos,,,span_mass,geometric_fraction,0.2375,0.2507,0.0131,0.0099,0.0172,3788,1154,0,PIOR que a base
+bert-base-cased-ft-genia,decl-23-bert-genia,C2,verdict,avaliação,k=1,,,span_mass,geometric_fraction,0.635,0.694,0.059,-0.0017,0.1122,178,148,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,C2,verdict,avaliação,k=2,,,span_mass,geometric_fraction,0.3516,0.4124,0.0608,0.0412,0.0791,574,406,0,PIOR que a base
+bert-base-cased-ft-genia,decl-23-bert-genia,C2,verdict,avaliação,k=3-4,,,span_mass,geometric_fraction,0.248,0.266,0.018,0.0082,0.0285,1449,791,0,PIOR que a base
+bert-base-cased-ft-genia,decl-23-bert-genia,C2,verdict,avaliação,k>=5,,,span_mass,geometric_fraction,0.2222,0.2327,0.0105,0.0045,0.0171,1587,852,0,PIOR que a base
+bert-base-cased-ft-genia,decl-23-bert-genia,C2,verdict,avaliação,aninhado,,,span_mass,geometric_fraction,0.8172,0.8434,0.0262,0.0179,0.035,482,245,0,PIOR que a base
+bert-base-cased-ft-genia,decl-23-bert-genia,C2,verdict,avaliação,plano,,,span_mass,geometric_fraction,0.1821,0.1953,0.0132,0.0097,0.0173,3306,1134,0,PIOR que a base
+bert-base-cased-ft-genia,decl-23-bert-genia,C3,verdict,avaliação,todos,,,model_confidence+enrichment,model_confidence,0.1203,0.1203,0.0,0.0,0.0,3788,1154,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,C3,verdict,avaliação,k=1,,,model_confidence+enrichment,model_confidence,0.4568,0.4568,0.0,0.0,0.0,178,148,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,C3,verdict,avaliação,k=2,,,model_confidence+enrichment,model_confidence,0.1878,0.1878,0.0,0.0,0.0,574,406,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,C3,verdict,avaliação,k=3-4,,,model_confidence+enrichment,model_confidence,0.0864,0.0864,0.0,0.0,0.0,1449,791,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,C3,verdict,avaliação,k>=5,,,model_confidence+enrichment,model_confidence,0.1151,0.1151,0.0,0.0,0.0,1587,852,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,C3,verdict,avaliação,aninhado,,,model_confidence+enrichment,model_confidence,0.7779,0.7779,0.0,0.0,0.0,482,245,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,C3,verdict,avaliação,plano,,,model_confidence+enrichment,model_confidence,0.074,0.074,0.0,0.0,0.0,3306,1134,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9626,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.5657,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,todos,n_entidades,5366,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.5466,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.6929,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k=1,n_entidades,267,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.8035,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.613,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k=2,n_entidades,820,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9015,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.5595,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k=3-4,n_entidades,2051,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9579,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.557,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,T1,descriptive,teste inteiro,k>=5,n_entidades,2228,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,escores,descriptive,avaliação,todos,aurc_acaso,0.2777,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,escores,descriptive,avaliação,todos,aurc_span_size,0.2435,,,,,,,,,,,melhor que o acaso
+bert-base-cased-ft-genia,decl-23-bert-genia,escores,descriptive,avaliação,todos,aurc_geometric_fraction,0.2375,,,,,,,,,,,melhor que o acaso
+bert-base-cased-ft-genia,decl-23-bert-genia,escores,descriptive,avaliação,todos,aurc_enrichment,0.3861,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-genia,decl-23-bert-genia,escores,descriptive,avaliação,todos,aurc_geometric_residual,0.3542,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-genia,decl-23-bert-genia,escores,descriptive,avaliação,todos,aurc_sentence_length,0.2883,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-genia,decl-23-bert-genia,escores,descriptive,avaliação,todos,aurc_span_mass,0.2507,,,,,,,,,,,melhor que o acaso
+bert-base-cased-ft-genia,decl-23-bert-genia,escores,descriptive,avaliação,todos,aurc_model_confidence,0.1203,,,,,,,,,,,melhor que o acaso
+bert-base-cased-ft-genia,decl-23-bert-genia,controle,descriptive,teste inteiro,todos,corr_span_size_vs_comprimento,0.0576,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,controle,descriptive,teste inteiro,todos,corr_geometric_fraction_vs_comprimento,-0.4583,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,controle,descriptive,teste inteiro,todos,corr_enrichment_vs_comprimento,0.1428,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,controle,descriptive,teste inteiro,todos,corr_geometric_residual_vs_comprimento,0.0283,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,controle,descriptive,teste inteiro,todos,corr_sentence_length_vs_comprimento,1.0,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,controle,descriptive,teste inteiro,todos,corr_span_mass_vs_comprimento,-0.4442,,,,,,,,,,,
+bert-base-cased-ft-genia,decl-23-bert-genia,controle,descriptive,teste inteiro,todos,corr_model_confidence_vs_comprimento,-0.02,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9813,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.4578,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,todos,n_entidades,5866,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.9264,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.4953,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k=1,n_entidades,1961,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.9685,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.4598,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k=2,n_entidades,1155,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9784,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.4417,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k=3-4,n_entidades,1745,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9805,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.4473,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C1,descriptive,teste inteiro,k>=5,n_entidades,1005,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C2,verdict,avaliação,todos,,,span_mass,geometric_fraction,0.1528,0.1581,0.0053,0.0038,0.0067,4038,2013,0,PIOR que a base
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C2,verdict,avaliação,k=1,,,span_mass,geometric_fraction,0.0976,0.1178,0.0202,0.014,0.0274,1357,990,0,PIOR que a base
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C2,verdict,avaliação,k=2,,,span_mass,geometric_fraction,0.2172,0.2292,0.012,0.0061,0.0176,786,625,0,PIOR que a base
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C2,verdict,avaliação,k=3-4,,,span_mass,geometric_fraction,0.1236,0.1324,0.0088,0.0048,0.0125,1189,916,0,PIOR que a base
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C2,verdict,avaliação,k>=5,,,span_mass,geometric_fraction,0.2317,0.2348,0.0031,-0.0008,0.0075,706,608,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C2,verdict,avaliação,aninhado,,,,,,,,,,51,,,NÃO AVALIADO (estrato pequeno ou de perda constante)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C2,verdict,avaliação,plano,,,span_mass,geometric_fraction,0.1467,0.1515,0.0047,0.0033,0.0061,3987,2004,0,PIOR que a base
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C3,verdict,avaliação,todos,,,model_confidence+enrichment,model_confidence,0.0255,0.0255,0.0,0.0,0.0,4038,2013,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C3,verdict,avaliação,k=1,,,model_confidence+enrichment,model_confidence,0.0165,0.0165,0.0,0.0,0.0,1357,990,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C3,verdict,avaliação,k=2,,,model_confidence+enrichment,model_confidence,0.0306,0.0306,0.0,0.0,0.0,786,625,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C3,verdict,avaliação,k=3-4,,,model_confidence+enrichment,model_confidence,0.0303,0.0303,0.0,0.0,0.0,1189,916,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C3,verdict,avaliação,k>=5,,,model_confidence+enrichment,model_confidence,0.0296,0.0296,0.0,0.0,0.0,706,608,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C3,verdict,avaliação,aninhado,,,,,,,,,,51,,,NÃO AVALIADO (estrato pequeno ou de perda constante)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,C3,verdict,avaliação,plano,,,model_confidence+enrichment,model_confidence,0.0214,0.0214,0.0,0.0,0.0,3987,2004,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9813,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.4578,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,todos,n_entidades,5866,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.9264,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.4953,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k=1,n_entidades,1961,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.9685,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.4598,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k=2,n_entidades,1155,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9784,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.4417,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k=3-4,n_entidades,1745,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9805,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.4473,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,T1,descriptive,teste inteiro,k>=5,n_entidades,1005,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,escores,descriptive,avaliação,todos,aurc_acaso,0.1149,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,escores,descriptive,avaliação,todos,aurc_span_size,0.1388,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-conll2003,decl-24-bert-conll,escores,descriptive,avaliação,todos,aurc_geometric_fraction,0.1528,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-conll2003,decl-24-bert-conll,escores,descriptive,avaliação,todos,aurc_enrichment,0.1455,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-conll2003,decl-24-bert-conll,escores,descriptive,avaliação,todos,aurc_geometric_residual,0.1873,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-conll2003,decl-24-bert-conll,escores,descriptive,avaliação,todos,aurc_sentence_length,0.0955,,,,,,,,,,,melhor que o acaso
+bert-base-cased-ft-conll2003,decl-24-bert-conll,escores,descriptive,avaliação,todos,aurc_span_mass,0.1581,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-conll2003,decl-24-bert-conll,escores,descriptive,avaliação,todos,aurc_model_confidence,0.0255,,,,,,,,,,,melhor que o acaso
+bert-base-cased-ft-conll2003,decl-24-bert-conll,controle,descriptive,teste inteiro,todos,corr_span_size_vs_comprimento,0.011,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,controle,descriptive,teste inteiro,todos,corr_geometric_fraction_vs_comprimento,-0.4977,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,controle,descriptive,teste inteiro,todos,corr_enrichment_vs_comprimento,0.3866,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,controle,descriptive,teste inteiro,todos,corr_geometric_residual_vs_comprimento,0.0851,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,controle,descriptive,teste inteiro,todos,corr_sentence_length_vs_comprimento,1.0,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,controle,descriptive,teste inteiro,todos,corr_span_mass_vs_comprimento,-0.4814,,,,,,,,,,,
+bert-base-cased-ft-conll2003,decl-24-bert-conll,controle,descriptive,teste inteiro,todos,corr_model_confidence_vs_comprimento,0.0359,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9832,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.5572,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,todos,n_entidades,10345,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.8913,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.6858,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k=1,n_entidades,1139,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.9578,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.5611,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k=2,n_entidades,1767,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9799,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.5514,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k=3-4,n_entidades,4173,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9797,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.5499,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C1,descriptive,teste inteiro,k>=5,n_entidades,3266,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C2,verdict,avaliação,todos,,,span_mass,geometric_fraction,0.15,0.1522,0.0022,0.0011,0.0033,7194,2914,0,PIOR que a base
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C2,verdict,avaliação,k=1,,,span_mass,geometric_fraction,0.3071,0.3157,0.0086,-0.0036,0.0212,827,634,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C2,verdict,avaliação,k=2,,,span_mass,geometric_fraction,0.2584,0.2599,0.0015,-0.0039,0.007,1200,909,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C2,verdict,avaliação,k=3-4,,,span_mass,geometric_fraction,0.1195,0.1221,0.0026,0.0008,0.0045,2889,1881,0,PIOR que a base
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C2,verdict,avaliação,k>=5,,,span_mass,geometric_fraction,0.1587,0.1603,0.0016,-0.0007,0.0039,2278,1532,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C2,verdict,avaliação,aninhado,,,,,,,,,,279,,,NÃO AVALIADO (estrato pequeno ou de perda constante)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C2,verdict,avaliação,plano,,,span_mass,geometric_fraction,0.1204,0.1231,0.0027,0.0017,0.0037,6915,2879,0,PIOR que a base
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C3,verdict,avaliação,todos,,,model_confidence+enrichment,model_confidence,0.0421,0.0421,0.0,0.0,0.0,7194,2914,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C3,verdict,avaliação,k=1,,,model_confidence+enrichment,model_confidence,0.1436,0.1436,0.0,0.0,0.0,827,634,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C3,verdict,avaliação,k=2,,,model_confidence+enrichment,model_confidence,0.0875,0.0875,0.0,0.0,0.0,1200,909,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C3,verdict,avaliação,k=3-4,,,model_confidence+enrichment,model_confidence,0.0252,0.0252,0.0,0.0,0.0,2889,1881,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C3,verdict,avaliação,k>=5,,,model_confidence+enrichment,model_confidence,0.0288,0.0288,0.0,0.0,0.0,2278,1532,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C3,verdict,avaliação,aninhado,,,,,,,,,,279,,,NÃO AVALIADO (estrato pequeno ou de perda constante)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,C3,verdict,avaliação,plano,,,model_confidence+enrichment,model_confidence,0.0304,0.0304,0.0,0.0,0.0,6915,2879,0,NÃO ACRESCENTA (IC contém zero)
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,todos,R2_massa_vs_fracao_geometrica,0.9832,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,todos,mediana_observado_sobre_esperado,0.5572,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,todos,n_entidades,10345,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k=1,R2_massa_vs_fracao_geometrica,0.8913,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k=1,mediana_observado_sobre_esperado,0.6858,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k=1,n_entidades,1139,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k=2,R2_massa_vs_fracao_geometrica,0.9578,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k=2,mediana_observado_sobre_esperado,0.5611,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k=2,n_entidades,1767,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k=3-4,R2_massa_vs_fracao_geometrica,0.9799,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k=3-4,mediana_observado_sobre_esperado,0.5514,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k=3-4,n_entidades,4173,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k>=5,R2_massa_vs_fracao_geometrica,0.9797,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k>=5,mediana_observado_sobre_esperado,0.5499,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,T1,descriptive,teste inteiro,k>=5,n_entidades,3266,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,escores,descriptive,avaliação,todos,aurc_acaso,0.1736,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,escores,descriptive,avaliação,todos,aurc_span_size,0.1557,,,,,,,,,,,melhor que o acaso
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,escores,descriptive,avaliação,todos,aurc_geometric_fraction,0.15,,,,,,,,,,,melhor que o acaso
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,escores,descriptive,avaliação,todos,aurc_enrichment,0.2199,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,escores,descriptive,avaliação,todos,aurc_geometric_residual,0.1903,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,escores,descriptive,avaliação,todos,aurc_sentence_length,0.1737,,,,,,,,,,,NÃO melhor que o acaso
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,escores,descriptive,avaliação,todos,aurc_span_mass,0.1522,,,,,,,,,,,melhor que o acaso
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,escores,descriptive,avaliação,todos,aurc_model_confidence,0.0421,,,,,,,,,,,melhor que o acaso
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,controle,descriptive,teste inteiro,todos,corr_span_size_vs_comprimento,0.0793,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,controle,descriptive,teste inteiro,todos,corr_geometric_fraction_vs_comprimento,-0.505,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,controle,descriptive,teste inteiro,todos,corr_enrichment_vs_comprimento,0.3176,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,controle,descriptive,teste inteiro,todos,corr_geometric_residual_vs_comprimento,0.0253,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,controle,descriptive,teste inteiro,todos,corr_sentence_length_vs_comprimento,1.0,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,controle,descriptive,teste inteiro,todos,corr_span_mass_vs_comprimento,-0.4975,,,,,,,,,,,
+bert-base-cased-ft-bc5cdr,decl-25-bert-bc5cdr,controle,descriptive,teste inteiro,todos,corr_model_confidence_vs_comprimento,-0.0052,,,,,,,,,,,

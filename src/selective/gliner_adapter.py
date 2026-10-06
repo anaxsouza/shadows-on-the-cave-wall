@@ -229,6 +229,53 @@ class GLiNERAdapter:
             "n_gold": len(ouro),
         }
 
+    def para_remedicao(self, example: Any) -> dict[str, Any]:
+        """A passagem da REMEDIÇÃO (decl-14 e decl-15): a mesma previsão e a mesma atenção.
+
+        Mesma tokenização, mesmo transformer, mesmo `predict_entities` com o
+        mesmo limiar que `__call__`. Não repete a passada de `multi_label` com
+        limiar zero (só alimenta a família de logits, que a remedição não
+        usa) nem pede estados ocultos (não mudam a atenção). Acrescenta o que
+        a medição original descartava: o intervalo de caracteres e o rótulo de
+        cada previsão, as fronteiras das anotadas e os offsets dos tokens.
+        """
+        texto, ouro = _texto_e_ouro(example)
+        lote = self.tokenizer(
+            texto, return_tensors="pt", return_offsets_mapping=True, truncation=True
+        )
+        offsets = lote["offset_mapping"][0].tolist()
+        import torch
+
+        with torch.no_grad():
+            saida = self.transformer(
+                input_ids=lote["input_ids"],
+                attention_mask=lote["attention_mask"],
+                output_attentions=True,
+            )
+        atencoes = getattr(saida, "attentions", None)
+        if not atencoes:
+            raise AdapterError("o transformer do GLiNER não devolveu atenção")
+        preditas = self.model.predict_entities(texto, self.labels, threshold=self.threshold)
+        out = []
+        for p in preditas:
+            ini, fim = int(p["start"]), int(p["end"])
+            rot = self.label_to_corpus.get(str(p["label"]), str(p["label"]))
+            out.append({
+                "token_indices": _tokens_do_span(offsets, ini, fim),
+                "confidence": float(p["score"]),
+                "correct": _casa_ouro(ini, fim, rot, ouro),
+                "is_nested": _e_aninhada(ini, fim, ouro),
+                "char_span": (ini, fim),
+                "label": rot,
+            })
+        return {
+            "attentions": atencoes,
+            "offsets": offsets,
+            "predicted": out,
+            "gold": [(g.start, g.end, g.label) for g in ouro],
+            "n_tokens": len(offsets),
+        }
+
 
 # -- funções puras, testáveis sem modelo ------------------------------------
 

@@ -1,0 +1,4 @@
+corpus,sentences,mentions,mean_words,pct_multiword,pct_three_plus,pct_nested
+genia,1854,5506,2.09,61.2,28.0,21.8
+conll2003,3453,5648,1.44,36.7,5.3,0.0
+bc5cdr,5865,9809,1.29,21.3,5.3,0.0

@@ -1,0 +1,6 @@
+modelo,familia,particao,estrato,aurc_acaso,aurc_massa,aurc_fracao,risco_removido_massa,risco_removido_fracao,dif_abs_massa_fracao,nota
+gliner-base,encoder,avaliação,todos,0.3852,0.4225,0.417,-0.0968,-0.0826,0.0055,"insumo de P1 (sinais) e P2 (|dif|<=0,004, só bidirecionais); sem veredito"
+gliner-large,encoder,avaliação,todos,0.3448,0.3737,0.3695,-0.0838,-0.0716,0.0042,"insumo de P1 (sinais) e P2 (|dif|<=0,004, só bidirecionais); sem veredito"
+gliner_base-ft-bc5cdr,encoder,avaliação,todos,0.1668,0.1832,0.1825,-0.0983,-0.0941,0.0007,"insumo de P1 (sinais) e P2 (|dif|<=0,004, só bidirecionais); sem veredito"
+qwen05b-ft-bc5cdr,decoder,avaliação,todos,0.1301,0.1367,0.1316,-0.0507,-0.0115,0.0051,"insumo de P1 (sinais) e P2 (|dif|<=0,004, só bidirecionais); sem veredito"
+qwen15b-ft-bc5cdr,decoder,avaliação,todos,0.1369,0.1406,0.1321,-0.027,0.0351,0.0085,"insumo de P1 (sinais) e P2 (|dif|<=0,004, só bidirecionais); sem veredito"

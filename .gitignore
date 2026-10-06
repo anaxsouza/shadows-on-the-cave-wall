@@ -9,3 +9,8 @@ __pycache__/
 .venv/
 # saídas da reprodução: são regeradas, não publicadas
 saida/
+
+# BC5CDR (decl-16): texto do corpus nao e redistribuido
+dados_bc5cdr/
+# BERT fine-tuned weights, published on Zenodo
+bert-base-cased-ft-*/

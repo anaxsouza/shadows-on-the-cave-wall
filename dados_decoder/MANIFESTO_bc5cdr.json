@@ -1,0 +1,23 @@
+{
+ "origem": "BC5CDRLoader, dados_bc5cdr com SHA-256 da decl-16",
+ "arquivos": {
+  "bc5cdr_train.jsonl": {
+   "sha256": "e5877f274229bec356fbcb385756ca5cdad7aee62c222a1317b54d466e7121e6",
+   "n_sentencas": 5228,
+   "n_entidades": 9385,
+   "campo_entidades": "ner (INDICE DE PALAVRA, fim inclusivo)"
+  },
+  "bc5cdr_validation.jsonl": {
+   "sha256": "789ad8872638428603bc46e8611287b7983663e962bd6315ce5bfbfa08cb388c",
+   "n_sentencas": 5330,
+   "n_entidades": 9591,
+   "campo_entidades": "ner (INDICE DE PALAVRA, fim inclusivo)"
+  },
+  "bc5cdr_test.jsonl": {
+   "sha256": "582e6db86dd56a25d2b5f27e21d4a0e9aebe3417e6f0de52e4ddc7134e0b8b73",
+   "n_sentencas": 5865,
+   "n_entidades": 9809,
+   "campo_entidades": "ner_char (CARACTERE)"
+  }
+ }
+}

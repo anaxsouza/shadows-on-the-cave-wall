@@ -17,13 +17,17 @@ ARCH_PATH = REPO_ROOT / "docs" / "ARCHITECTURE.md"
 # roster de seis modelos convivia com uma tese que precisava de dois.
 # DUAS escalas desde 15/09/2026. O conjunto é exato de propósito: modelo que
 # aparece aqui sem estar no config, ou no config sem estar aqui, é deriva.
+# BC5CDR (decl-16 a decl-19, 01/10/2026): entram o corpus e o GLiNER ajustado a ele. Os decoders
+# (qwen05b/qwen15b-ft-*) ficam fora do config, como os de GENIA/CoNLL: o teste abaixo exige que todo
+# modelo do config seja encoder, e eles são medidos por tools/medir_decoder.py a partir do peso.
 REQUIRED_MODELS = {"gliner-base", "gliner-large",
-                   "gliner_base-ft-genia", "gliner_base-ft-conll2003"}
+                   "gliner_base-ft-genia", "gliner_base-ft-conll2003",
+                   "gliner_base-ft-bc5cdr"}
 
 # Dois corpora, e a escolha é o desenho: CoNLL-2003 é plano, GENIA é aninhado, e
 # o contraste entre os dois é metade da pergunta única. Os cinco domínios do
 # CrossNER serviam à deriva de domínio, que é outra pergunta.
-REQUIRED_DATASETS = {"conll2003", "genia"}
+REQUIRED_DATASETS = {"conll2003", "genia", "bc5cdr"}
 
 # Modelos e corpora que saíram. Nomeados para que a volta quebre a suíte.
 MODELOS_APOSENTADOS = {

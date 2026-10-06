@@ -1,0 +1,42 @@
+modelo,corpus,comparacao,tipo,supervisor,grade,meta,meta_absoluta,vao_fechado,alcancavel,review_load,coverage,precision,recall,f1,n_delivered,contra,review_load_contra,delta,ci_low,ci_high,n_entidades,n_sentencas,n_reamostragens,n_degeneradas,veredito
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,(sem supervisor),—,—,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,span_size,absoluta,0.70,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,span_size,absoluta,0.80,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,span_size,absoluta,0.90,,1.0,sim,0.9993,0.0007,1.0,0.0005,0.001,5.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,span_size,absoluta,0.95,,1.0,sim,0.9993,0.0007,1.0,0.0005,0.001,5.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.70,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.80,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.90,,0.4007,sim,0.9986,0.0014,0.9,0.0009,0.0018,10.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,geometric_fraction,absoluta,0.95,,1.0,sim,0.999,0.001,1.0,0.0007,0.0014,7.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,enrichment,absoluta,0.70,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,enrichment,absoluta,0.80,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,enrichment,absoluta,0.90,,0.4047,sim,0.8603,0.1397,0.9007,0.0943,0.1707,1027.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,enrichment,absoluta,0.95,,0.7076,sim,0.9833,0.0167,0.9512,0.0119,0.0236,123.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.70,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.80,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.90,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,geometric_residual,absoluta,0.95,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,sentence_length,absoluta,0.70,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,sentence_length,absoluta,0.80,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,sentence_length,absoluta,0.90,,0.4061,sim,0.9849,0.0151,0.9009,0.0102,0.0202,111.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,sentence_length,absoluta,0.95,,,não,inalcançável,,,,,0.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,span_mass,absoluta,0.70,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,span_mass,absoluta,0.80,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,span_mass,absoluta,0.90,,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,2.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,span_mass,absoluta,0.95,,1.0,sim,0.9997,0.0003,1.0,0.0002,0.0004,2.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,model_confidence,absoluta,0.70,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,model_confidence,absoluta,0.80,,0.0,sim,0.0,1.0,0.8332,0.6246,0.714,7354.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,model_confidence,absoluta,0.90,,0.4013,sim,0.1369,0.8631,0.9001,0.5824,0.7072,6347.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T1,descriptive,model_confidence,absoluta,0.95,,0.7007,sim,0.3546,0.6454,0.9501,0.4597,0.6196,4746.0,,,,,,,,,,
+gliner_base-ft-bc5cdr,bc5cdr,T2,task_verdict,span_mass,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7354.0,3050.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)
+gliner_base-ft-bc5cdr,bc5cdr,T2,task_verdict,span_mass,absoluta,0.80,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7354.0,3050.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)
+gliner_base-ft-bc5cdr,bc5cdr,T2,task_verdict,span_mass,absoluta,0.90,,,sim,0.9997,,,,,,model_confidence,0.1369,0.8628,0.8393,0.8855,7354.0,3050.0,1801.0,199.0,span_mass EXIGE MAIS revisão
+gliner_base-ft-bc5cdr,bc5cdr,T2,task_verdict,span_mass,absoluta,0.95,,,sim,0.9997,,,,,,model_confidence,0.3546,0.6451,0.6024,0.7029,7354.0,3050.0,1783.0,217.0,span_mass EXIGE MAIS revisão
+gliner_base-ft-bc5cdr,bc5cdr,T3,task_verdict,enrichment,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7354.0,3050.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)
+gliner_base-ft-bc5cdr,bc5cdr,T3,task_verdict,enrichment,absoluta,0.80,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7354.0,3050.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)
+gliner_base-ft-bc5cdr,bc5cdr,T3,task_verdict,enrichment,absoluta,0.90,,,sim,0.8603,,,,,,model_confidence,0.1369,0.7234,0.6463,0.8083,7354.0,3050.0,2000.0,0.0,enrichment EXIGE MAIS revisão
+gliner_base-ft-bc5cdr,bc5cdr,T3,task_verdict,enrichment,absoluta,0.95,,,sim,0.9833,,,,,,model_confidence,0.3546,0.6286,0.5798,0.6866,7354.0,3050.0,2000.0,0.0,enrichment EXIGE MAIS revisão
+gliner_base-ft-bc5cdr,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.70,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7354.0,3050.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)
+gliner_base-ft-bc5cdr,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.80,,,sim,0.0,,,,,,model_confidence,0.0,0.0,0.0,0.0,7354.0,3050.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)
+gliner_base-ft-bc5cdr,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.90,,,sim,0.1369,,,,,,model_confidence,0.1369,0.0,0.0,0.0,7354.0,3050.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)
+gliner_base-ft-bc5cdr,bc5cdr,T4,task_verdict,model_confidence+enrichment,absoluta,0.95,,,sim,0.3546,,,,,,model_confidence,0.3546,0.0,0.0,0.0,7354.0,3050.0,2000.0,0.0,NÃO DISTINGUE (IC contém zero)

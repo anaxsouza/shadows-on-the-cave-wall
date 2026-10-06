@@ -3,6 +3,17 @@
 Everything below ran in an environment built from `uv.lock` alone (Python 3.12, macOS
 arm64), from this repository, without access to the development repository.
 
+## 2026-10-05, revised submission (code v2.0-submission)
+
+| level | what | result |
+|---|---|---|
+| 0 | `pytest tests/` | 401 pass, 2 skipped, 1 expected xfail |
+| 0b | `tools/registro_publico.py --conferir` | identical to the deposited registry (version 3) |
+| 1b | `reproduzir/artigo.py`: numbers, both stratum tables, null check, and the three tables added in the revision (prediction, error types, control windows) | **7 of 7 files byte-identical** |
+| 2 | `tools/impressao_digital.py`: the 6 weights added in the revision (BERT x3, GLiNER and Qwen2.5 x2 on BC5CDR), downloaded from the training jobs before packing | 6 of 6 match `PESOS.json` |
+
+`reproduzir/analise.py` (level 1) was not rerun for this release.
+
 ## 2026-09-28, before submission
 
 | level | what | result |
