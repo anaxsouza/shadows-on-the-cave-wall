@@ -55,20 +55,20 @@
 \maketitle
 
 \begin{abstract}
-An entity extractor that could point to its own likely errors would let a human review only those predictions. We asked
-whether the attention a predicted entity receives can play that role, in three families of extractors: a span scorer
-(\gliner{}), a token classifier (BERT) and generative decoders (Qwen2.5). On biomedical text, ranking
-predictions by attention first removed about \rrGeniaMassBase\% of the risk of abstaining at random.
-But attention rows sum to one, so the share a span receives depends on its size before anything the model computes. We derived the attention an indifferent model would give a span. It is exact and parameter-free: the
-fraction of the visible tokens the span occupies. Against this reference, attention is mostly geometry. In no family does
-it rank errors better than the geometric fraction, and its apparent value, sign included, is inherited from how span
-and sentence length relate to correctness in each corpus. Beyond geometry, attention adds almost nothing to the model's
-own confidence, whichever reading, extractor, training, architecture or error type we examined. We then tested the
-mechanism on an unexamined corpus, BC5CDR, with a prediction declared beforehand. The sign was
-predicted for \predPoneOk{} of \predN{} extractors, but the full prediction held for only \predConfirmed{}, so the mechanism
-as stated does not transfer unchanged; there, too, attention never ranked errors better than the fraction and never
-improved confidence. Comparing attention with the geometric fraction needs only two lengths and should precede any use of
-attention as evidence about errors.
+An entity extractor that could point to its own likely errors would let a human review only those predictions. We
+asked whether the attention a predicted entity receives can play that role, in three families of extractors: a span
+scorer (\gliner{}), a token classifier (BERT) and generative decoders (Qwen2.5). On biomedical text, ranking
+predictions by attention first removed about \rrGeniaMassBase\% of the risk of abstaining at random. But attention
+rows sum to one, so the share a span receives depends on its size before anything the model computes. We derived the
+attention an indifferent model would give a span. It is exact and parameter-free: the fraction of the visible tokens
+the span occupies. Against this reference, attention is mostly geometry. Wherever attention ranked errors better than
+chance, the attention-free fraction did so by about as much or more, and attention's apparent value, sign included, is
+inherited from how span and sentence length relate to correctness in each corpus. Beyond geometry, attention adds
+almost nothing to the model's own confidence, in every reading, extractor, architecture and error type we examined. We
+then tested the mechanism on an unexamined corpus, BC5CDR, with a prediction declared beforehand. The sign was
+predicted for \predPoneOk{} of \predN{} extractors, but the full prediction held for only \predConfirmed{}, so the
+mechanism as stated does not transfer unchanged; there, too, attention never beat the fraction or improved confidence.
+Comparing with the fraction needs only two lengths and should precede any use of attention as evidence about errors.
 \end{abstract}
 
 % ============================================================================
