@@ -568,10 +568,7 @@ span size and nesting (\strataCtwoNAll{} with the pooled rows, as counted in \cr
 than the geometric fraction in \strataCtwoFav{} and worse in \strataCtwoAdv{}, where chance would give about
 \strataCtwoChance{} of each, by up to \strataCtwoMaxAbs{} in \aurc. The direction is not consistent: attention does better
 for medium-sized entities on GENIA with the base and large extractors, and for single-token entities with the extractor
-fine-tuned on GENIA, but worse for several strata on CoNLL-2003. For the decoders (\cref{tab:strata-dec}(a)) attention ranks
-errors \emph{worse} than the causal fraction for single-token mentions in all four models, the largest differences in that
-table and the only ones shared by every model; across the \decStrataCtwoN{} stratum intervals it is worse in
-\decStrataCtwoAdv{} and better in \decStrataCtwoFav{}. Within a size class, then, attention carries some information about
+fine-tuned on GENIA, but worse for several strata on CoNLL-2003. The decoders show no consistent advantage either (Appendix~\ref{app:decoders}). Within a size class, then, attention carries some information about
 correctness that sentence length does not. Whether that information is new relative to the model's confidence is the
 question of \cref{sec:res-confidence}.
 
@@ -721,10 +718,7 @@ appear in the untuned extractors. \Cref{tab:strata}(b) repeats the combination w
 chance among the \strataCthreeNonDeg{} that are not degenerate, and \strataCthreeAdv{} is worse. Both improvements concern
 single-token entities on CoNLL-2003, for \gliner{} base ($\Delta\aurc=\cthreeKoneConllBaseD$) and large
 ($\cthreeKoneConllLargeD$). For the extractor fine-tuned on CoNLL-2003 the procedure puts no weight on attention in any
-stratum. For the decoders (\cref{tab:strata-dec}(b)) attention receives no weight at all in \decStrataCthreeZeroW{} of the
-\decStrataCthreeN{} stratum intervals, and improves on confidence in \decStrataCthreeFav{}, where chance would give about
-\decStrataCthreeChance{} among the \decStrataCthreeNonDeg{} non-degenerate intervals: single-token mentions for the 1.5B
-model on GENIA, a stratum of 170 entities whose interval is wide. The within-size information of \cref{sec:res-geometry} is,
+stratum. The decoders show no counterpart (Appendix~\ref{app:decoders}). The within-size information of \cref{sec:res-geometry} is,
 for the most part, already in the confidence; where it is not, it belongs to extractors that have not been adapted to the
 corpus.
 
@@ -734,14 +728,6 @@ GENIA, for \gliner{} base ($\Delta\aurc=\ctwoGeniaBaseD$, $[\ctwoGeniaBaseLo, \c
 disappears ($\ctwoGeniaTunedD$, $[\ctwoGeniaTunedLo, \ctwoGeniaTunedHi]$). Whatever attention carried beyond the entity's
 size, a better-trained extractor no longer shows it.
 
-\begin{table}[t]
-\centering
-\small
-\caption{The stratified comparisons of \cref{tab:strata}, for the Qwen2.5 decoders fine-tuned on each corpus. The reference in
-(a) is the causal geometric fraction (\cref{eq:closed}). Notation as in \cref{tab:strata}.}
-\label{tab:strata-dec}
-\input{tab_estratos_decoder}
-\end{table}
 
 
 \subsection{What attention knows beyond geometry concerns the label}
@@ -784,23 +770,9 @@ A negative result is only as strong as the objections it withstands. Four were n
 One objection is that attention was read the wrong way. We averaged all layers and heads, and read the attention an entity
 receives. Perhaps the signal lives in one layer, one head, or in the attention the entity pays. Across the \periReadings{}
 readings of \cref{sec:guard}, each combined with confidence on validation data, the chosen weight on attention was exactly
-zero in \periGeniaZeroWeight\% of readings on GENIA and \periConllZeroWeight\% on CoNLL-2003. Each weight is fitted on one part
-of the validation data and evaluated on the other, so each reading is judged out of sample; only the choice of the best
-reading among thousands is optimistic. \Cref{fig:readings} shows the whole distribution. On CoNLL-2003 almost every reading
-changes nothing. On GENIA most readings improve confidence slightly: the median change is $\periGeniaMedDelta$ and a quarter
-of the readings improve it by more than \periGeniaQuartDeltaAbs. The best reading changed the \aurc{} of confidence by
-$\periGeniaBestDelta$ on GENIA and $\periConllBestDelta$ on CoNLL-2003. These are the numbers of \gliner{} base, the weakest
-extractor, whose residual disappears after fine-tuning. The readings also share the confound: their median correlation with
-span length is \periGeniaSizeCorr{} on GENIA and \periConllSizeCorr{} on CoNLL-2003.
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{img/fig_readings.pdf}
-  \caption{Change in the \aurc{} of confidence when it is combined with each of the \periReadings{} readings of attention of
-  \gliner{} base, on the validation partition (weight fitted on one part, change measured on the other). Colours: which
-  attention is read (\cref{sec:guard}). Negative values mean the combination beats confidence alone.}
-  \label{fig:readings}
-\end{figure}
+zero in \periGeniaZeroWeight\% of readings on GENIA and \periConllZeroWeight\% on CoNLL-2003. The best reading changed the \aurc{} of confidence by
+$\periGeniaBestDelta$ on GENIA and $\periConllBestDelta$ on CoNLL-2003, for \gliner{} base, the weakest extractor, whose residual
+disappears after fine-tuning (Appendix~\ref{app:readings} gives the whole distribution).
 
 
 A second objection is that the mass received is only one summary. The row entropy, row maximum and mass emitted, which
@@ -823,25 +795,18 @@ Qwen2.5 at both sizes, the three attention signals are worse than confidence and
 
 \subsection{What is established}
 
-The chain of results supports a specific conclusion. In entity extraction, the scalar summaries of attention one would
-first reach for inform abstention largely through the geometric fraction, the share of the context an entity occupies.
-Their apparent usefulness, and on the two corpora where it was found even its sign, is inherited from how lengths relate to
-correctness among the predictions being ranked. What they carry beyond geometry concerns, in one family, the label of a
-correctly bounded span, and it is already contained in the model's confidence. This holds for a span scorer, a token
-classifier and a generative decoder, which produce entities in three different ways.
+In entity extraction, the scalar summaries of attention one would first reach for inform abstention largely through the
+geometric fraction. Their apparent usefulness, sign included on the two corpora where it was found, is inherited from how
+lengths relate to correctness, and what they carry beyond geometry is already in the model's confidence, for three ways of
+producing entities.
 
 The conclusion is confined to this setting. In generation, where attention has been combined with confidence to
 detect factual and contextual errors, it has been reported to help~\citep{yuksekgonul2023attention,vazhentsev2025rauq}, and our
-results do not bear on those reports beyond suggesting the comparison with a geometric reference. These results run against an intuition that has guided much of the field for nearly a decade: that attention, the component
-on which transformers are built, also carries usable information about what a model gets right. Our evidence is narrower
-than that intuition. It concerns the scalar summaries of attention one would use to rank extracted entities, and within that
-scope the information attention seemed to carry was in the lengths. Two lines of work reach compatible conclusions by other
-routes. \citet{saghir2026twopathway} finds that white-box scores for detecting shifted inputs are confounded by sequence
-length, and bounds the growth of attention entropy with length; we give the confound an exact form for each span, which shows that it acts through the fraction of the context the
-span occupies, and that it can reverse a signal and not only inflate it. \citet{papamichalis2026attentionrows} show that
-one-number summaries of an attention row mix how much attention the first token absorbs with how the rest is divided among
-the content tokens; the attention a span receives likewise mixes how much of the context the span occupies with how the model
-divides its attention beyond that, and the reference of \cref{sec:null} is what separates the two.
+results do not bear on those reports. Two lines of work reach compatible conclusions by other
+routes. The length confound \citet{saghir2026twopathway} found for shifted inputs takes, for errors, an exact form per span,
+and it can reverse a signal, not only inflate it. \citet{papamichalis2026attentionrows} separate, in an attention row, the
+first token's share from the division among content tokens; our reference likewise separates the share of the context a span
+occupies from what the model adds to it.
 
 The account does not transfer unchanged. On a corpus examined only after the prediction was declared, the sign was predicted
 for five of six extractors and the equivalence held for one of the three bidirectional extractors to which it applied. We read
@@ -855,23 +820,17 @@ The results do not show that the network holds no information about its errors, 
 next stages of this work.
 
 \begin{enumerate}
-  \item \emph{Decoder errors receive less attention than correct predictions on newswire.} Relative to windows of their own
-  sentence, both decoders single out errors on CoNLL-2003 markedly less than correct predictions (\cref{sec:res-windows}).
-  Whether this difference is already in the decoders' confidence was not declared and is not known; it is the first
-  comparison to run.
-  \item \emph{Why the sign failed for one decoder on BC5CDR.} The causal fraction slightly helps and attention slightly hurts
-  for Qwen2.5-1.5B. The two lengths do not explain this, and the risk removed by span and sentence length separately on that
-  corpus would be the first step.
-  \item \emph{Information that is not scalar.} Averaging over heads and layers, which our readings do, can destroy
-  information spread across them. A reader trained on per-head attention, given the geometric fraction as an input, would
-  test this. It would give up the exact reference, because its weights are fitted to the data. The same holds for hidden
-  states and output scores, which have no exact reference at all; we study them separately.
-  \item \emph{Errors made on purpose.} All errors we analysed are the model's own. Perturbing correct entities, by moving
-  boundaries or changing labels, would ask whether attention responds to an error when the error is known, and needs a design
-  with parameters of its own.
-  \item \emph{Other tasks, domains and scales.} The evidence comes from entity extraction in two domains, biomedical and news,
-  and from models of up to 1.5B parameters. The reference applies to any span, so the same comparison can be made for other
-  span-level decisions and for larger models.
+  \item \emph{Decoder errors on newswire.} Relative to windows of their sentence, both decoders single out errors on
+  CoNLL-2003 markedly less than correct predictions (\cref{sec:res-windows}); whether confidence already contains this is
+  not known.
+  \item \emph{The sign that failed.} For Qwen2.5-1.5B on BC5CDR the causal fraction slightly helps and attention slightly
+  hurts, which the two lengths do not explain.
+  \item \emph{Information that is not scalar.} A reader trained on per-head attention, with the geometric fraction as an
+  input, would test whether averaging destroys a signal, at the cost of the exact reference; hidden states and output scores,
+  which have no exact reference, we study separately.
+  \item \emph{Errors made on purpose.} Perturbing correct entities would ask whether attention responds to a known error.
+  \item \emph{Other tasks and scales.} The reference applies to any span, so the comparison extends to other span-level
+  decisions and to larger models.
 \end{enumerate}
 
 % ============================================================================
@@ -881,27 +840,20 @@ next stages of this work.
 The evidence comes from one task, three corpora and extractors of up to 1.5B parameters. Confidence is defined differently
 for the three families, so each is compared with its own confidence and never across them. For \gliner{} the attention is read from a pass of the encoder over the sentence alone, not from the pass in which the extractor also encodes the label prompt and predicts; the two share weights but not inputs. In the decoders the first token, which is not a special token there, is kept in the denominator; the scan of first-token treatments was run for \gliner{} base only. The analysis of control windows
 and of error types covers the ten extractor--corpus combinations of \gliner{} and Qwen2.5 on GENIA and CoNLL-2003, not BERT
-nor BC5CDR. The comparisons were declared before measurement, but in a private repository; the released code verifies that
-each result follows from its declaration, not when the declaration was written. Past dates cannot be established from a
-private history, and we do not claim them. To make the declarations verifiable from here on, the SHA-256 of every
-declaration, addendum and executable configuration was deposited on Zenodo (\preregDOI), and the registry was updated
-before each new set of measurements; a single command checks the released files against the deposit. Several declarations
-were made on the same two test sets, as each question followed from an earlier result; the third corpus is the one on which
-the account was tested rather than found, and on it the account held only in part. Appendix~\ref{app:protocol} lists every
+nor BC5CDR. The comparisons were declared before measurement, but in a private repository, so dates before the public deposit of
+their hashes (\preregDOI), updated before each new set of measurements, cannot be established and are not claimed. Only the third corpus tested the account rather than produced it. Appendix~\ref{app:protocol} lists every
 departure from the declarations.
 
 % ============================================================================
 \section{Conclusion}
 \label{sec:conclusion}
 
-We began by asking whether the attention an extracted entity receives could tell a reviewer which predictions to check. It
-first appeared that it could. Asking what attention a model would pay to an entity if it paid no particular attention to it
-led to an exact reference, and against that reference the apparent signal turned out to be mostly the share of the sentence
-the entity occupies. That share predicts correctness on one corpus and anti-predicts it on another, and attention followed it
-in both. With geometry set aside, attention added almost nothing to the extractor's own confidence, whichever way we read it,
-whichever extractor we used, and whether entities were scored, labelled word by word or generated. On a corpus we had not
-examined, the account predicted the sign for most extractors but not the full outcome; what held without exception was that
-attention never ranked errors better than geometry and never improved confidence.
+We asked whether the attention an extracted entity receives could tell a reviewer which predictions to check. Against an
+exact reference, the apparent signal turned out to be mostly the share of the sentence the entity occupies, which predicts
+correctness on one corpus and anti-predicts it on another; beyond it, attention added almost nothing to the extractor's own
+confidence, whether entities were scored, labelled word by word or generated. On a corpus we had not examined, the account
+predicted the sign for most extractors but not the full outcome, and there attention never ranked errors better than
+geometry or improved confidence.
 
 The practical lesson is simple, and the comparison that supports it costs nothing to run: before treating attention as
 evidence about an error, compare it with the geometric fraction, which is computed from two lengths. Whether attention is
@@ -909,11 +861,9 @@ explanation has been argued both ways~\citep{jain-wallace-2019-attention,wiegref
 an extractor should abstain, what attention showed us was mostly a shadow on the cave wall: the outline of the share of the
 sentence an entity occupies, which can be measured directly, from two lengths, without looking at attention at all.
 
-Code, declarations and measured tables (without corpus text) are available at \repoURL{}, archived as \codeDOI. Every number,
-table and figure in this paper is regenerated from them by a single command and compared byte for byte with the published
-version. The twelve fine-tuned weights are archived under the licences they inherit, as \weightsDOIgliner{} (\gliner{},
-CC-BY-NC-4.0), \weightsDOIqwen{} (Qwen2.5, Apache-2.0) and \weightsDOIbert{} (BERT, Apache-2.0), each with a content
-fingerprint that the repository checks before any measurement.
+Code, declarations and measured tables (no corpus text), from which one command regenerates every number, table and
+figure: \repoURL{}, \codeDOI. Fine-tuned weights, under the licences they inherit and fingerprinted: \weightsDOIgliner{}
+(\gliner{}, CC-BY-NC-4.0), \weightsDOIqwen{} (Qwen2.5, Apache-2.0), \weightsDOIbert{} (BERT, Apache-2.0).
 
 \begin{acknowledgments}
 This study was financed in part by the Coordenação de Aperfeiçoamento de Pessoal de Nível Superior -- Brasil (CAPES) --
@@ -985,5 +935,46 @@ The departures from the declarations, in the order they occurred, were these:
 
 Declared comparisons of the further tests are reported in \cref{tab:windows,tab:errortypes,tab:prediction}; \cref{fig:tallies}
 counts those of the original declarations.
+
+
+\section{Stratified comparisons for the decoders}
+\label{app:decoders}
+
+\Cref{tab:strata-dec} repeats the stratified comparisons of \cref{tab:strata} for the four decoders. Against the causal
+geometric fraction, attention ranks errors \emph{worse} for single-token mentions in all four models, the largest
+differences in the table and the only ones shared by every model; across the \decStrataCtwoN{} stratum intervals it is
+worse in \decStrataCtwoAdv{} and better in \decStrataCtwoFav{}. Combined with confidence, attention receives no weight at
+all in \decStrataCthreeZeroW{} of the \decStrataCthreeN{} stratum intervals, and improves on confidence in
+\decStrataCthreeFav{}, where chance would give about \decStrataCthreeChance{} among the \decStrataCthreeNonDeg{}
+non-degenerate intervals: single-token mentions for the 1.5B model on GENIA, a stratum of 170 entities whose interval is
+wide.
+
+\begin{table}[t]
+\centering
+\small
+\caption{The stratified comparisons of \cref{tab:strata}, for the Qwen2.5 decoders fine-tuned on each corpus. The reference in
+(a) is the causal geometric fraction (\cref{eq:closed}). Notation as in \cref{tab:strata}.}
+\label{tab:strata-dec}
+\input{tab_estratos_decoder}
+\end{table}
+
+\section{The scan of readings}
+\label{app:readings}
+
+Each weight in the scan of \cref{sec:guard} is fitted on one part of the validation data and evaluated on the other, so
+each reading is judged out of sample; only the choice of the best reading among thousands is optimistic.
+\Cref{fig:readings} shows the whole distribution. On CoNLL-2003 almost every reading changes nothing. On GENIA most
+readings improve confidence slightly: the median change is $\periGeniaMedDelta$ and a quarter of the readings improve it
+by more than \periGeniaQuartDeltaAbs. The readings also share the confound: their median correlation with span length is
+\periGeniaSizeCorr{} on GENIA and \periConllSizeCorr{} on CoNLL-2003.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{img/fig_readings.pdf}
+  \caption{Change in the \aurc{} of confidence when it is combined with each of the \periReadings{} readings of attention of
+  \gliner{} base, on the validation partition (weight fitted on one part, change measured on the other). Colours: which
+  attention is read (\cref{sec:guard}). Negative values mean the combination beats confidence alone.}
+  \label{fig:readings}
+\end{figure}
 
 \end{document}
