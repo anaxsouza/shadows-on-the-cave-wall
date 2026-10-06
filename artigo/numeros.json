@@ -576,7 +576,7 @@
  "bcTunedFone": "0.87",
  "bcSmallFone": "0.89",
  "bcBigFone": "0.93",
- "bcNtest": "5865",
+ "bcNtest": "5,865",
  "corpGeniaMents": "5,506",
  "corpGeniaMeanW": "2.1",
  "corpGeniaMulti": "61",
@@ -626,5 +626,9 @@
  "winDecConllJthreeMin": "-0.22",
  "winDecConllJthreeMax": "-0.23",
  "winEncConllJthreeN": "2",
- "winNoWindowMax": "569"
+ "winNoWindowMax": "569",
+ "decRawGapAbsMin": "0.002",
+ "decRawGapAbsMax": "0.014",
+ "errLabelAbsMin": "0.004",
+ "errLabelAbsMax": "0.018"
 }

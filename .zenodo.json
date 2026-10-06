@@ -25,9 +25,8 @@
     "attention",
     "named entity recognition",
     "selective prediction",
-    "abstention",
-    "pre-registration",
-    "reproducibility"
+    "uncertainty estimation",
+    "interpretability"
   ],
   "related_identifiers": [
     {

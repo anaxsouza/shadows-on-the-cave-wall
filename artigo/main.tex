@@ -147,8 +147,7 @@ out~\citep{wiegreffe-pinter-2019-attention}, and they predict the importance of 
 tool~\citep{bastings2020elephant}. Raw weights also leave out part of what a token contributes: the norm of the value vectors
 they multiply~\citep{kobayashi2020attention} and the mixing of information across layers~\citep{abnar2020quantifying}; and,
 within a head, once a sequence is longer than the head dimension, different weights can produce the same output, so the
-weights are not identifiable~\citep{brunner2020identifiability}. Among the tests \citet{wiegreffe-pinter-2019-attention} propose is a comparison
-with a model whose attention is frozen to uniform weights, applied to task performance, and \citet{clark2019bert} use a
+weights are not identifiable~\citep{brunner2020identifiability}. Among the tests \citet{wiegreffe-pinter-2019-attention} propose is to compare task performance with that of a model whose attention is frozen to uniform weights, and \citet{clark2019bert} use a
 uniform estimate informally to judge how much attention a token would receive by chance. Our reference applies the same idea
 to the attention a span receives and gives it a closed form under both masks; we found no earlier closed form for it. This debate is about
 explanation. We borrow its object and change the question to one with an operational answer: whether attention improves a
@@ -306,7 +305,7 @@ over the prompt. Because each row sees a different number of positions, each row
 before the mass on $S$ is averaged over rows. Here the first token is kept. It is the first token of the prompt, which opens with the word
 \emph{Text} (Qwen2.5 adds no beginning-of-sequence token), and under a causal mask it is the one position every
 row can see, and the reference below counts it. A generated mention is located in the sentence by exact match. A mention that
-does not occur in the sentence has no span and no attention; it is always an error, and it is removed for every score alike
+does not occur in the sentence has no span and no attention; it is always an error, and it is removed from the evaluation of every score alike
 (\decHallucMin{} to \decHallucMax{} per model and corpus).
 
 \subsection{The reference: what an indifferent model would give an entity}
@@ -442,8 +441,7 @@ entities nest, BERT is trained on the outermost flat labels and its flat predict
 annotation by the same strict criterion. \emph{Generative decoders}: Qwen2.5 with 0.5B and 1.5B parameters~\citep{qwen2025}, starting from
 the base (not instruction-tuned) checkpoints, fully fine-tuned on each corpus to write out mentions and labels and decoded greedily. The decoders address two objections a
 single architecture leaves open: that the result belongs to bidirectional attention, and that it belongs to small models.
-The causal mask changes the reference, and the two sizes differ by a factor of three in parameters. On BC5CDR the
-fine-tuned extractors reach validation F1 of \bcTunedFone{} (\gliner{}), \bcSmallFone{} and \bcBigFone{} (Qwen2.5).
+The causal mask changes the reference, and the two sizes differ by a factor of three in parameters. On BC5CDR the fine-tuned \gliner{} and Qwen2.5 extractors reach validation F1 of \bcTunedFone{} (\gliner{}), \bcSmallFone{} and \bcBigFone{} (Qwen2.5).
 
 For BERT, attention is read exactly as for \gliner{}: all layers and heads are averaged, and the first token, [CLS], is
 removed from the denominator. All values are on the test partition unless stated.
@@ -507,10 +505,9 @@ geometric fraction ranks errors against how well attention does, both relative t
 the diagonal: the two rankings produce the same \aurc{} to within \encMassGeoMaxGap{} on GENIA and CoNLL-2003. They beat
 chance together on GENIA and lose to it together on CoNLL-2003. For BERT, the third family, attention ranks errors
 \emph{worse} than the fraction on all three corpora, by \bertCtwoMin{} to \bertCtwoMax{} in \aurc, with every interval above
-zero. For the decoders the picture depends on the direction in which a score is read. Read in the fixed direction used for
-the bidirectional extractors, higher values ranked as more likely correct, both scores are worse than chance and attention
-is slightly less bad than the causal fraction (by \decRawGapMax{} to \decRawGapMin{} in \aurc). The decoder declarations
-instead set each direction on the calibration part; it was reversed at all four points, both scores then beat chance, and
+zero. For the decoders the picture depends on the direction in which a score is read. Read in the fixed direction used for the bidirectional extractors, in which higher values rank as more likely correct, both scores are worse than chance and attention
+is slightly less bad than the causal fraction (its \aurc{} is lower by \decRawGapAbsMin{} to \decRawGapAbsMax). The decoder declarations
+instead set each direction from the calibration part; it was reversed at all four points, both scores then beat chance, and
 attention ranks errors \emph{worse} than the causal fraction, by \decCalGapMin{} to \decCalGapMax{} with all
 \decCalGapAdv{} intervals above zero (\cref{tab:aurc}). In no family and in neither reading does attention carry an
 advantage over geometry that would matter. Whatever attention contributed to the \rrGeniaMassBase\% we started from, the
@@ -556,7 +553,7 @@ Qwen2.5-1.5B        & GENIA & \decLargeGeniaChance & \decLargeGeniaSize & \decLa
                     & CoNLL & \decLargeConllChance & \decLargeConllSize & \decLargeConllGeo\,/\,\decLargeConllGeoCal & \decLargeConllMass\,/\,\decLargeConllMassCal & \decLargeConllConf & \\
 \bottomrule
 \end{tabular}
-\par\smallskip{\footnotesize Decoder: causal reference (\cref{eq:nullcausal}); $R^2$ is the range over the four points. Geometric fraction and attention mass are given in two directions, fixed\,/\,calibrated: \emph{fixed} ranks higher values as more likely correct, as for \gliner{}; \emph{calibrated} takes the direction from the calibration part, as the decoder declarations prescribe, and it was reversed at all four points.}
+\par\smallskip{\footnotesize Decoder: causal reference (\cref{eq:nullcausal}); for the decoders the $R^2$ column gives the range of $R^2$ over the four decoder--corpus points. Geometric fraction and attention mass are given in two directions, fixed\,/\,calibrated: \emph{fixed} ranks higher values as more likely correct, as for \gliner{}; \emph{calibrated} takes the direction from the calibration part, as the decoder declarations prescribe, and it was reversed at all four points.}
 \end{table}
 
 
@@ -657,7 +654,7 @@ that attention predicts errors: on a corpus where the correct entities are the l
 \end{figure}
 
 
-\subsection{The prediction for an unseen corpus held in part}
+\subsection{The prediction for an unseen corpus was only partly confirmed}
 \label{sec:res-prediction}
 
 The account of the previous section was built on two corpora, the ones on which it was found. Its most direct test is a
@@ -685,7 +682,7 @@ a result. Its two failures have different characters. The failure of P2 is one o
 attention departs from geometry by more than the bound, it does so by ranking errors worse. The failure of P1, in one
 decoder, is a failure of the sign itself, and we cannot explain it from the two lengths (\cref{sec:open}).
 
-What did transfer is the conclusion that matters in practice. On BC5CDR attention ranked errors better than the geometric
+What did transfer was the conclusion that matters in practice. On BC5CDR attention ranked errors better than the geometric
 fraction for no extractor: worse for \bcCtwoAdv{} of the six, with the interval containing zero for the fine-tuned
 \gliner{}. Combined with confidence, it improved on confidence for none (\bcCthreeFav{} of six).
 
@@ -739,7 +736,7 @@ signal about boundaries: attention to an entity's tokens plausibly speaks to whe
 \errNBound{} boundary errors and \errNSpur{} spurious predictions (\cref{tab:errortypes}).
 
 The expectation was wrong. Against the geometric fraction, attention ranks \emph{label} errors better in \errEoneLabelFav{}
-of the ten combinations, all of them \gliner{} (by \errLabelMin{} to \errLabelMax{} in \aurc), and worse in none. For
+of the ten combinations, all of them \gliner{} (lower \aurc{} by \errLabelAbsMin{} to \errLabelAbsMax), and worse in none. For
 boundary errors it is better in \errEoneBoundFav{} and worse in \errEoneBoundAdv{}; for spurious predictions, better in
 \errEoneSpurFav{} and worse in \errEoneSpurAdv{}, in no consistent direction. Over all 30 intervals chance
 would give about \errEoneChance{} favourable ones; the concentration in one type, in more than one extractor, meets the
@@ -839,7 +836,7 @@ next stages of this work.
 
 The evidence comes from one task, three corpora and extractors of up to 1.5B parameters. Confidence is defined differently
 for the three families, so each is compared with its own confidence and never across them. For \gliner{} the attention is read from a pass of the encoder over the sentence alone, not from the pass in which the extractor also encodes the label prompt and predicts; the two share weights but not inputs. In the decoders the first token, which is not a special token there, is kept in the denominator; the scan of first-token treatments was run for \gliner{} base only. The analysis of control windows
-and of error types covers the ten extractor--corpus combinations of \gliner{} and Qwen2.5 on GENIA and CoNLL-2003, not BERT
+and of error types covers the five \gliner{} and Qwen2.5 extractors on GENIA and CoNLL-2003 (ten combinations), not BERT
 nor BC5CDR. The comparisons were declared before measurement, but in a private repository, so dates before the public deposit of
 their hashes (\preregDOI), updated before each new set of measurements, cannot be established and are not claimed. Only the third corpus tested the account rather than produced it. Appendix~\ref{app:protocol} lists every
 departure from the declarations.
@@ -876,7 +873,7 @@ authors reviewed all of it and take full responsibility.
 
 % ============================================================================
 \appendix
-\section{Pre-registration and analysis protocol}
+\section{Declarations and analysis protocol}
 \label{app:protocol}
 
 The study was conducted under a series of declarations, each written as executable configuration before the measurement
